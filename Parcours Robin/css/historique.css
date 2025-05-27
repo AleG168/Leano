@@ -1,0 +1,762 @@
+.historique-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.historique-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+/* Section anniversaire */
+.anniversary-banner {
+    background-color: #e8e8e8;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.anniversary-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 250px;
+    perspective: 1000px;
+}
+
+/* Mise en valeur spéciale pour le "15 ans de l'agence" */
+.anniversary-content.highlight {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #00acc1;
+    box-shadow: 0 6px 15px rgba(0, 172, 193, 0.3);
+    transform: scale(1.05);
+}
+
+.anniversary-content .years {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #00acc1;
+    line-height: 1;
+}
+
+.anniversary-content .text {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.anniversary-content.highlight .years {
+    font-size: 5.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.anniversary-content.highlight .text {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: white;
+}
+
+/* Styles pour le compteur à barillet */
+.roller-counter-container {
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    position: relative;
+}
+
+.digit-container {
+    position: relative;
+    width: 3rem;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    box-shadow: none;
+    transform-style: preserve-3d;
+}
+
+.digit-roller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000%; /* 10 chiffres à 100% chacun */
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.digit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #00acc1;
+    line-height: 1;
+    text-shadow: none;
+}
+
+/* Style spécial pour les chiffres dans la section mise en évidence */
+.anniversary-content.highlight .digit-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: none; 
+}
+
+.anniversary-content.highlight .digit {
+    font-size: 5.5rem;
+    color: white;
+    text-shadow: none; 
+}
+
+/* Ajouter des marqueurs pour simuler un compteur mécanique */
+.digit-container::before,
+.digit-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-shadow: none;
+}
+
+.digit-container::before {
+    top: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.digit-container::after {
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.anniversary-content.highlight .digit-container::before,
+.anniversary-content.highlight .digit-container::after {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: none; 
+}
+
+/* Section profil */
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.profile-image {
+    flex: 0 0 300px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-info h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.profile-info .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    font-size: 1.4rem;
+    color: #00acc1;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.section ul {
+    padding-left: 20px;
+}
+
+.section li {
+    margin-bottom: 8px;
+}
+
+/* Timeline */
+.timeline {
+    margin: 50px 0;
+}
+
+.timeline h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 60px;
+    bottom: -40px;
+    width: 2px;
+    background-color: #e0e0e0;
+}
+
+.timeline-date {
+    flex: 0 0 200px;
+    text-align: right;
+    padding-right: 30px;
+    font-weight: 600;
+    color: #00acc1;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content {
+    flex: 1;
+    background-color: #e8e8e8; /* Gris plus foncé */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.job-title {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.job-description {
+    color: #666;
+}
+
+/* Section philosophie */
+.philosophy-section {
+    background-color: #e8e8e8; /* Gris plus foncé */
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.philosophy-section h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.philosophy-section p {
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        flex: 0 0 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+    }
+    
+    .timeline-date {
+        flex-direction: row;
+        text-align: left;
+        padding-right: 0;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    
+    .timeline-item:not(:last-child)::after {
+        display: none;
+    }
+    
+    .anniversary-banner {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .anniversary-content.highlight {
+        transform: scale(1);
+    }
+    
+    .digit-container {
+        width: 2.5rem;
+    }
+    
+    .digit {
+        font-size: 4rem;
+    }
+    
+    .anniversary-content.highlight .digit {
+        font-size: 4.5rem;
+    }
+}
+
+/* Styles pour la section parcours professionnel */
+.parcours-section {
+    margin: 60px 0;
+}
+
+.parcours-section h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.parcours-section h3:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #00acc1;
+    margin: 15px auto 0;
+}
+
+.parcours-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.parcours-timeline:before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #e0e0e0;
+    transform: translateX(-50%);
+}
+
+.parcours-item {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.parcours-period {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    text-align: right;
+    padding-right: 30px;
+    font-weight: 600;
+    color: #00acc1;
+}
+
+/* Style spécial pour la période actuelle */
+.parcours-item:first-child .parcours-period {
+    color: #e53935;
+    font-weight: 700;
+}
+
+.parcours-period .year-start,
+.parcours-period .year-end {
+    display: inline-block;
+}
+
+.parcours-period .year-separator {
+    margin: 0 5px;
+    color: #666;
+}
+
+.parcours-details {
+    margin-left: 150px; /* Ajusté pour aligner avec la nouvelle position */
+    position: relative;
+    background-color: #e8e8e8; /* Gris plus foncé */
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parcours-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    background-color: #e0f2f4; /* Ajusté pour maintenir le contraste */
+}
+
+.parcours-icon {
+    position: absolute;
+    left: -30px; /* Ajusté pour la nouvelle position */
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #00acc1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(26, 115, 232, 0.3);
+    z-index: 2; /* Pour s'assurer que l'icône est au-dessus de la ligne */
+}
+
+/* Style spécial pour l'icône actuelle */
+.parcours-item:first-child .parcours-icon {
+    background-color: #e53935; /* Rouge pour l'icône actuelle */
+    box-shadow: 0 4px 8px rgba(229, 57, 53, 0.3);
+}
+
+.parcours-content h4 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.parcours-content .role {
+    font-weight: 600;
+    color: #555;
+    margin: 8px 0 15px;
+}
+
+.parcours-content .description {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .parcours-timeline:before {
+        left: 30px;
+    }
+    
+    .parcours-period {
+        position: relative;
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .parcours-details {
+        margin-left: 70px;
+    }
+    
+    .parcours-icon {
+        left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .parcours-details {
+        padding: 20px;
+    }
+    
+    .parcours-content h4 {
+        font-size: 1.1rem;
+    }
+}
+
+.parcours-content .role {
+    font-weight: 600;
+    color: #555;
+    margin: 8px 0 15px;
+}
+
+.parcours-content .description {
+    color: #666;
+    line-height: 1.6;
+}
+
+.company-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #00acc1;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.company-dot.current {
+    background-color: #e53935;
+}
+
+.parcours-content h4 {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+/* Animations pour la page historique */
+
+/* Animation d'entrée pour le titre principal */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.historique-container h1 {
+    animation: fadeInDown 0.8s ease forwards;
+}
+
+/* Animation pour la bannière d'anniversaire */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.anniversary-banner {
+    animation: scaleIn 1s ease 0.3s forwards;
+    opacity: 0; /* État initial avant l'animation */
+    transform: scale(0.8);
+}
+
+/* Animation pour le nombre d'années */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anniversary-content .years {
+    animation: countUp 1.2s ease 0.6s forwards;
+    opacity: 0;
+}
+
+/* Animation pour la photo de profil */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile-image {
+    animation: fadeInLeft 1s ease 0.8s forwards;
+    opacity: 0;
+}
+
+/* Animation pour les informations de profil */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.profile-info {
+    animation: fadeInRight 1s ease 1s forwards;
+    opacity: 0;
+}
+
+/* Animation pour la timeline */
+@keyframes growLine {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.parcours-timeline:before {
+    animation: growLine 1.5s ease 1.2s forwards;
+    height: 0;
+    top: 0;
+}
+
+/* Animation pour les éléments du parcours */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.parcours-item:nth-child(1) {
+    animation: fadeInUp 0.8s ease 1.4s forwards;
+    opacity: 0;
+}
+
+.parcours-item:nth-child(2) {
+    animation: fadeInUp 0.8s ease 1.6s forwards;
+    opacity: 0;
+}
+
+.parcours-item:nth-child(3) {
+    animation: fadeInUp 0.8s ease 1.8s forwards;
+    opacity: 0;
+}
+
+/* Animation pour les points colorés */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 172, 193, 0.7);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(0, 172, 193, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 172, 193, 0);
+    }
+}
+
+.company-dot {
+    animation: pulse 2s infinite;
+}
+
+.company-dot.current {
+    animation: pulse 2s infinite;
+    animation-delay: 0.5s;
+}
+
+/* Animation pour la section philosophie */
+.philosophy-section {
+    animation: fadeInUp 1s ease 2s forwards;
+    opacity: 0;
+}
+
+/* Animation au survol des éléments du parcours */
+.parcours-details {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+}
+
+.parcours-details:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 172, 193, 0.2);
+    background-color: #f5fdfe;
+}
+
+/* Animation pour les liens et boutons */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Option pour désactiver les animations pour les personnes qui préfèrent réduire les mouvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .parcours-timeline:before {
+        left: 30px;
+    }
+    
+    .parcours-period {
+        position: relative;
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .parcours-details {
+        margin-left: 70px;
+    }
+    
+    .parcours-icon {
+        left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .parcours-details {
+        padding: 20px;
+    }
+    
+    .parcours-content h4 {
+        font-size: 1.1rem;
+    }
+}
