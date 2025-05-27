@@ -24,7 +24,7 @@
 
     <main>
         <section class="content">
-            <h1>Design </h1>
+            <h1>Design Industriel</h1>
             <h2>Développement de produit grand public et professionnel</h2>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/AcCyxakOg5k" allowfullscreen></iframe>
