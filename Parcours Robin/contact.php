@@ -6,6 +6,7 @@
     <title>LeanoDesign - Contact</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
     <?php include 'navbar.php'; ?>
