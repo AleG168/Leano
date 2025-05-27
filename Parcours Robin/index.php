@@ -2,9 +2,15 @@
 <html lang="fr">
 
 <head>
+    <title>LEANO DESIGN+ ENGINEERING</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEANO DESIGN+ ENGINEERING</title>
+
+    <meta name="Vincent Beaucourt" content="Projet">
+    <meta name="description" content="Fiche métier Développeur d'Applications Mobiles ."> 
+    <meta name="keywords" content="CV, Développeur, Mobiles, App, Applications">
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -27,7 +33,22 @@
             <h1>Design Industriel</h1>
             <h2>Développement de produit grand public et professionnel</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/AcCyxakOg5k" allowfullscreen></iframe>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen 
+                        frameborder="0">
+                    </iframe>
+                </div>
+
+                <!-- <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                    frameborder="0">
+                /iframe>     (si besoin d'enlever possibiliter d'avancer la vidéo) -->
+
+
+
             </div>
             <p class="slogan">
                 <em>Notre engagement : concevoir ensemble des produits ingénieux et innovants</em>
