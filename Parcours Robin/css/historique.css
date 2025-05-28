@@ -67,15 +67,15 @@
     flex-shrink: 0;
   }
   
-  nav {
+nav {
     background-color: #1c1c1c;
-    border-radius: 30px;
     padding: 12px 30px;
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
     justify-content: center;
-  }
+}
+
   
   nav a {
     color: white;
