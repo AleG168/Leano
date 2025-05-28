@@ -41,9 +41,6 @@ $current_year = date('Y');
     
 
 
-
-
-
     <div class="partenaires-bandeau">
         <div class="partenaires-conteneur">
             <h3 id = "Titre_Partenaire">Partenaires de confiance</h3>
@@ -53,8 +50,6 @@ $current_year = date('Y');
             <img class = "LogoPart" src="assets/images/Logo-Label-3.png" alt="Label 3">
         </div>
     </div>
-
-
 
 
 
