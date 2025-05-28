@@ -18,7 +18,7 @@
     display: inline;
 }
 
-.navbar a {
+.navbar a, .navbar a:visited {
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -75,13 +75,14 @@
     margin-top: 40px; 
 }
 
-.home-icon {
+.home-icon, .home-icon:visited, .home-icon:focus, .home-icon:active {
     font-size: 28px;
-    margin-right: 18px; 
+    margin-right: 18px;
+    text-decoration: none ;   
 }
 
-.mail-icon {
+.mail-icon, .mail-icon:visited {
     font-size: 30px; 
     margin-left: 18px; 
-   
+    text-decoration: none;    
 }
