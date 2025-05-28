@@ -1,11 +1,11 @@
 <?php
 // CSS should be included in the head of the document
+
 if (!isset($footerCssIncluded)) {
-    echo '<style>';
-    include 'css/footer.css';
-    echo '</style>';
+    echo '<link rel="stylesheet" href="css/footer.css">';
     $footerCssIncluded = true;
 }
+
 $current_year = date('Y');
 ?>
 
@@ -39,25 +39,58 @@ $current_year = date('Y');
         </div>
     </div>
     
-    <div class="footer-content">
-        <div class="footer-section">
-            <p>&copy; <?php echo $current_year; ?> LeanoDesign. Tous droits réservés.</p>
+
+
+
+
+
+    <div class="partenaires-bandeau">
+        <div class="partenaires-conteneur">
+            <h3 id = "Titre_Partenaire">Partenaires de confiance</h3>
+            <img class = "LogoPart" src="assets/images/Logo-Breizh-Fab.png" alt="Breizh Fab">
+            <img class = "LogoPart" src="assets/images/Logo-Partenaire-1.png" alt="Partenaire 1">
+            <img class = "LogoPart" src="assets/images/Logo-Partenaire-2.png" alt="Partenaire 2">
+            <img class = "LogoPart" src="assets/images/Logo-Label-3.png" alt="Label 3">
         </div>
-        
-        <!-- Ajout du logo Breizh Fab au centre -->
-        <div class="footer-section footer-logo">
-            <img src="assets/images/Logo-Breizh-Fab.png" alt="Logo Breizh Fab" class="breizh-fab-logo">
-        </div>
-        
-        <div class="footer-section">
-            <a href="mentions-legales.php">Mentions Légales</a>
-            <span class="separator">|</span>
-            <a href="#" id="cookie-settings">Paramètres des Cookies</a>
-            <span class="separator">|</span>
-            <a href="contact.php">Contact</a>
+    </div>
+
+
+
+
+
+    <div class="footer-background">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>&copy; <?php echo $current_year; ?> LeanoDesign. Tous droits réservés.</p>
+            </div>
+            
+            <!-- Ajout du logo Breizh Fab au centre -->
+            <div class="footer-section footer-logo">
+                <img src="assets/images/Logo-Breizh-Fab.png" alt="Logo Breizh Fab" class="breizh-fab-logo">
+            </div>
+            
+            <div class="footer-section">
+                <a href="mentions-legales.php">Mentions Légales</a>
+                <span class="separator">|</span>
+                <a href="#" id="cookie-settings">Paramètres des Cookies</a>
+                <span class="separator">|</span>
+                <a href="contact.php">Contact</a>
+            </div>
         </div>
     </div>
 </footer>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Cookie Banner -->
 <div id="cookie-banner" class="cookie-banner">

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
+
+
 html, body {
     height: 100%;
     margin: 0;
@@ -13,6 +17,21 @@ body {
 main, .content-wrapper, .main-content {
     flex: 1 0 auto; 
 }
+
+
+h1 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 32pt;
+}
+
+h2 {
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+
 
 .footer {
     background-color: #222222;
@@ -284,3 +303,18 @@ main, .content-wrapper, .main-content {
     }
 }
 
+#Titre_Partenaire{
+    text-align : center;
+    color : red;
+}
+
+.partenaires-bandeau{
+background-color : whitesmoke;
+
+}
+
+
+.LogoPart{
+max-width : 10px;
+max-height : 15px;
+}

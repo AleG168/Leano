@@ -13,8 +13,8 @@
     <link rel="icon" type="image/png" href="assets/images/logo.png"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -33,13 +33,12 @@
             <h1>Design Industriel</h1>
             <h2>Développement de produit grand public et professionnel</h2>
             <div class="video-container">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1" 
-                        allow="autoplay; encrypted-media" 
-                        allowfullscreen 
-                        frameborder="0">
-                    </iframe>
-                </div>
+                <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen 
+                    frameborder="0">
+                </iframe>
+
 
                 <!-- <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0"
                     allow="autoplay; encrypted-media"
