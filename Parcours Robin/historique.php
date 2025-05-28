@@ -121,12 +121,8 @@
         <p>Transformer une idée en un produit tangible, équilibrant innovation, fonctionnalité, esthétique et production durable.</p>
       </div>
     </section>
+    <?php include 'footer.php'; ?>
   </main>
-
-  <footer class="footer">
-    <p>Contact : <a href="mailto:leanodesign@gmail.com">leanodesign@gmail.com</a> | 06.80.43.54.02</p>
-    <p>© 2025 Leano Design – Vincent Beaucourt</p>
-  </footer>
 
   <!-- AOS Library Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
