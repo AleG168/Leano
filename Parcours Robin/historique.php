@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeanoDesign - Notre Histoire</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>LeanoDesign - Notre Histoire</title>    
     <link rel="stylesheet" href="css/historique.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"> 
 </head>
-
 <body>
-    <header>
+    <header>      
         <img src="assets/images/logo.png" alt="Leano Design Logo" class="logo">
         <?php include 'navbar.php'; ?>
         <div class="social-icons">
@@ -21,108 +21,117 @@
             <a href="#"><img src="assets/images/LinkedIn_logo_initials.svg" alt="LinkedIn"></a>
         </div>
     </header>
-
+  <main>
     <div class="content">
-        <div class="historique-container">
-            <div class="anniversary-banner scale-in">
-                <div class="anniversary-content highlight">
-                    <span class="years count-up">15</span>
-                    <span class="text">ans de l'agence Leano Design</span>
-                </div>
-                <div class="anniversary-content">
-                    <span class="years count-up">26</span>
-                    <span class="text">ans d'expertise en design industriel</span>
-                </div>
-            </div>
+      <div class="historique-container">
+          <div class="anniversary-banner">
+              <div class="anniversary-content highlight">
+                  <span class="years">15</span>
+                  <span class="text">ans de l'agence Leano Design</span>
+              </div>
+              <div class="anniversary-content">
+                  <span class="years">26</span>
+                  <span class="text">ans d'expertise en design industriel</span>
+              </div>
+          </div>
+        <a href="#about" class="cta">Découvrir le parcours</a>
+      </div>  
+    </section>
 
-
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="assets/images/vincent-beaucourt.jpg" alt="Vincent Beaucourt - Fondateur de Leano Design">
-                </div>
-                <div class="profile-info">
-                    <h2>Vincent Beaucourt</h2>
-                    <p class="subtitle">Fondateur & Designer Industriel</p>
-
-                    <div class="section formation">
-                        <h3>Formation</h3>
-                        <ul>
-                            <li>Diplômé de RUBIKA (ISD) à Valenciennes</li>
-                            <li>Cycle de spécialisation filière Produits & Systèmes Industriels</li>
-                            <li>Bac Arts Appliqués (F12) – Institut Saint Vincent de Paul à Lille</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="parcours-section">
-                <h3>Parcours Professionnel</h3>
-                <div class="parcours-timeline">
-                    <div class="parcours-item">
-                        <div class="parcours-period">
-                            <span class="year-start">2010</span>
-                            <span class="year-separator">-</span>
-                            <span class="year-end">Aujourd'hui</span>
-                        </div>
-                        <div class="parcours-details">
-                            <div class="parcours-content">
-                                <h4><span class="company-dot current"></span>EURL Leano Design à Guingamp (22)</h4>
-                                <p class="role">Designer Industriel | Gérant</p>
-                                <p class="description">Création et direction de l'agence Leano Design, spécialisée dans
-                                    le design industriel et l'ingénierie de produits. Accompagnement des entreprises
-                                    dans leurs projets d'innovation et de développement de produits.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="parcours-item">
-                        <div class="parcours-period">
-                            <span class="year-start">2001</span>
-                            <span class="year-separator">-</span>
-                            <span class="year-end">2010</span>
-                        </div>
-                        <div class="parcours-details">
-                            <div class="parcours-content">
-                                <h4><span class="company-dot"></span>Société OKTES, Bureau d'études à Lannion (22)</h4>
-                                <p class="role">Designer Industriel</p>
-                                <p class="description">En relation directe avec le bureau d'études : électronique,
-                                    conception mécanique, calcul de structure, simulation thermique. Développement de
-                                    solutions techniques innovantes pour divers secteurs industriels.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="parcours-item">
-                        <div class="parcours-period">
-                            <span class="year-start">1991</span>
-                            <span class="year-separator">-</span>
-                            <span class="year-end">2001</span>
-                        </div>
-                        <div class="parcours-details">
-                            <div class="parcours-content">
-                                <h4><span class="company-dot"></span>Groupe SEB à Lourdes (65)</h4>
-                                <p class="role">Designer Produit</p>
-                                <p class="description">Division Food Preparation & Breuvage. Conception et développement
-                                    de produits électroménagers innovants, alliant esthétique et fonctionnalité pour une
-                                    marque leader du secteur.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="philosophy-section">
-                <h3>Notre Philosophie</h3>
-                <p>Depuis 15 ans, Leano Design s'engage à créer des produits innovants qui allient esthétique et
-                    fonctionnalité. Notre approche combine créativité et expertise technique pour répondre aux besoins
-                    spécifiques de nos clients.</p>
-            </div>
+    <section id="about" class="section about" data-aos="fade-up" data-aos-duration="1500">
+      <div class="container grid">
+        <div class="text">
+          <h2>À propos</h2>
+          <p>Vincent Beaucourt, fondateur de Leano Design, conçoit depuis 15 ans des produits alliant <strong>innovation</strong>, <strong>esthétique</strong> et <strong>fonctionnalité</strong>. Diplômé de RUBIKA, il collabore avec des équipes techniques pour transformer les idées en produits concrets.</p>
+          <p class="quote">"Un bon design, c'est quand la forme suit la fonction avec élégance."</p>
         </div>
-    </div>
+        <img src="assets/images/vincent-beaucourt.jpg" alt="Vincent Beaucourt" class="profile" />
+      </div>
+    </section>
+    <section class="section" id="timeline" data-aos="fade-up" data-aos-duration="1500">
+      <div class="container">
+        <h2>Parcours</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
+            <div class="timeline-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2010 – aujourd'hui</span>
+              <p><strong>Leano Design (Guingamp) – Gérant, Designer Industriel</strong></p>
+              <p>Création et gestion de Leano Design, une entreprise spécialisée dans le design industriel, alliant créativité et innovation.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
+            <div class="timeline-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">2001 – 2010</span>
+              <p><strong>OKTES (Lannion) – Responsable Design / Bureau d'études</strong></p>
+              <p>Supervision des projets de design au sein de l'équipe de recherche et développement.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
+            <div class="timeline-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-date">1999 – 2001</span>
+              <p><strong>Groupe SEB (Lourdes) – Designer Produit</strong></p>
+              <p>Conception et développement de nouveaux produits pour le leader mondial des appareils de cuisine.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section skills-full-bg" id="skills" data-aos="fade-up" data-aos-duration="1500">
+      <h2>Expertises</h2>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Créativité & innovation</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-hand-paper"></i>
+          <h3>Ergonomie & UX</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-cogs"></i>
+          <h3>Prototype à production</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-tools"></i>
+          <h3>Techniques de fabrication</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-leaf"></i>
+          <h3>Matériaux durables</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Confidentialité & NDA</h3>
+        </div>
+      </div>
+    </section>
 
-    <?php include 'footer.php'; ?>
-    <script src="js/counter-animation.js"></script>
+    <section class="highlight" data-aos="fade-up" data-aos-duration="1500">
+      <div class="container center">
+        <h2>Notre mission</h2>
+        <p>Transformer une idée en un produit tangible, équilibrant innovation, fonctionnalité, esthétique et production durable.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Contact : <a href="mailto:leanodesign@gmail.com">leanodesign@gmail.com</a> | 06.80.43.54.02</p>
+    <p>© 2025 Leano Design – Vincent Beaucourt</p>
+  </footer>
+
+  <!-- AOS Library Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
-
 </html>
