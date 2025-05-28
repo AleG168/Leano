@@ -358,17 +358,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #fff0;
-    padding: 0 40px;
-  }
+    flex: 1;
+    min-width: 250px;
+    perspective: 1000px;
+}
   
   .anniversary-content.highlight {
-    background: #005D62;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(7,177,199,0.13);
-    color: #fff;
-    padding: 30px 60px;
-  }
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #005D62;
+    box-shadow: 0 6px 15px rgba(0, 172, 193, 0.3);
+    transform: scale(1.05);
+}
   
   .anniversary-content .years {
     font-size: 72px;
@@ -414,8 +416,181 @@
     .anniversary-content .years {
       font-size: 48px;
       padding: 0 10px;
+      animation: countUp 1.2s ease 0.6s forwards;
+      opacity: 0;
     }
     .anniversary-content .text {
       font-size: 18px;
     }
   }
+
+  .historique-container h1 {
+    animation: fadeInDown 0.8s ease forwards;
+}
+
+/* Animation pour la bannière d'anniversaire */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.anniversary-banner {
+    animation: scaleIn 1s ease 0.3s forwards;
+    opacity: 0; /* État initial avant l'animation */
+    transform: scale(0.8);
+}
+
+/* Animation pour le nombre d'années */
+@keyframes countUp {
+    from {
+        opacity:    0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anniversary-content .years {
+    animation: countUp 1.2s ease 0.6s forwards;
+    opacity: 0;
+}
+
+/* Styles pour le compteur à barillet */
+.roller-counter-container {
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    position: relative;
+}
+
+.digit-container {
+    position: relative;
+    width: 3rem;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    box-shadow: none;
+    transform-style: preserve-3d;
+}
+
+.digit-roller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000%; /* 10 chiffres à 100% chacun */
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.digit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #00acc1;
+    line-height: 1;
+    text-shadow: none;
+}
+
+/* Style spécial pour les chiffres dans la section mise en évidence */
+.anniversary-content.highlight .digit-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: none; 
+}
+
+.anniversary-content.highlight .digit {
+    font-size: 5.5rem;
+    color: white;
+    text-shadow: none; 
+}
+
+/* Ajouter des marqueurs pour simuler un compteur mécanique */
+.digit-container::before,
+.digit-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-shadow: none;
+}
+
+.digit-container::before {
+    top: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.digit-container::after {
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.anniversary-content.highlight .digit-container::before,
+.anniversary-content.highlight .digit-container::after {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: none; 
+}
+
+ 
+
+/* Option pour désactiver les animations pour les personnes qui préfèrent réduire les mouvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .parcours-timeline:before {
+        left: 30px;
+    }
+    
+    .parcours-period {
+        position: relative;
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .parcours-details {
+        margin-left: 70px;
+    }
+    
+    .parcours-icon {
+        left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .parcours-details {
+        padding: 20px;
+    }
+    
+    .parcours-content h4 {
+        font-size: 1.1rem;
+    }
+}
