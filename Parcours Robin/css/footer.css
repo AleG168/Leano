@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
 
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/seanslab-normalblack-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 html, body {
     height: 100%;
@@ -42,6 +49,7 @@ h2 {
     z-index: 999;
     flex-shrink: 0;
     margin: 0;
+    padding: 2rem 0 1.5rem 0;
 }
 
 .footer-content {
@@ -246,7 +254,8 @@ h2 {
 .references-carousel-section h3 {
     margin-top: 0;
     margin-bottom: 30; 
-    font-size: 30px;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 16px;
     color: #2E2925;
 }
 
@@ -303,18 +312,36 @@ h2 {
     }
 }
 
-#Titre_Partenaire{
-    text-align : center;
-    color : #222222;
+#Titre_Partenaire {
+    margin: 0;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 16px;
+    color :#00acc1;
 }
 
-.partenaires-bandeau{
-background-color : whitesmoke;
+.partenaires-bandeau {
+  background-color: whitesmoke;
+  margin-top: -30px;
+  padding: 0.8rem 1rem;
+  position: relative;
+  z-index: 1000;
 
+  display: flex;
+  flex-direction: column;     /* empile verticalement */
+  align-items: center;        /* centre horizontalement */
+  text-align: center;
 }
 
 
-.LogoPart{
-max-width : 10px;
-max-height : 15px;
+.LogoPart {
+    max-width: 100px;
+    max-height: 35px;
+    display: block;
+}
+
+.partenaires-conteneur {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 0.5rem;
 }
