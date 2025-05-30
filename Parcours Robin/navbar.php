@@ -3,7 +3,7 @@
   <nav class="navbar">
     <ul>
       <li><a href="historique.php">A Propos</a></li>
-      <li><a href="Préstation">Préstation</a></li>
+      <li><a href="Préstation">Prestations</a></li>
       <li><a href="lieux-intervention.php">Démarches</a></li>
       <li><a href="réalisations.php">Réalisations</a></li>
     </ul>
