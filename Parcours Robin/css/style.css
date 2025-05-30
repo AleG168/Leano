@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
+
 @font-face {
   font-family: 'Sean Slab Narrow';
   src: url('../fonts/seanslab-normalblack-regular.otf') format('opentype');
@@ -7,9 +10,9 @@
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
     background: white;
     color: black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -37,8 +40,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 40px 0 40px 50px;  /* top right bottom left */
-    gap: 50px;
+    padding: 10px 0 40px 50px;  /* top right bottom left */
     flex-wrap: nowrap;
     box-sizing: border-box;
 }
@@ -53,19 +55,22 @@ main {
 
 
 h1 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 32pt;
 }
 
-h2 {
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 25px;
+#SousTitre {
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 24px;
 }
 
-
+h3 {
+    font-family: 'Sean Slab', serif;
+    font-weight: 400;
+    font-size: 18px;
+}
 
 
 .video-container {
@@ -99,7 +104,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 55px;
+    margin-top: 45px;
     max-width: 400px;
     margin-right: 240px;
 }
@@ -152,9 +157,11 @@ h2 {
 }
 
 .engagement-label {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
 }
 
 .section-spacer {

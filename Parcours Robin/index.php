@@ -31,7 +31,7 @@
     <main>
         <section class="content">
             <h1>Design Industriel</h1>
-            <h2>Développement de produit grand public et professionnel</h2>
+            <h2 id = "SousTitre" >Développement de produit grand public et professionnel</h2>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1" 
                     allow="autoplay; encrypted-media" 
@@ -61,62 +61,52 @@
             <div class="engagements-grid">
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Innovation.png"
-                            alt="Innovation"></div>
+                    
                     <div class="engagement-label">Innovation</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Durabilite.png"
-                            alt="Durabilité"></div>
+                    
                     <div class="engagement-label">Durabilité</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Simplicite.png"
-                            alt="Simplicité"></div>
+                    
                     <div class="engagement-label">Simplicité</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Esthetique.png"
-                            alt="Esthétique"></div>
+                    
                     <div class="engagement-label">Esthétique</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Collaboration.png"
-                            alt="Collaboration"></div>
+                    
                     <div class="engagement-label">Collaboration</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Technologie.png"
-                            alt="Technologie"></div>
+                    
                     <div class="engagement-label">Technologie</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Responsabilite.png"
-                            alt="Responsabilité"></div>
+                    
                     <div class="engagement-label">Responsabilité</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Adaptabilite.png"
-                            alt="Adaptabilité"></div>
+                    
                     <div class="engagement-label">Adaptabilité</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Performance.png"
-                            alt="Performance"></div>
+                    
                     <div class="engagement-label">Performance</div>
                 </div>
 
                 <div class="engagement-block">
-                    <div class="icon-circle"><img src="assets/images/Ethique.png"
-                            alt="Éthique"></div>
+                    
                     <div class="engagement-label">Éthique</div>
                 </div>
             </div>

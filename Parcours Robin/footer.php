@@ -77,16 +77,6 @@ $current_year = date('Y');
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- Cookie Banner -->
 <div id="cookie-banner" class="cookie-banner">
     <div class="cookie-content">
@@ -98,6 +88,8 @@ $current_year = date('Y');
         </div>
     </div>
 </div>
+
+
 
 <!-- Cookie Settings Modal -->
 <div id="cookie-modal" class="cookie-modal">
