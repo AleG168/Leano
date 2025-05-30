@@ -51,12 +51,22 @@ main, .content-wrapper, .main-content {
 
 .footer-section {
     color: #ffffff;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 16px;
+    color :#00acc1;
+    font-weight: 400;
 }
 
+
+
 .footer-section a {
-    color: #0066cc;
     text-decoration: none;
     transition: color 0.3s;
+
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 16px;
+    color :#00acc1;
+    font-weight: 400;
 }
 
 .footer-section a:hover {
@@ -245,6 +255,7 @@ main, .content-wrapper, .main-content {
     font-family: 'Sean Slab Narrow', serif;
     font-size: 16px;
     color: #2E2925;
+    font-weight: 400;
 }
 
 
@@ -304,7 +315,8 @@ main, .content-wrapper, .main-content {
     margin: 0;
     font-family: 'Sean Slab Narrow', serif;
     font-size: 16px;
-    color :#00acc1;
+    color :#004049;
+    font-weight: 400;
 }
 
 .partenaires-bandeau {

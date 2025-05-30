@@ -33,20 +33,11 @@
             <h1>Design Industriel</h1>
             <h2 id = "SousTitre" >Développement de produit grand public et professionnel</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1" 
+                <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0" 
                     allow="autoplay; encrypted-media" 
                     allowfullscreen 
                     frameborder="0">
                 </iframe>
-
-
-                <!-- <iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    frameborder="0">
-                /iframe>     (si besoin d'enlever possibiliter d'avancer la vidéo) -->
-
-
 
             </div>
             <p class="slogan">

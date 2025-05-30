@@ -29,6 +29,7 @@ header {
 .social-icons {
     display: flex;
     gap: 15px;
+    margin-right: 20em;
 }
 
 .social-icons img {
@@ -63,14 +64,9 @@ h1 {
 #SousTitre {
     font-family: 'Sean Slab', serif;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 18pt;
 }
 
-h3 {
-    font-family: 'Sean Slab', serif;
-    font-weight: 400;
-    font-size: 18px;
-}
 
 
 .video-container {
@@ -98,6 +94,7 @@ h3 {
     font-family: 'Sean Slab Narrow', serif;
     font-size: 16px;
     margin-top: 20px;
+    font-weight: 400;
 }
 
 .engagements-wrapper {
@@ -107,13 +104,17 @@ h3 {
     margin-top: 45px;
     max-width: 400px;
     margin-right: 240px;
+    margin-right: 30em;
 }
 
 .engagements-wrapper h3 {
     font-size: 28px;
-    font-weight: 700;
     color: #00acc1;
     margin-bottom: 30px;
+
+    font-family: 'Sean Slab', serif;
+    font-weight: 400;
+
 }
 
 .engagements-grid {
@@ -139,23 +140,6 @@ h3 {
     background-color: #A9A8A9;
 }
 
-.icon-circle {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.icon-circle img {
-    height: 30px;
-    width: 30px;
-    object-fit: contain;
-}
-
 .engagement-label {
     font-family: 'Sean Slab', serif;
     font-weight: 800;
@@ -167,6 +151,8 @@ h3 {
 .section-spacer {
     width: 10%;
 }
+
+
 
 
 /* Responsive design */
