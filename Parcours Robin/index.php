@@ -105,6 +105,8 @@
     </main>
 
     <?php include 'footer.php'; ?>
+    <script src="js/texte_Block.js"></script>
+    
 </body>
 
 </html>

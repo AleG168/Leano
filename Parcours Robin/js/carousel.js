@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
         return item.offsetWidth + parseInt(style.marginLeft) + parseInt(style.marginRight);
     };
 
-    // Dupliquer les éléments pour créer l'effet infini
+    // Crée une bande très longue pour l’effet d'infini
     const setupInfiniteScroll = () => {
-        for (let i = 0; i < 3; i++) {
+        const clonesNeeded = 10;
+        for (let i = 0; i < clonesNeeded; i++) {
             items.forEach(item => {
                 const clone = item.cloneNode(true);
                 track.appendChild(clone);
@@ -26,24 +27,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const allItems = track.querySelectorAll('.carousel-item');
 
-    let totalOriginalWidth = 0;
-    for (let i = 0; i < items.length; i++) {
-        totalOriginalWidth += getItemWidth(items[i]);
-    }
+    let totalScrollWidth = 0;
+    allItems.forEach(item => {
+        totalScrollWidth += getItemWidth(item);
+    });
 
     let position = 0;
     let speed = 0.5;
     let targetSpeed = 0.5;
-    const easing = 0.05; // plus petit = plus lent, ajustable
+    const easing = 0.05;
     let animationFrameId;
 
     const continuousScroll = () => {
-        // Appliquer un easing pour ralentir ou accélérer en douceur
         speed += (targetSpeed - speed) * easing;
-
         position += speed;
-        if (position >= totalOriginalWidth) {
-            position -= totalOriginalWidth;
+
+        if (position >= totalScrollWidth) {
+            position -= totalScrollWidth;
         }
 
         track.style.transition = 'none';
@@ -54,20 +54,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     animationFrameId = requestAnimationFrame(continuousScroll);
 
-    // Survol : ralentir progressivement à 0
     track.parentElement.addEventListener('mouseenter', () => {
-        targetSpeed = 0;
+        targetSpeed = 2;
     });
 
-    // Quitter : reprendre la vitesse normale
     track.parentElement.addEventListener('mouseleave', () => {
         targetSpeed = 0.5;
     });
 
     window.addEventListener('resize', () => {
-        totalOriginalWidth = 0;
-        for (let i = 0; i < items.length; i++) {
-            totalOriginalWidth += getItemWidth(items[i]);
-        }
+        totalScrollWidth = 0;
+        const updatedItems = track.querySelectorAll('.carousel-item');
+        updatedItems.forEach(item => {
+            totalScrollWidth += getItemWidth(item);
+        });
     });
 });
