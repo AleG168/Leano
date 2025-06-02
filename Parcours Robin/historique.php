@@ -18,8 +18,8 @@
         <img src="assets/images/logo.png" alt="Leano Design Logo" class="logo">
         <?php include 'navbar.php'; ?>
         <div class="social-icons">
-            <a href="#"><img src="assets/images/Instagram_icon.svg" aria-label="Instagram" ></a>
-            <a href="#"><img src="assets/images/LinkedIn_logo_initials.svg" aria-label="LinkedIn" ></a>
+            <a href="#"><img src="assets/images/Instagram_icon.svg" alt="Instagram" ></a>
+            <a href="#"><img src="assets/images/LinkedIn_logo_initials.svg" alt="LinkedIn" ></a>
         </div>
     </header>
   <main>
@@ -52,7 +52,7 @@
           <p>Vincent Beaucourt, fondateur de Leano Design, conçoit depuis 15 ans des produits alliant <strong>innovation</strong>, <strong>esthétique</strong> et <strong>fonctionnalité</strong>. Diplômé de RUBIKA, il collabore avec des équipes techniques pour transformer les idées en produits concrets.</p>
           <p class="quote">"Un bon design, c'est quand la forme suit la fonction avec élégance."</p>
         </div>
-        <img src="assets/images/vincent-beaucourt.jpg" alt="Vincent Beaucourt" class="profile" />
+        <img src="assets/images/vincent-beaucourt.jpg" loading="lazy" alt="Vincent Beaucourt" class="profile" />
       </div>
     </section>
     <section class="section" id="timeline" data-aos="fade-up" data-aos-duration="1500">
@@ -127,9 +127,9 @@
         <h2>Notre mission</h2>
         <p>Transformer une idée en un produit tangible, équilibrant innovation, fonctionnalité, esthétique et production durable.</p>
       </div>
-    </section>
-    <?php include 'footer.php'; ?>
+    </section>    
   </main>
+  <?php include 'footer.php'; ?>
 
   <!-- AOS Library Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
