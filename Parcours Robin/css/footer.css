@@ -243,7 +243,7 @@ main, .content-wrapper, .main-content {
 .references-carousel-section {
     width: 100%;
     padding: 15px 80px;  /* augmente les marges gauche/droite */
-    background-color: #b0e2e2;
+    background-color: #bfbfbf;
     text-align: center;
     margin-bottom: 1.5rem; 
     box-sizing: border-box;
