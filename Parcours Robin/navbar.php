@@ -1,7 +1,6 @@
 <div class="navbar-container">
   <a href="index.php" class="home-icon" aria-label="Accueil" title="Accueil">🏠</a>
   <nav class="navbar">
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="nav-toggle-label">
       <span></span>
       <span></span>
