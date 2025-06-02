@@ -7,20 +7,14 @@
     <meta name="description" content="Découvrez l'histoire de LeanoDesign, une entreprise de design industriel spécialisée dans la création de produits innovants et durables.">
     <link rel="stylesheet" href="css/historique.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>      
-        <img src="assets/images/logo.png" alt="Leano Design Logo" class="logo">
-        <?php include 'navbar.php'; ?>
-        <div class="social-icons">
-            <a href="#"><img src="assets/images/Instagram_icon.svg" alt="Instagram" ></a>
-            <a href="#"><img src="assets/images/LinkedIn_logo_initials.svg" alt="LinkedIn" ></a>
-        </div>
-    </header>
+<?php include 'navbar.php'; ?>
   <main>
     <div class="content">
       <div class="historique-container">
@@ -136,5 +130,8 @@
   <script>
     AOS.init();
   </script>
+
+  <!-- Bootstrap JS (nécessaire pour le menu hamburger) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
