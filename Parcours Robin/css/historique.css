@@ -456,45 +456,31 @@ h2 {
 .roller-counter-container {
     display: flex;
     justify-content: center;
-    height: 5rem;
-    position: relative;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    height: 100%;
 }
 
 .digit-container {
-    position: relative;
-    width: 3rem;
-    height: 100%;
     overflow: hidden;
-    margin: 0 2px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 0px;
-    box-shadow: none;
-    transform-style: preserve-3d;
+    height: 1em; /* Ajuste selon la taille de ta police */
+    width: 0.8em; /* Ajuste selon la taille de ta police */
+    display: inline-block;
+    margin: 0 0.05em;
 }
 
 .digit-roller {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1000%; /* 10 chiffres à 100% chacun */
     display: flex;
     flex-direction: column;
-    will-change: transform;
-    backface-visibility: hidden;
+    transition: transform 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .digit {
+    height: 1em; /* Même hauteur que .digit-container */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10%;
-    width: 100%;
-    font-size: 5rem;
-    font-weight: 700;
-    color: #00acc1;
-    line-height: 1;
-    text-shadow: none;
 }
 
 /* Style spécial pour les chiffres dans la section mise en évidence */

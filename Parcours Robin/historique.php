@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeanoDesign - Notre Histoire</title>    
+    <meta name="description" content="Découvrez l'histoire de LeanoDesign, une entreprise de design industriel spécialisée dans la création de produits innovants et durables.">
     <link rel="stylesheet" href="css/historique.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -17,28 +18,34 @@
         <img src="assets/images/logo.png" alt="Leano Design Logo" class="logo">
         <?php include 'navbar.php'; ?>
         <div class="social-icons">
-            <a href="#"><img src="assets/images/Instagram_icon.svg" alt="Instagram"></a>
-            <a href="#"><img src="assets/images/LinkedIn_logo_initials.svg" alt="LinkedIn"></a>
+            <a href="#"><img src="assets/images/Instagram_icon.svg" aria-label="Instagram" ></a>
+            <a href="#"><img src="assets/images/LinkedIn_logo_initials.svg" aria-label="LinkedIn" ></a>
         </div>
     </header>
   <main>
     <div class="content">
       <div class="historique-container">
-          <div class="anniversary-banner">
+          <div class="anniversary-banner scale-in ">
               <div class="anniversary-content highlight">
-                  <span class="years">15 ans</span>
-                  <span class="text"> De l'agence Leano Design</span>
+              <span class="years count-up">26</span><span class="years-text"> Ans</span>
+                  <span class="text">D'expertise en design industriel</span>
               </div>
               <div class="anniversary-content">
-                  <span class="years">26 ans</span>
-                  <span class="text">D'expertise en design industriel</span>
+              <span class="years count-up">15</span><span class="years-text"> Ans</span>
+                  <span class="text">De l'agence Leano Design</span>
+              </div>
+              <div class="anniversary-content highlight">
+                  <span class="years">60</span>
+                  <span class="text">Clients qui nous ont fait confiance</span>
+              </div>
+              <div class="anniversary-content">
+                  <span class="years">250</span>
+                  <span class="text">Projets réalisés pour nos clients</span>
               </div>
           </div>
         <a href="#about" class="cta">Découvrir le parcours</a>
-      </div>  
-    </section>
-
-    <section id="about" class="section about" data-aos="fade-up" data-aos-duration="1500">
+      </div>
+      <section id="about" class="section about" data-aos="fade-up" data-aos-duration="1500">
       <div class="container grid">
         <div class="text">
           <h2>À propos</h2>
@@ -126,6 +133,7 @@
 
   <!-- AOS Library Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  
   <script>
     AOS.init();
   </script>
