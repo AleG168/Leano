@@ -15,20 +15,17 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"><!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome pour les icônes réseaux -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-<body>
-    <header>
-        <img src="assets/images/logo.png" alt="Leano Design Logo" class="logo">
-        <?php include 'navbar.php'; ?>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/leanodesign?igsh=M2Fkd3Q3Mm9vbzU3"><img src="assets/images/Instagram_icon.svg" alt="Instagram"></a>
-            <a href="https://fr.linkedin.com/company/leano-design"><img src="assets/images/LinkedIn_logo_initials.svg" alt="LinkedIn"></a>
-        </div>
+<body class="home-page">
+    <header>        
+    <body>
+    <?php include 'navbar.php'; ?>
     </header>
 
     <main>
