@@ -20,12 +20,12 @@
       <div class="historique-container">
           <div class="anniversary-banner scale-in ">
               <div class="anniversary-content highlight">
-              <span class="years count-up">26</span><span class="years-text"> Ans</span>
-                  <span class="text">D'expertise en design industriel</span>
-              </div>
+              <span class="years count-up">26</span> 
+                  <span class="text"> Ans d'expertise en design industriel</span>
+              </div> 
               <div class="anniversary-content">
-              <span class="years count-up">15</span><span class="years-text"> Ans</span>
-                  <span class="text">De l'agence Leano Design</span>
+              <span class="years count-up">15</span>
+                  <span class="text">Ans De l'agence Leano Design</span>
               </div>
               <div class="anniversary-content highlight">
                   <span class="years">60</span>
