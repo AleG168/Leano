@@ -1,0 +1,146 @@
+body {
+    background-color: #fff;
+    color: #2E2925;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    background-color: #005D62;
+    border-radius: 0 !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    color: #fff;
+}
+
+.contact-info {
+    padding: 2rem;
+}
+
+.contact-info h1 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.info-block {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #F4F6F8;
+    border-radius: 0 !important;
+    border-left: 4px solid #0099A8;
+    color: #2E2925;
+}
+
+.info-block h2 {
+    color: #0099A8;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.info-block a {
+    color: #0099A8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-block a:hover {
+    color: #25CAD3;
+}
+
+.contact-form {
+    padding: 2rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #F4F6F8;
+    border: 2px solid #0099A8;
+    border-radius: 0 !important;
+    color: #2E2925;
+    font-size: 1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    transition: all 0.3s;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: #555559;
+    transition: all 0.3s;
+    pointer-events: none;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #25CAD3;
+    outline: none;
+    box-shadow: 0 0 10px rgba(37,202,211,0.10);
+}
+
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:valid ~ label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    color: #0099A8;
+    background-color: #fff;
+    padding: 0 0.5rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #0099A8;
+    color: #fff;
+    border: none;
+    border-radius: 0 !important;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #25CAD3;
+    color: #2E2925;
+}
+
+.map-container iframe {
+    border-radius: 0 !important;
+    border: 2px solid #0099A8;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 1rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 1rem;
+    }
+} 

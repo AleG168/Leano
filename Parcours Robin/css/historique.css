@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/seanslab-normalblack-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+    --main: #A9A8A9;
+    --main-light: #C6C5C6;
+    --main-dark: #7B7A7B;
+    --bg: #f4f6f8;
+    --text: #1d1d1f;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-dark);
+}
+
+a:focus{
+    outline: 2px solid var(--main-light);
+}
+
+h1,
+h2 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--main-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* --------------------- NAVIGATION HEADER --------------------- */
+
+header {
+    width: 100%;
+    background-color: var(--white);
+    padding: 20px 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.logo {
+    height: 100px;
+    flex-shrink: 0;
+}
+
+nav {
+    background-color: var(--main-dark);
+    padding: 12px 30px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons img {
+    height: 30px;
+}
+
+/* --------------------- HERO --------------------- */
+
+.hero {
+    background: var(--white);
+    color: var(--main-dark);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+}
+
+.hero-text span {
+    color: var(--white);
+    background: var(--main);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0px;
+}
+
+.cta {
+    background: var(--main-dark);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0px;
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: var(--main);
+    color: white;
+}
+
+/* --------------------- SECTIONS --------------------- */
+
+.section, .light {
+    background: var(--main-light);
+    color: var(--text);
+    padding: 60px 40px;
+    width: 100%;
+}
+
+.section *, .light * {
+    color: var(--text) !important;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+}
+
+.profile {
+    max-width: 300px;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.quote {
+    font-style: italic;
+    margin-top: 1rem;
+    color: #444;
+}
+
+/* --------------------- TIMELINE --------------------- */
+
+.timeline {
+    display: block;
+    gap: 0;
+    margin-top: 2rem;
+}
+
+.timeline-item {
+    display: block;
+    align-items: unset;
+    gap: 0;
+    position: static;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+.timeline-item::before {
+    display: none;
+}
+
+.timeline-icon {
+    display: none;
+}
+
+.timeline-content {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.timeline-content:hover {
+    transform: none;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--text);
+    font-size: 1.1rem;
+    display: inline;
+    margin-right: 0.5em;
+}
+
+.timeline-item p {
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+/* --------------------- SKILLS --------------------- */
+
+h2 {
+    color: var(--main-dark);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0px;
+    box-shadow: 0 6px 16px rgba(169, 168, 169, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(169, 168, 169, 0.2);
+}   
+
+/* --------------------- HIGHLIGHT / FOOTER --------------------- */
+
+.highlight {
+    background: var(--white);
+    color: #1F1F1F;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer {
+    background: var(--main-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+#about, #skills {
+    background: var(--main);
+    color: var(--white);
+}
+
+/* --------------------- RESPONSIVE --------------------- */
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .cta {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-item::before {
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+.historique-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0 60px 0;
+}
+
+.anniversary-banner {
+    display: flex;
+    background: #eaeaea;
+    border-radius: 0px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    padding: 30px 40px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.anniversary-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 250px;
+    perspective: 1000px;
+}
+
+.anniversary-content.highlight {
+    position: relative;
+    padding: 20px;
+    border-radius: 0px;
+    background-color: #A9A8A9;
+    box-shadow: 0 6px 15px rgba(169, 168, 169, 0.3);
+    transform: scale(1.05);
+}
+
+.anniversary-content .years {
+    font-size: 72px;
+    font-weight: 700;
+    color: #7B7A7B;
+    background: #e0e9ed;
+    border-radius: 0px;
+    padding: 0 18px;
+    margin-bottom: 10px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.3s;
+}
+
+.anniversary-content.highlight .years {
+    color: #fff;
+    background: #A9A8A9;
+    box-shadow: 0 2px 12px #A9A8A9;
+}
+
+.anniversary-content .text {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 8px;
+    text-align: center;
+    color: #222;
+}
+
+.anniversary-content.highlight .text {
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .anniversary-banner {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+    .anniversary-content,
+    .anniversary-content.highlight {
+        padding: 20px 10px;
+    }
+    .anniversary-content .years {
+        font-size: 48px;
+        padding: 0 10px;
+        animation: countUp 1.2s ease 0.6s forwards;
+        opacity: 0;
+    }
+    .anniversary-content .text {
+        font-size: 18px;
+    }
+}
+
+.historique-container h1 {
+    animation: fadeInDown 0.8s ease forwards;
+}
+
+/* Animation pour la bannière d'anniversaire */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.anniversary-banner {
+    animation: scaleIn 1s ease 0.3s forwards;
+    opacity: 0; /* État initial avant l'animation */
+    transform: scale(0.8);
+}
+
+/* Animation pour le nombre d'années */
+@keyframes countUp {
+    from {
+        opacity:    0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anniversary-content .years {
+    animation: countUp 1.2s ease 0.6s forwards;
+    opacity: 0;
+}
+
+/* Styles pour le compteur à barillet */
+.roller-counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    height: 100%;
+}
+
+.digit-container {
+    overflow: hidden;
+    height: 1em; /* Ajuste selon la taille de ta police */
+    width: 0.8em; /* Ajuste selon la taille de ta police */
+    display: inline-block;
+    margin: 0 0.05em;
+}
+
+.digit-roller {
+    display: flex;
+    flex-direction: column;
+    transition: transform 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.digit {
+    height: 1em; /* Même hauteur que .digit-container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style spécial pour les chiffres dans la section mise en évidence */
+.anniversary-content.highlight .digit-container {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: none; 
+}
+
+.anniversary-content.highlight .digit {
+    font-size: 5.5rem;
+    color: white;
+    text-shadow: none; 
+}
+
+/* Ajouter des marqueurs pour simuler un compteur mécanique */
+.digit-container::before,
+.digit-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    box-shadow: none;
+}
+
+.digit-container::before {
+    top: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.digit-container::after {
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.anniversary-content.highlight .digit-container::before,
+.anniversary-content.highlight .digit-container::after {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: none; 
+}
+
+/* Option pour désactiver les animations pour les personnes qui préfèrent réduire les mouvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .parcours-timeline:before {
+        left: 30px;
+    }
+    
+    .parcours-period {
+        position: relative;
+        width: auto;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .parcours-details {
+        margin-left: 70px;
+    }
+    
+    .parcours-icon {
+        left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .parcours-details {
+        padding: 20px;
+    }
+    
+    .parcours-content h4 {
+        font-size: 1.1rem;
+    }
+}

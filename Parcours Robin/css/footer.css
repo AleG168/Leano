@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/seanslab-normalblack-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+html, body {
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+}
+
+main, .content-wrapper, .main-content {
+    flex: 1 0 auto; 
+}
+
+
+
+.footer {
+    background-color: #222222;
+    padding: 0 0 1.5rem 0;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+.footer-content {
+    max-width: 1264px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section {
+    color: #ffffff;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    color :#00acc1;
+    font-weight: 400;
+}
+
+
+
+.footer-section a {
+    text-decoration: none;
+    transition: color 0.3s;
+
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    color :#00acc1;
+    font-weight: 400;
+}
+
+.footer-section a:hover {
+    color: #4d94ff;
+}
+
+.separator {
+    color: #444444;
+    margin: 0 1rem;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #222222;
+    padding: 1.5rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.cookie-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cookie-button.accept {
+    background-color: #0066cc;
+    color: white;
+}
+
+.cookie-button.accept:hover {
+    background-color: #0052a3;
+}
+
+.cookie-button.reject {
+    background-color: #444444;
+    color: white;
+}
+
+.cookie-button.reject:hover {
+    background-color: #333333;
+}
+
+.cookie-button.customize {
+    background-color: transparent;
+    border: 2px solid #0066cc;
+    color: #0066cc;
+}
+
+.cookie-button.customize:hover {
+    background-color: #0066cc;
+    color: white;
+}
+
+/* Cookie Modal */
+.cookie-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #222222;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    color: #ffffff;
+}
+
+.modal-content h2 {
+    color: #0066cc;
+    margin-bottom: 1.5rem;
+}
+
+.cookie-options {
+    margin-bottom: 2rem;
+}
+
+.cookie-option {
+    margin-bottom: 1.5rem;
+}
+
+.cookie-option label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cookie-option p {
+    color: #888888;
+    font-size: 0.9rem;
+    margin-left: 1.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .cookie-buttons {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Style pour le logo Breizh Fab */
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breizh-fab-logo {
+    height: 80px;
+    width: auto;
+    margin: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .breizh-fab-logo {
+        height: 35px;
+        margin: 10px 0;
+    }
+}
+
+/* Styles pour le carrousel des références */
+.references-carousel-section {
+    width: 100%;
+    padding: 15px 80px;  /* augmente les marges gauche/droite */
+    background-color: #bfbfbf;
+    text-align: center;
+    margin-bottom: 1.5rem; 
+    box-sizing: border-box;
+}
+
+.references-carousel-section h3 {
+    margin-top: 0;
+    margin-bottom: 30; 
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    color: #2E2925;
+    font-weight: 400;
+}
+
+
+.references-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.custom-carousel-track {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.custom-carousel-item {
+    min-width: 200px;
+    height: 70px; 
+    margin: 0 15px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-carousel-item img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+
+.custom-carousel-item img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .custom-carousel-item {
+        min-width: 150px;
+    }
+}
+
+#Titre_Partenaire {
+    margin: 0;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    color :#004049;
+    font-weight: 400;
+}
+
+.partenaires-bandeau {
+  background-color: whitesmoke;
+  margin-top: -30px;
+  padding: 0.8rem 1rem;
+  position: relative;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;     /* empile verticalement */
+  align-items: center;        /* centre horizontalement */
+  text-align: center;
+}
+
+
+.LogoPart {
+    max-width: 100px;
+    max-height: 35px;
+    display: block;
+}
+
+.partenaires-conteneur {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 0.5rem;
+}
