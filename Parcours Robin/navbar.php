@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <!-- BOOTSTRAP NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
   <div class="container-fluid">
@@ -35,25 +34,8 @@
         <a href="https://www.instagram.com/leanodesign?igsh=M2Fkd3Q3Mm9vbzU3" target="_blank" class="fs-4 text-dark"><i class="fab fa-instagram"></i></a>
         <a href="https://fr.linkedin.com/company/leano-design" target="_blank" class="fs-4 text-dark"><i class="fab fa-linkedin-in"></i></a>
       </div>
-=======
-<div class="navbar-container">
-  <a href="index.php" class="home-icon" aria-label="Accueil" title="Accueil">🏠</a>
-  <nav class="navbar">
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <div class="nav-links">
-      <ul>
-        <li><a href="historique.php">A Propos</a></li>
-        <li><a href="prestations">Prestations</a></li>
-        <li><a href="lieux-intervention.php">Démarches</a></li>
-        <li><a href="réalisations.php">Réalisations</a></li>
-      </ul>
->>>>>>> Stashed changes
     </div>
-  </nav>
-  <a href="contact.php" class="mail-icon" aria-label="Contact" title="Contact">✉️</a>
-</div>
+  </div>
+</nav>
+<!-- /BOOTSTRAP NAVBAR -->
 

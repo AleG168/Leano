@@ -72,11 +72,8 @@
     <?php include 'footer.php'; ?>
     <script src="js/texte_Block.js"></script>
     
-<<<<<<< Updated upstream
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-=======
->>>>>>> Stashed changes
 </body>
 
 </html>
