@@ -38,21 +38,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const easing = 0.05;
     let animationFrameId;
 
-    const continuousScroll = () => {
-        speed += (targetSpeed - speed) * easing;
-        position += speed;
+    let lastTimestamp = null;
 
-        if (position >= totalScrollWidth) {
-            position -= totalScrollWidth;
-        }
+const continuousScroll = (timestamp) => {
+    if (!lastTimestamp) lastTimestamp = timestamp;
+    const delta = (timestamp - lastTimestamp) / 1000; // temps écoulé en secondes
+    lastTimestamp = timestamp;
 
-        track.style.transition = 'none';
-        track.style.transform = `translateX(-${position}px)`;
+    speed += (targetSpeed - speed) * easing;
+    position += speed * delta * 180; // normalisation à ~60 fps
 
-        animationFrameId = requestAnimationFrame(continuousScroll);
-    };
+    if (position >= totalScrollWidth) {
+        position -= totalScrollWidth;
+    }
+
+    track.style.transition = 'none';
+    track.style.transform = `translateX(-${position}px)`;
 
     animationFrameId = requestAnimationFrame(continuousScroll);
+};
+
+animationFrameId = requestAnimationFrame(continuousScroll);
+
 
     track.parentElement.addEventListener('mouseenter', () => {
         targetSpeed = 2;
