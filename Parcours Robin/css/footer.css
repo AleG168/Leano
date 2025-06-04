@@ -11,7 +11,7 @@
 
 
 html, body {
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
     padding: 0;
 }
@@ -19,7 +19,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 main, .content-wrapper, .main-content {
@@ -274,13 +274,13 @@ main, .content-wrapper, .main-content {
     position: relative;
 }
 
-.carousel-track {
+.custom-carousel-track {
     width: 100%;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {
+.custom-carousel-item {
     min-width: 200px;
     height: 70px; 
     margin: 0 15px;
@@ -290,7 +290,7 @@ main, .content-wrapper, .main-content {
     justify-content: center;
 }
 
-.carousel-item img {
+.custom-carousel-item img {
     max-width: 100%;
     max-height: 60px;
     object-fit: contain;
@@ -299,14 +299,14 @@ main, .content-wrapper, .main-content {
 }
 
 
-.carousel-item img:hover {
+.custom-carousel-item img:hover {
     filter: grayscale(0%);
     transform: scale(1.05);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .carousel-item {
+    .custom-carousel-item {
         min-width: 150px;
     }
 }

@@ -15,7 +15,7 @@ $current_year = date('Y');
         <h3>Ils nous ont fait confiance</h3>
         <div class="references-carousel">
             <div class="carousel-container">
-                <div class="carousel-track">
+                <div class="custom-carousel-track">
                     <?php
                     // Récupération des images du dossier assets/refs
                     $refs_dir = 'assets/refs/';
@@ -27,7 +27,7 @@ $current_year = date('Y');
                         foreach ($files as $file) {
                             $file_parts = pathinfo($file);
                             if (isset($file_parts['extension']) && in_array(strtolower($file_parts['extension']), $allowed_extensions)) {
-                                echo '<div class="carousel-item">';
+                                echo '<div class="custom-carousel-item">';
                                 echo '<img src="' . $refs_dir . $file . '" alt="Référence client">';
                                 echo '</div>';
                             }

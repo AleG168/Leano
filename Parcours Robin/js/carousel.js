@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const track = document.querySelector('.carousel-track');
-    const items = document.querySelectorAll('.carousel-item');
+    const track = document.querySelector('.custom-carousel-track');
+    const items = document.querySelectorAll('.custom-carousel-item');
 
     if (!track || items.length === 0) {
         console.error('Éléments du carrousel non trouvés');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setupInfiniteScroll();
 
-    const allItems = track.querySelectorAll('.carousel-item');
+    const allItems = track.querySelectorAll('.custom-carousel-item');
 
     let totalScrollWidth = 0;
     allItems.forEach(item => {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('resize', () => {
         totalScrollWidth = 0;
-        const updatedItems = track.querySelectorAll('.carousel-item');
+        const updatedItems = track.querySelectorAll('.custom-carousel-item');
         updatedItems.forEach(item => {
             totalScrollWidth += getItemWidth(item);
         });
