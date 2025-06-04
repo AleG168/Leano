@@ -259,13 +259,13 @@ h2 {
 .skill-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(169, 168, 169, 0.2);
-}
+}   
 
 /* --------------------- HIGHLIGHT / FOOTER --------------------- */
 
 .highlight {
     background: var(--white);
-    color: var(--main-dark);
+    color: #1F1F1F;
     text-align: center;
     padding: 3rem 2rem;
 }

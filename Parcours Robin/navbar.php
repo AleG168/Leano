@@ -2,9 +2,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
   <div class="container-fluid">
     <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center me-2 ms-n4">
+      <div class="d-flex align-items-center me-2">
         <!-- Logo à gauche (non cliquable) -->
-        <img src="assets/images/logo.png" alt="Leano Design Logo" style="height:60px; margin-left: -53px;" class="">
+        <img src="assets/images/logo.png" alt="Leano Design Logo" style="height:80px; margin-left: -53px;" class="">
         <a class="nav-link fs-4" href="index.php" title="Accueil">🏠</a>
       </div>
       <!-- Hamburger -->
@@ -13,18 +13,18 @@
       </button>
       <!-- Menu -->
       <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">  
-        <ul class="navbar-nav mb-2 mb-lg-0 border border-light rounded-0 px-4 py-2 shadow">
+        <ul class="navbar-nav mb-2 mb-lg-0 border border-light rounded-0 px-4 py-2 shadow text-dark">
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="historique.php">A Propos</a>
+            <a class="nav-link fw-bold" href="historique.php" style="color: #000;">A Propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="prestations">Prestations</a>
+            <a class="nav-link fw-bold" href="prestations" style="color: #000;">Prestations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="lieux-intervention.php">Démarches</a>
+            <a class="nav-link fw-bold" href="lieux-intervention.php" style="color: #000;">Démarches</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="réalisations.php">Réalisations</a>
+            <a class="nav-link fw-bold" href="réalisations.php" style="color: #000;">Réalisations</a>
           </li>
         </ul>
       </div>
