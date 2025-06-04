@@ -44,10 +44,14 @@ $current_year = date('Y');
     <div class="partenaires-bandeau">
   <h3 id="Titre_Partenaire">Partenaires</h3>
   <div class="partenaires-conteneur">
-    <img class="LogoPart" src="assets/Partenaires/SAFRAN.png" alt="Breizh Fab">
-    <img class="LogoPart" src="assets/Partenaires/HERCULES.png" alt="Partenaire 1">
-    <img class="LogoPart" src="assets/Partenaires/PARKER.png" alt="Partenaire 2">
-    <img class="LogoPart" src="assets/Partenaires/PCM.png" alt="Label 3">
+    <img class="LogoPart" src="assets/Partenaires/BRETAGNE-COMPETITIVITE.png" alt="Partenaire 1">
+    <img class="LogoPart" src="assets/Partenaires/CETIM.png" alt="Partenaire 2">
+    <img class="LogoPart" src="assets/Partenaires/innozh.png" alt="Partenaire 3">
+    <img class="LogoPart" src="assets/Partenaires/logo_anticipa_menu_mobile.png" alt="Partenaire 4">
+    <img class="LogoPart" src="assets/Partenaires/Maupertuis.png" alt="Partenaire 5">
+    <img class="LogoPart" src="assets/Partenaires/Pépites.png" alt="Partenaire 6">
+    <img class="LogoPart" src="assets/Partenaires/seatrackbox.png" alt="Partenaire 7">
+    <img class="LogoPart" src="assets/Partenaires/UBO.png" alt="Partenaire 8">
   </div>
 </div>
 
