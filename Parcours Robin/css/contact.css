@@ -190,4 +190,8 @@ body {
     .contact-form {
         padding: 1rem 1.5rem;
     }
+}
+
+a[aria-label="Contact"] {
+    text-decoration: none;
 } 
