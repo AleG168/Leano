@@ -236,12 +236,15 @@ h2 {
     color: var(--main-dark);
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 1200px;
     margin-top: 2rem;
 }
 
@@ -266,8 +269,12 @@ h2 {
 .highlight {
     background: var(--white);
     color: #1F1F1F;
-    text-align: center;
-    padding: 3rem 2rem;
+    padding: 3rem 40px;
+}
+
+.highlight .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer {
@@ -281,6 +288,10 @@ h2 {
 #about, #skills {
     background: var(--main);
     color: var(--white);
+}
+
+#skills h2 {
+    padding-left: 40px;
 }
 
 /* --------------------- RESPONSIVE --------------------- */
@@ -301,6 +312,20 @@ h2 {
 
     .skills-grid {
         grid-template-columns: 1fr;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    #skills {
+        padding: 60px 20px;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #skills h2 {
+        text-align: left !important;
     }
 
     .timeline-item {
@@ -372,16 +397,11 @@ h2 {
 }
 
 .anniversary-content .years {
-    font-size: 72px;
-    font-weight: 700;
-    color: #7B7A7B;
-    background: #e0e9ed;
-    border-radius: 0px;
-    padding: 0 18px;
-    margin-bottom: 10px;
-    display: inline-block;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: background 0.3s;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--main-dark);
 }
 
 .anniversary-content.highlight .years {
@@ -575,5 +595,18 @@ h2 {
     
     .parcours-content h4 {
         font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+    }
+
+    #skills h2 {
+        text-align: left;
+        padding-left: 0;
     }
 }

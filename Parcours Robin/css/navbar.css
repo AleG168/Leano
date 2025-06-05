@@ -51,12 +51,6 @@
     height: 100%;
 }
 
-/* Effet au survol */
-.navbar a:hover {
-    background-color: #555;
-    border-radius: 0px;
-}
-
 /* Style spécial pour le lien "accueil" */
 .home-link {
     font-weight: bold;
@@ -120,7 +114,7 @@
 .mail-icon, .mail-icon:visited {
     font-size: 30px; 
     margin-left: 18px; 
-    text-decoration: none;    
+    text-decoration: none !important;    
 }
 
 /* Hamburger menu CSS-only */
