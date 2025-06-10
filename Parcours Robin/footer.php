@@ -12,7 +12,7 @@ $current_year = date('Y');
 <footer class="footer">
     <!-- Ajout du carrousel des références -->
     <div class="references-carousel-section">
-        <h3>Ils nous ont fait confiance</h3>
+        <h3>Références</h3>
         <div class="references-carousel">
             <div class="carousel-container">
                 <div class="custom-carousel-track">
@@ -52,6 +52,7 @@ $current_year = date('Y');
     <img class="LogoPart" src="assets/Partenaires/Pépites.png" alt="Partenaire 6">
     <img class="LogoPart" src="assets/Partenaires/seatrackbox.png" alt="Partenaire 7">
     <img class="LogoPart" src="assets/Partenaires/UBO.png" alt="Partenaire 8">
+    <img class="LogoPart" src="assets/Partenaires/Logo-Breizh-Fab.png" alt="Partenaire 9">
   </div>
 </div>
 
@@ -65,7 +66,7 @@ $current_year = date('Y');
             
             <!-- Ajout du logo Breizh Fab au centre -->
             <div class="footer-section footer-logo">
-                <img src="assets/images/Logo-Breizh-Fab.png" alt="Logo Breizh Fab" class="breizh-fab-logo">
+                <img src="assets/images/LOGO_COULEUR2.png" alt="Logo Leano Design" class="LOGO_COULEUR">
             </div>
             
             <div class="footer-section">

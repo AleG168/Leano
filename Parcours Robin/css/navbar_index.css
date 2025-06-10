@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+
+@font-face {
+  font-family: 'Sean Slab';
+  src: url('../fonts/SeanSlab-NormalExtrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/SeanSlab-NarrowRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #1c1c1c;
+    /* border-radius: 30px; */
+    padding: 0;
+    margin: 0 20px; /* optionnel : espace autour de la barre */
+    height: 60px;
+    display: flex;
+    align-items: stretch;
+}
+
+/* Liste des liens dans la navbar */
+.navbar ul {
+    list-style-type: none; /* suppression des puces */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* centrage horizontal */
+    align-items: stretch; /* chaque li prend toute la hauteur */
+    height: 100%;
+}
+
+/* Chaque élément de la liste */
+.navbar li {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    flex: 1; /* chaque li prend la même largeur */
+}
+
+/* Style des liens */
+.navbar a, .navbar a:visited {
+    color: white;
+    text-decoration: none;
+    padding: 0 1.5rem; /* padding horizontal seulement */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 18pt;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+}
+
+/* Effet au survol */
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 0px;
+}
+
+/* Style spécial pour le lien "accueil" */
+.home-link {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 1.2rem;
+}
+
+.home-link:hover {
+    background-color: transparent;
+    color: #4d94ff;
+}
+
+/* Design adaptatif (responsive) */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        border-radius: 15px;
+        padding: 10px 0;
+        margin: 10px 0;
+        height: auto;
+        min-width: 0;
+    }
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+    .navbar li {
+        margin: 0.5rem 0;
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+    .navbar a, .navbar a:visited {
+        border-radius: 10px;
+        margin: 0 10px;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Conteneur de la navbar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; 
+}
+
+/* Icone accueil */
+.home-icon, .home-icon:visited, .home-icon:focus, .home-icon:active {
+    font-size: 28px;
+    margin-right: 18px;
+    text-decoration: none;   
+}
+
+/* Icone mail */
+.mail-icon, .mail-icon:visited {
+    font-size: 30px; 
+    margin-left: 18px; 
+    text-decoration: none;    
+}
+
+/* Hamburger menu CSS-only */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+.nav-toggle-label span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 5px 0;
+  background: #fff !important;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Afficher le menu horizontalement sur desktop */
+.nav-links {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: flex;
+    position: fixed;
+    top: 18px;
+    right: 24px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    padding: 6px 8px;
+    z-index: 2001;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #1c1c1c;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+  #nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  #nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  #nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  #nav-toggle:checked ~ .nav-links {
+    display: block !important;
+  }
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .navbar a, .navbar a:visited {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    justify-content: center;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
+
+ @media (min-width: 992px) {
+  .Navbar_centrer{
+    margin-left: 44px;
+  }
+} 
+
+@media (min-width: 991px) and (max-width: 1135px) {
+  .navbar a, .navbar a:visited {
+    padding: 0 6px;
+} 
+}
+
+
+ @media (min-width: 768px) and (max-width: 991px) {
+  .Navbar_centrer{
+        margin-left: 19px;
+  }
+} 
+
+
+
+ @media (max-width: 769px) {
+  .Navbar_centrer{
+    margin-right: 87px;
+  }
+}  
+
+
+ @media (min-width: 768px) and (max-width: 768px) {
+  .Navbar_centrer{
+        margin-left: 40px;
+  }
+} 
+
+ @media (max-width: 751px) { 
+  .Navbar_centrer{
+    transform: translateX(clamp(0px, calc((751px - 100vw) * 1), 9px));
+  }
+} 
+
+
+@media (min-width: 742px) and (max-width: 768px) {
+  .Navbar_centrer {
+    transform: translateX(clamp(-9px, calc((751px - 100vw) * -1), 0px));
+  }
+}
+
+@media (max-width: 767px) and (min-width: 741px) {
+  .Navbar_centrer {
+    transform: translateX(calc((767px - 100vw) * 0.3));
+  }
+}
