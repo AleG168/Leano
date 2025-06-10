@@ -17,7 +17,6 @@
     height: 60px;
     display: flex;
     align-items: stretch;
-    position: relative;
 }
 
 /* Liste des liens dans la navbar */
@@ -43,11 +42,19 @@
 .navbar a, .navbar a:visited {
     color: white;
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
     padding: 0 1.5rem; /* padding horizontal seulement */
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     height: 100%;
+}
+
+/* Effet au survol */
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 0px;
 }
 
 /* Style spécial pour le lien "accueil" */
@@ -113,11 +120,7 @@
 .mail-icon, .mail-icon:visited {
     font-size: 30px; 
     margin-left: 18px; 
-    text-decoration: none !important;    
-}
-
-.navbar-logo-container {
-  padding-left: 50px;
+    text-decoration: none;    
 }
 
 /* Hamburger menu CSS-only */
@@ -200,25 +203,10 @@
     border-radius: 10px;
     margin: 0 10px;
     padding: 1rem 0;
+    font-size: 1.1rem;
     justify-content: center;
   }
   .hamburger {
     display: none !important;
   }
 }
-.contact-nav .logo {
-  margin-left: 20px;
-}
-
-.contact-nav .logo img {
-  margin-left: 20px; /* ou tout autre espacement souhaité */
-  height: 50px;
-  width: auto;
-}
-
-.social-icons-wrapper {
-    margin-left: auto;
-    margin-right: -60px; /* Adjusting margin to shift social icons right */
-}
-
-

@@ -13,27 +13,28 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="historique-page">
+<body>
 <?php include 'navbar.php'; ?>
   <main>
     <div class="content">
       <div class="historique-container">
           <div class="anniversary-banner scale-in ">
               <div class="anniversary-content highlight">
-              <span class="years count-up">26 ans</span> 
+              <span class="years count-up">26 Ans</span> 
                   <span class="text"> D'expertise en design industriel</span>
               </div> 
               <div class="anniversary-content">
-              <span class="years count-up">15 ans</span>
-                 <span class="text"> De l'agence Leano Design</span>
+              <span class="years count-up">15 Ans</span>
+                  <span class="text"> De l'agence Leano Design</span>
               </div>
               <div class="anniversary-content highlight">
-             <span class="years">60 clients </span>
-              <span class="label"></span>
-              <span class="text"> Nous ont fait confiance</span>
+             <span class="years">60</span>
+              <span class="label">Clients</span>
+              <span class="text">Qui nous ont fait confiance</span>
               </div>
               <div class="anniversary-content">
-              <span class="years">250 projets</span>
+              <span class="years">250</span>
+              <span class="label">Projets</span>
              <span class="text">Réalisés pour nos clients</span>
             </div>
           </div>
@@ -58,8 +59,9 @@
               <i class="fas fa-briefcase"></i>
             </div>
             <div class="timeline-content">
-              <p><strong>Depuis 2010, je suis gérant et designer industriel chez Leano Design à Guingamp</strong></p>
-              <p>Cette entreprise est spécialisée dans le design industriel, alliant créativité et innovation.</p>
+              <span class="timeline-date">2010 – aujourd'hui</span>
+              <p><strong>Leano Design (Guingamp) – Gérant, Designer Industriel</strong></p>
+              <p>Création et gestion de Leano Design, une entreprise spécialisée dans le design industriel, alliant créativité et innovation.</p>
             </div>
           </div>
           <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
@@ -86,33 +88,37 @@
       </div>
     </section>
     <section class="section skills-full-bg" id="skills" data-aos="fade-up" data-aos-duration="1500">
-      <div class="container">
-        <h2>Expertises</h2>
-        <div class="skills-grid">
-          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <h3>Créativité & innovation</h3>
-          </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <h3>Ergonomie & UX</h3>
-          </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <h3>Prototype à production</h3>
-          </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <h3>Techniques de fabrication</h3>
-          </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <h3>Matériaux durables</h3>
-          </div>
-          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <h3>Confidentialité & NDA</h3>
-          </div>
+      <h2>Expertises</h2>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Créativité & innovation</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-hand-paper"></i>
+          <h3>Ergonomie & UX</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-cogs"></i>
+          <h3>Prototype à production</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-tools"></i>
+          <h3>Techniques de fabrication</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-leaf"></i>
+          <h3>Matériaux durables</h3>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Confidentialité & NDA</h3>
         </div>
       </div>
     </section>
 
     <section class="highlight" data-aos="fade-up" data-aos-duration="1500">
-      <div class="container">
+      <div class="container center">
         <h2>Notre mission</h2>
         <p>Transformer une idée en un produit tangible, équilibrant innovation, fonctionnalité, esthétique et production durable.</p>
       </div>
