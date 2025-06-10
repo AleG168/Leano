@@ -13,7 +13,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="historique-page">
 <?php include 'navbar.php'; ?>
   <main>
     <div class="content">
@@ -58,9 +58,8 @@
               <i class="fas fa-briefcase"></i>
             </div>
             <div class="timeline-content">
-              <span class="timeline-date">2010 – aujourd'hui</span>
-              <p><strong>Leano Design (Guingamp) – Gérant, Designer Industriel</strong></p>
-              <p>Création et gestion de Leano Design, une entreprise spécialisée dans le design industriel, alliant créativité et innovation.</p>
+              <p><strong>Depuis 2010, je suis gérant et designer industriel chez Leano Design à Guingamp</strong></p>
+              <p>Cette entreprise est spécialisée dans le design industriel, alliant créativité et innovation.</p>
             </div>
           </div>
           <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
@@ -91,27 +90,21 @@
         <h2>Expertises</h2>
         <div class="skills-grid">
           <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <i class="fas fa-lightbulb"></i>
             <h3>Créativité & innovation</h3>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <i class="fas fa-hand-paper"></i>
             <h3>Ergonomie & UX</h3>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <i class="fas fa-cogs"></i>
             <h3>Prototype à production</h3>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <i class="fas fa-tools"></i>
             <h3>Techniques de fabrication</h3>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <i class="fas fa-leaf"></i>
             <h3>Matériaux durables</h3>
           </div>
           <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-            <i class="fas fa-shield-alt"></i>
             <h3>Confidentialité & NDA</h3>
           </div>
         </div>
