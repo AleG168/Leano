@@ -26,7 +26,7 @@
             <a class="nav-link fw-bold" href="lieux-intervention.php" style="color: #000;">Démarches</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="réalisations.php" style="color: #000;">Réalisations</a>
+            <a class="nav-link fw-bold" href="realisations.php" style="color: #000;">Réalisations</a>
           </li>
         </ul>
       </div>

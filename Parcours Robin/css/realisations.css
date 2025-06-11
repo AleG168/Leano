@@ -1,0 +1,82 @@
+/* Style pour les blocs carrés */
+.square-block {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Crée un carré parfait */
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.square-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-color: #adb5bd;
+}
+
+.block-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.square-block:hover .block-image {
+    transform: scale(1.05);
+}
+
+.block-label {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+/* Espacement général */
+.realisation-content h1 {
+    margin-bottom: 1.5rem;
+}
+
+.realisation-container .row {
+    margin-bottom: 1rem;
+}
+
+/* Centrage vertical par rapport au logo */
+@media (min-width: 992px) {
+    .realisation-block {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Responsive pour tablettes */
+@media (max-width: 991px) {
+    .block-label {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 767px) {
+    .block-label {
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+    
+    .realisation-block {
+        padding: 0 0.25rem;
+    }
+}
+
+/* Ajustement pour très petits écrans */
+@media (max-width: 575px) {
+    .block-label {
+        font-size: 0.8rem;
+    }
+}
