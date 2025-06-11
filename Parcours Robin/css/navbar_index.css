@@ -59,11 +59,7 @@
     font-weight: 800;
 }
 
-/* Effet au survol */
-.navbar a:hover {
-    background-color: #555;
-    border-radius: 0px;
-}
+
 
 /* Style spécial pour le lien "accueil" */
 .home-link {
@@ -77,36 +73,68 @@
     color: #4d94ff;
 }
 
+/* Ajoutez ceci à votre fichier CSS */
+.navbar-icons-container a:not(:last-child) {
+  margin-right: 4px; /* Ajustez cette valeur selon vos besoins */
+}
+
+/* Dans votre fichier CSS */
+.navbar-icons-container a {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-width: auto !important;
+}
+
+.navbar-icons-container {
+  gap: 2px !important; /* Espace ultra-minimal */
+}
+
+.navbar-icons-container img {
+  display: block; /* Évite les espaces sous les images */
+}
+
 /* Design adaptatif (responsive) */
-@media (max-width: 768px) {
-    .navbar {
-        width: 100%;
-        border-radius: 15px;
-        padding: 10px 0;
-        margin: 10px 0;
-        height: auto;
-        min-width: 0;
-    }
-    .navbar ul {
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        height: auto;
-    }
-    .navbar li {
-        margin: 0.5rem 0;
-        flex: none;
-        width: 100%;
-        height: auto;
-    }
-    .navbar a, .navbar a:visited {
-        border-radius: 10px;
-        margin: 0 10px;
-        padding: 1rem 0;
-        font-size: 1.1rem;
-        width: 100%;
-        justify-content: center;
-    }
+@media (max-width: 991px) {
+  .navbar {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  #mainNavbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1050;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-collapse {
+    position: static;
+  }
+  
+  .navbar-nav {
+    border: 1px solid #eee;
+  }
+  
+  /* Empêche le décalage des autres éléments */
+  .container.d-flex.align-items-center {
+    flex-wrap: nowrap;
+  }
+  
+  /* Ajustement des icônes */
+  .d-flex.align-items-center[style*="margin-right: -53px"] {
+    margin-top: 0;
+    order: 0;
+  }
+  
+  /* Style du menu déplié */
+  .navbar-collapse.collapsing,
+  .navbar-collapse.show {
+    position: absolute;
+    width: 100%;
+  }
 }
 
 /* Conteneur de la navbar */
@@ -271,3 +299,36 @@
     transform: translateX(calc((767px - 100vw) * 0.3));
   }
 }
+
+
+@media (max-width: 740px) { 
+  .Navbar_centrer{
+    margin-left: -20px;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 769px) {
+  .Navbar_centrer {
+    margin-right: 0;
+    margin-left: -10px;
+    transform: none;
+  }
+  
+  /* Ajustement supplémentaire pour le conteneur de la navbar */
+  .navbar-container {
+    margin-top: 20px;
+  }
+  
+  /* Ajustement du padding pour les liens */
+  .navbar a, .navbar a:visited {
+    padding: 0 10px;
+    font-size: 16pt;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 770px) {
+  .Navbar_centrer {
+    margin-left: 21px;
+  }
+}
+
