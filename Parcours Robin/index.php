@@ -8,7 +8,7 @@
 
     <meta name="Vincent Beaucourt" content="Projet">
     <meta name="description" content="Agence de design & ingénierie industrielle en Bretagne : conception et optimisation pour vos produits et équipements."> 
-    <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton">
+    <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
 
     <link rel="icon" type="image/png" href="assets/images/logo.png"/>
 
@@ -23,14 +23,11 @@
 
 <body>
     <header class = "Navbar_centrer">        
-    <?php include 'navbar_Index.php'; ?>
+      <?php include 'navbar_Index.php'; ?>
     </header>
 
 <div class="container-fluid px-3 px-md-5">
-
   <div class="row align-items-start">
-
-
     <!-- Colonne gauche (vidéo + titre + texte) -->
     <div class="col-12 col-xl-6 ps-lg-5 ps-4 pe-4 video-section">
   
@@ -72,8 +69,8 @@
 
   </div>
 </div>
-        </div>
-        </div>
+  </div>
+</div>
 
     <?php include 'footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
