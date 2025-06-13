@@ -10,12 +10,11 @@
     <meta name="description" content="Agence de design & ingénierie industrielle en Bretagne : conception et optimisation pour vos produits et équipements."> 
     <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
 
-    <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+    <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar_Index.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -47,7 +46,7 @@
   <div class="engagement-wrapper">
 
     <h3 class="text-primarySupport Titre">
-      Notre engagement
+      Mon engagement
     </h3>
     <h3 class="Sous_Titre">
       Concevoir ensemble des produits ingénieux et innovants

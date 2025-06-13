@@ -4,7 +4,7 @@
     <div class="container d-flex align-items-center">
       <div class="d-flex align-items-center me-2">
         <!-- Logo à gauche (non cliquable) -->
-        <img src="assets/images/logo.png" alt="Leano Design Logo" style="height:80px; margin-left: -53px;" class="">
+        <img src="assets/images/logo.png" alt="Leano Design Logo" id="LogoLeano">
         <a class="nav-link fs-4" href="index.php" title="Accueil">
           <img src="assets/images/Home.png" alt="Accueil" style="width: 24px; height: 24px;">
         </a>

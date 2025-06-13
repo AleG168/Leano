@@ -66,7 +66,7 @@ $current_year = date('Y');
             
             <!-- Ajout du logo Breizh Fab au centre -->
             <div class="footer-section footer-logo">
-                <img src="assets/images/LOGO_COULEUR2.png" alt="Logo Leano Design" class="LOGO_COULEUR">
+                <img src="assets/images/EMBLEME-BLANC.svg" alt="Logo Leano Design" class="LOGO_COULEUR">
             </div>
             
             <div class="footer-section">
@@ -85,7 +85,7 @@ $current_year = date('Y');
 <!-- Cookie Banner -->
 <div id="cookie-banner" class="cookie-banner">
     <div class="cookie-content">
-        <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre utilisation des cookies.</p>
+        <p>Ce site utilise des cookies pour améliorer votre expérience utilisateur. En continuant à naviguer, vous acceptez l'utilisation de vos cookies.</p>
         <div class="cookie-buttons">
             <button id="accept-cookies" class="cookie-button accept">Accepter</button>
             <button id="reject-cookies" class="cookie-button reject">Refuser</button>
@@ -113,7 +113,7 @@ $current_year = date('Y');
                     <input type="checkbox" id="analytics-cookies">
                     Cookies analytiques
                 </label>
-                <p>Ces cookies nous permettent d'analyser l'utilisation du site pour en améliorer les performances.</p>
+                <p>Ces cookies permettent d'analyser l'utilisation du site pour en améliorer les performances.</p>
             </div>
         </div>
         <div class="modal-buttons">
