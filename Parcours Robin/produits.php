@@ -83,15 +83,7 @@ if (is_dir($productsDir)) {
     <link rel="stylesheet" href="css/realisations.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
-    <style>
-        .debug-info {
-            background: #f8f9fa;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            font-family: monospace;
-        }
-    </style>
+    
 </head>
 <body>
     <header>
@@ -102,10 +94,7 @@ if (is_dir($productsDir)) {
         <div class="container mt-3 realisation-container agrandissement">
             <h1 class="TitreReali"><?= htmlspecialchars($displayName) ?></h1>
             
-            <div class="debug-info">
-                <strong>Chemin vérifié :</strong> <?= htmlspecialchars($productsDir) ?><br>
-                <strong>Sous-catégories trouvées :</strong> <?= count($subCategories) ?>
-            </div>
+        
             
             <?php if (empty($subCategories)): ?>
                 <div class="alert alert-warning">

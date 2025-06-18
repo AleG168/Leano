@@ -19,7 +19,7 @@
     </header>
 
     <?php 
-    // Récupération des paramètres
+
     $categoryKey = $_GET['category'] ?? 'Aeronautique';
     $productName = $_GET['NomProduit'] ?? '';
     
