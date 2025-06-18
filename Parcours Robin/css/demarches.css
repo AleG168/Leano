@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/seanslab-normalblack-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --card-width: 280px;
+    --card-height: 200px;
+    --arrow-overlap: 0px;
+    --arrow-base-thickness: 20px; /* Reduced thickness of the arrow's base */
+    --arrow-total-length: 50px; /* Reduced total length of the arrow */
+    --card-to-card-spacing: 110px;
+    --photo-block-height: 450px;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Logo Styling */
+.logo {
+    max-width: 150px; /* Reduced max-width for the logo */
+    height: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+header h2 {
+    font-family: 'League Spartan', sans-serif; /* Applied League Spartan */
+    font-weight: 600; /* Semi-bold */
+    font-size: 42.66px; /* Title size */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-family: 'Sean Slab Narrow', sans-serif; /* Applied Sean Slab Narrow */
+    font-weight: 400; /* Regular */
+    font-size: 16px; /* Body text size */
+    color: #666;
+}
+
+/* Timeline Container */
+.timeline-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 0;
+    gap: 30px; /* Réduit de 50px à 30px pour un espacement plus compact */
+    width: fit-content; /* S'adapte à la largeur du contenu pour afficher toutes les cartes */
+    margin: 0 auto;
+    overflow-x: auto;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.timeline-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Removed .timeline-section and related styles as they are no longer needed for a single row layout */
+
+/* Card Container for stacked elements */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: var(--card-width); /* Ensure it takes the card width */
+    position: relative; /* For proper positioning of children like z-index */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.1s ease;
+}
+
+/* Card Styling (Adjusted for being inside card-container) */
+.card {
+    position: relative;
+    width: var(--card-width); 
+    min-width: var(--card-width);
+    height: var(--card-height);
+    background-color: #fff;
+    border-radius: 0; /* Ensure sharp corners */
+    /* box-shadow and border-radius moved to .card-container */
+    /* transition moved to .card-container */
+    display: flex;
+    align-items: flex-start; /* Align content to the top */
+    justify-content: flex-start; /* Align content to the left */
+    padding-right: 0; /* No general padding for arrow space */
+    flex-shrink: 0;
+    margin-right: 0; /* Ensure this is 0 as gap handles spacing */
+}
+
+/* Target the last card to remove the extra margin */
+.timeline-container .card:last-child {
+    margin-right: 0;
+}
+
+/* Default arrow (right-pointing) */
+.card-arrow-right::after {
+    content: '';
+    position: absolute;
+    right: calc(-1 * var(--arrow-base-thickness)); /* Positioned to start outside the card in the gap */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: var(--arrow-base-thickness);
+    height: var(--arrow-total-length);
+    background-color: inherit;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    z-index: 1;
+    pointer-events: none;
+    filter: drop-shadow(2px 0 0 rgba(0, 0, 0, 1)); /* Right shadow for outline */
+}
+
+/* Down-pointing arrow */
+.card-arrow-down::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-1 * var(--arrow-base-thickness));
+    left: 50%;
+    transform: translateX(-50%);
+    width: var(--arrow-total-length);
+    height: var(--arrow-base-thickness);
+    background-color: inherit;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    z-index: 1;
+    pointer-events: none;
+    filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 1)); /* Bottom shadow for outline */
+}
+
+/* Left-pointing arrow */
+.card-arrow-left::after {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--arrow-base-thickness)); /* Positioned to start outside the card in the gap */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    width: var(--arrow-base-thickness);
+    height: var(--arrow-total-length);
+    background-color: inherit;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    z-index: 1;
+    pointer-events: none;
+    filter: drop-shadow(-2px 0 0 rgba(0, 0, 0, 1)); /* Left shadow for outline */
+}
+
+/* Remove T6 styles */
+
+/* Specific card colors - progressive grey */
+.card-t1 {
+    background-color: #ffffff; /* White */
+}
+
+.card-t2 {
+    background-color: #f0f0f0; /* Light grey */
+}
+
+.card-t3 {
+    background-color: #e0e0e0;
+}
+
+.card-t4 {
+    background-color: #d0d0d0;
+}
+
+.card-t5     {
+    background-color: #c0c0c0;
+}
+
+.card-t6 {
+    background-color: #b0b0b0;
+}
+
+
+.card-content {
+    padding: 20px; /* Overall padding for the content area */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.card-content h3 {
+    font-family: 'Sean Slab', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0; /* Remove bottom margin to reduce gap */
+    text-align: left;
+    line-height: 1.2;
+}
+
+.card-content p {
+    margin-top: 0; 
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4; /* Ensure consistent line spacing for objectives */
+}
+
+/* Removed .card-image-container styles as icons are no longer used */
+
+/* Removed .card-image-container img styles as icons are no longer used */
+
+.card-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Changed to fully opaque black */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(100%); /* Start off-screen */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 0px;
+    text-align: center;
+    font-family: 'Sean Slab Narrow', sans-serif; /* Applied Sean Slab Narrow */
+    font-weight: 400; /* Regular */
+    font-size: 16px; /* Body text size */
+}
+
+/* New styles for the photo block */
+.card-photo-block {
+    width: 100%;
+    height: var(--photo-block-height); /* Fixed height for consistency */
+    overflow: hidden; /* Ensure image doesn't overflow */
+    position: relative; /* For overlay positioning */
+    border-radius: 0px; /* Ensure square corners for the photo block */
+}
+
+.card-photo-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+    display: block; /* Remove extra space below image */
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Définit la direction des éléments flexibles en colonne pour un meilleur centrage vertical */
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* Ajuste le padding pour mieux centrer le texte et éviter qu'il ne sorte */
+    box-sizing: border-box;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    border-radius: 0px; /* Ensure square corners for the overlay */
+    overflow-y: auto; /* Allow vertical scrolling if text is too long */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.photo-overlay::-webkit-scrollbar {
+    display: none;
+}
+
+.photo-overlay .overlay-text {
+    font-family: 'Sean Slab Narrow', sans-serif;
+    font-weight: 400;
+    font-size: 16px; /* Increased font size from 12px to 14px */
+    text-align: left;
+    margin: 0;
+    line-height: 1.4;
+    max-width: 80%;
+}
+
+/* Hover effects */
+.card-container:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.card-container:hover .card-description {
+    opacity: 0; /* Ensure this remains hidden as photo overlay takes precedence */
+    transform: translateY(100%); /* Ensure this remains off-screen */
+}
+
+/* Removed .card-container:hover .card-image-container img styles as icons are no longer used */
+
+.card-container:hover .card-arrow-right::after,
+.card-container:hover .card-arrow-down::after,
+.card-container:hover .card-arrow-left::after {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition for the arrow disappearance */
+}
+
+.card-container:hover .photo-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Entry Animation */
+.card.animate {
+    animation: fadeInSlideIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeInSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.cta-section h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cta-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 0px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    /* Removed this media query for a single-row layout */
+}
+
+@media (max-width: 900px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+        padding: 0 5px;
+    }
+    .card-container {
+        width: 100%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    .card {
+        width: 100%;
+        min-width: unset;
+        height: auto;
+        flex-direction: column;
+        padding-right: 0;
+    }
+    .card-photo-block {
+        height: auto;
+        min-height: 180px;
+        max-height: 260px;
+    }
+    .demarche-small-img {
+        height: 120px;
+        max-width: 100%;
+    }
+    .photo-overlay .overlay-text {
+        font-size: 14px;
+        max-width: 95%;
+    }
+    header h2 {
+        font-size: 24px;
+    }
+    header p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+    }
+
+    .card-container {
+        width: 90%; /* Make cards take more width on small screens */
+        margin-bottom: 20px; /* Add some space between stacked cards */
+        transform: none !important; /* Prevent unintended transforms */
+    }
+
+    .card {
+        width: 100%; /* Ensure card takes full width of container */
+        min-width: unset; /* Remove min-width constraint */
+        height: auto; /* Adjust height based on content */
+        flex-direction: column; /* Stack content vertically */
+        padding-right: 0;
+    }
+
+    .card-arrow-right::after,
+    .card-arrow-down::after,
+    .card-arrow-left::after {
+        display: none; /* Hide arrows on small screens */
+    }
+
+    header h2 {
+        font-size: 32px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .logo {
+        height: 80px; /* Further reduced logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .card {
+        padding: 8px;
+    }
+    .card-photo-block {
+        min-height: 100px;
+        max-height: 160px;
+    }
+    .demarche-small-img {
+        height: 70px;
+    }
+    .photo-overlay .overlay-text {
+        font-size: 12px;
+    }
+    header h2 {
+        font-size: 18px;
+    }
+    header p {
+        font-size: 11px;
+    }
+    .logo {
+        height: 60px; /* Further reduced logo size */
+    }
+}
+
+.card-sub-description {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin-top: 5px; /* Adjust spacing from the image */
+    padding: 0 10px; /* Add some horizontal padding */
+}
+
+.logo {
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+    
+.social-icons img {
+    height: 50px;
+}
+
+.social-icons-wrapper {
+    margin-left: auto;
+    margin-right: 20px; /* Adjusted to prevent disappearing on smaller screens */
+}
+
+.social-icons-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline */
+}
+
+.demarche-small-img {
+    height: 220px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
