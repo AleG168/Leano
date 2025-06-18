@@ -245,4 +245,23 @@ h1 {
     margin-left: auto !important;
 }
 
+/* Responsive adjustments for logo on contact page */
+@media (max-width: 992px) {
+    .logo {
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        height: 60px;
+    }
+}
+
 
