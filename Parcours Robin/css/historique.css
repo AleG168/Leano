@@ -9,7 +9,7 @@
 }
 
 :root {
-    --main: #A9A8A9;
+    --main: #EAEAEA;
     --main-light: #C6C5C6;
     --main-dark: #7B7A7B;
     --bg: #f4f6f8;
@@ -18,7 +18,8 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -42,8 +43,10 @@ a:focus{
 h1,
 h2 {
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--main-dark);
+    font-family: 'Sean Slab', serif;
+    font-size: 1.5rem;
 }
 
 .container {
@@ -57,11 +60,11 @@ h2 {
 header {
     width: 100%;
     background-color: var(--white);
-    padding: 20px 50px;
+    padding: 20px 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-container {
@@ -70,13 +73,17 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
+    width: 100%;
+    
 }
 
 .logo {
-    height: 100px;
+    height: 120px;
     flex-shrink: 0;
+    margin-left: -47px;
 }
 
+  
 nav {
     background-color: var(--main-dark);
     padding: 12px 30px;
@@ -98,10 +105,22 @@ nav a {
     gap: 15px;
     align-items: center;
 }
-
+    
 .social-icons img {
-    height: 30px;
+    height: 50px;
 }
+
+.social-icons-wrapper {
+    margin-left: auto;
+    margin-right: -50px; /* Increased negative margin to shift further right */
+}
+
+.social-icons-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* --------------------- HERO --------------------- */
 
@@ -125,25 +144,26 @@ nav a {
 }
 
 .cta {
-    background: var(--main-dark);
-    color: var(--white);
+    background: var(--main);
+    color: var(--text);
     padding: 0.8rem 1.5rem;
     border-radius: 0px;
-    display: inline-block;
-    margin-top: 1.5rem;
+    display: block;
+    margin: 1.5rem auto;
     font-weight: 600;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .cta:hover {
-    background: var(--main);
-    color: white;
+    background: var(--main-dark);
+    color: var(--text);
 }
 
 /* --------------------- SECTIONS --------------------- */
 
 .section, .light {
-    background: var(--main-light);
+    background: var(--bg);
     color: var(--text);
     padding: 60px 40px;
     width: 100%;
@@ -224,24 +244,50 @@ nav a {
     margin-right: 0.5em;
 }
 
-.timeline-item p {
+.timeline-item .timeline-content p {
     margin-top: 0.2rem;
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--text);
+    font-family: 'Sean Slab Narrow', serif;
+    font-weight: 400;
+}
+
+.timeline h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem; /* Adjusted for better visual hierarchy */
+}
+
+.timeline-item p strong {
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 1.2rem; /* Adjusted for better visual hierarchy */
+}
+
+.timeline-item p,
+.timeline-item ul li {
+    font-family: 'Sean Slab Narrow', serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 /* --------------------- SKILLS --------------------- */
 
 h2 {
-    color: var(--main-dark);
-    font-size: 2.5rem;
+    font-size: 36px !important;
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    color: #111;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 1200px;
     margin-top: 2rem;
 }
 
@@ -259,15 +305,25 @@ h2 {
 .skill-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(169, 168, 169, 0.2);
-}   
+}
+
+.skill-card h3 {
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+}
 
 /* --------------------- HIGHLIGHT / FOOTER --------------------- */
 
 .highlight {
-    background: var(--white);
-    color: #1F1F1F;
-    text-align: center;
-    padding: 3rem 2rem;
+    background: var(--bg);
+    color: var(--text);
+    padding: 60px 40px;
+}
+
+.highlight .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 3rem;
 }
 
 .footer {
@@ -279,57 +335,289 @@ h2 {
 }
 
 #about, #skills {
-    background: var(--main);
+    background: var(--bg);
     color: var(--white);
+}
+
+#skills h2 {
+    padding-left: 40px;
+    font-size: 1.5rem;
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
 }
 
 /* --------------------- RESPONSIVE --------------------- */
 
-@media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 2.2rem;
+@media (max-width: 1200px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .anniversary-banner {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
     }
 
-    .cta {
-        padding: 0.7rem 1.2rem;
+    .anniversary-content {
+        width: 100%;
+        text-align: center;
+        transform: none;
+        padding: 15px;
+    }
+
+    .anniversary-content .years {
+        font-size: 3.5rem;
+    }
+
+    .anniversary-content .text {
+        font-size: 1rem;
     }
 
     .grid {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+    }
+
+    .profile {
+        max-width: 250px;
+        margin: 2rem auto;
+    }
+
+    .text {
+        padding: 0 1rem;
+    }
+
+
+    .logo {
+        height: 100px;
+        margin-left: 0;
+    }
+
+    .social-icons img {
+        height: 40px;
+    }
+
+    .social-icons-wrapper {
+        margin-right: 0;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .section {
+        padding: 40px 20px;
+    }
+
+    .timeline-item {
+        padding: 1rem;
+    }
+
+    .timeline-date {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .skill-card {
+        padding: 1rem;
+    }
+
+    .skill-card i {
+        font-size: 1.5rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .cta {
+        padding: 0.6rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        height: 80px;
+        margin-left: 0;
+    }
+
+    .social-icons img {
+        height: 30px;
+    }
+
+    .social-icons-wrapper {
+        margin-right: 0;
+    }
+
+    .anniversary-content {
+        min-width: unset;
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px 5px;
+    }
+
+    .highlight .container {
+        padding-left: 0;
+    }
+
+    .page-title {
+        margin-left: 0 !important;
+        font-size: 1.8rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.2rem;
+        word-break: break-word;
+        line-height: 1.15;
+    }
+}
+
+@media (max-width: 480px) {
+    .anniversary-content .years {
+        font-size: 2.5rem;
+    }
+
+    .anniversary-content .text {
+        font-size: 0.8rem;
+    }
+
+    .cta {
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
     }
 
+    .section, .light {
+        padding: 25px 10px;
+    }
+
+    .container {
+        padding: 0.8rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+
     .timeline-item {
-        flex-direction: column;
-        align-items: center;
+        padding: 0.6rem;
+        margin-bottom: 1.5rem;
     }
 
-    .timeline-item::before {
-        left: 0;
-        width: 100%;
-        height: 2px;
+    .timeline-date {
+        font-size: 0.85rem;
+        margin-bottom: 0.2rem;
     }
 
-    .timeline-content {
-        padding: 1.5rem;
+    .timeline-content p {
+        font-size: 0.8rem;
     }
 
-    .header-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+    .skill-card {
+        padding: 0.7rem;
     }
 
-    nav {
-        justify-content: center;
+    .skill-card i {
+        font-size: 1.2rem;
     }
 
-    .social-icons {
-        justify-content: center;
+    .skill-card h3 {
+        font-size: 0.85rem;
+    }
+    
+    .grid {
+        gap: 0.8rem;
+    }
+
+    .profile {
+        max-width: 180px;
+        margin: 1.5rem auto;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .anniversary-banner {
+        padding: 1rem 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .anniversary-content {
+        min-width: unset;
+        padding: 5px;
+    }
+
+    .anniversary-content .years {
+        font-size: 1.4rem;
+    }
+
+    .anniversary-content .text {
+        font-size: 0.7rem;
+    }
+
+    .cta {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .roller-counter-container {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        height: 60px;
+        margin-left: 0;
+    }
+
+    .social-icons img {
+        height: 25px;
+    }
+
+    .social-icons-wrapper {
+        margin-right: 0;
+    }
+
+    header {
+        padding: 10px 5px;
     }
 }
 
@@ -337,6 +625,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     margin: 40px 0 60px 0;
 }
 
@@ -358,108 +647,31 @@ h2 {
     flex-direction: column;
     align-items: center;
     flex: 1;
-    min-width: 250px;
+    min-width: 0;
     perspective: 1000px;
-}
-
-.anniversary-content.highlight {
     position: relative;
     padding: 20px;
     border-radius: 0px;
-    background-color: #A9A8A9;
-    box-shadow: 0 6px 15px rgba(169, 168, 169, 0.3);
+    background-color: var(--white);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
     transform: scale(1.05);
 }
 
 .anniversary-content .years {
-    font-size: 72px;
-    font-weight: 700;
-    color: #7B7A7B;
-    background: #e0e9ed;
-    border-radius: 0px;
-    padding: 0 18px;
-    margin-bottom: 10px;
-    display: inline-block;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: background 0.3s;
-}
-
-.anniversary-content.highlight .years {
-    color: #fff;
-    background: #A9A8A9;
-    box-shadow: 0 2px 12px #A9A8A9;
+    font-family: 'Sean Slab', serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: var(--text);
 }
 
 .anniversary-content .text {
-    font-size: 26px;
-    font-weight: 600;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 16px;
+    font-weight: 400;
     margin-top: 8px;
     text-align: center;
-    color: #222;
-}
-
-.anniversary-content.highlight .text {
-    color: #fff;
-}
-
-@media (max-width: 900px) {
-    .anniversary-banner {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 10px;
-    }
-    .anniversary-content,
-    .anniversary-content.highlight {
-        padding: 20px 10px;
-    }
-    .anniversary-content .years {
-        font-size: 48px;
-        padding: 0 10px;
-        animation: countUp 1.2s ease 0.6s forwards;
-        opacity: 0;
-    }
-    .anniversary-content .text {
-        font-size: 18px;
-    }
-}
-
-.historique-container h1 {
-    animation: fadeInDown 0.8s ease forwards;
-}
-
-/* Animation pour la bannière d'anniversaire */
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.anniversary-banner {
-    animation: scaleIn 1s ease 0.3s forwards;
-    opacity: 0; /* État initial avant l'animation */
-    transform: scale(0.8);
-}
-
-/* Animation pour le nombre d'années */
-@keyframes countUp {
-    from {
-        opacity:    0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.anniversary-content .years {
-    animation: countUp 1.2s ease 0.6s forwards;
-    opacity: 0;
+    color: var(--text);
 }
 
 /* Styles pour le compteur à barillet */
@@ -493,18 +705,6 @@ h2 {
     justify-content: center;
 }
 
-/* Style spécial pour les chiffres dans la section mise en évidence */
-.anniversary-content.highlight .digit-container {
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: none; 
-}
-
-.anniversary-content.highlight .digit {
-    font-size: 5.5rem;
-    color: white;
-    text-shadow: none; 
-}
-
 /* Ajouter des marqueurs pour simuler un compteur mécanique */
 .digit-container::before,
 .digit-container::after {
@@ -528,12 +728,6 @@ h2 {
     box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.anniversary-content.highlight .digit-container::before,
-.anniversary-content.highlight .digit-container::after {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: none; 
-}
-
 /* Option pour désactiver les animations pour les personnes qui préfèrent réduire les mouvements */
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -546,34 +740,51 @@ h2 {
 
 /* Responsive styles */
 @media (max-width: 900px) {
-    .parcours-timeline:before {
-        left: 30px;
-    }
-    
-    .parcours-period {
-        position: relative;
-        width: auto;
-        text-align: left;
-        padding-right: 0;
-        padding-left: 70px;
-        margin-bottom: 15px;
-    }
-    
-    .parcours-details {
-        margin-left: 70px;
-    }
-    
-    .parcours-icon {
-        left: 10px;
-    }
+    /* Removed parcours-timeline styles as they are not used in historique.php */
 }
 
 @media (max-width: 600px) {
-    .parcours-details {
-        padding: 20px;
+    /* Removed parcours-details and parcours-content styles as they are not used in historique.php */
+}
+
+@media (min-width: 769px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
     }
-    
-    .parcours-content h4 {
-        font-size: 1.1rem;
+
+    #skills h2 {
+        text-align: left;
+        padding-left: 0;
     }
+}
+
+#about h2 {
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+#about p {
+    font-family: 'Sean Slab Narrow', serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text);
+}
+
+.page-title {
+    text-align: left;
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #111;
+    margin: 1.5rem 0 1.5rem 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    text-decoration: none;
+    letter-spacing: -1px;
+    margin-left: -47px;
 }

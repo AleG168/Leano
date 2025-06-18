@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeanoDesign - Notre Histoire</title>    
+    <title>LeanoDesign -  Histoire</title>    
     <meta name="description" content="Découvrez l'histoire de LeanoDesign, une entreprise de design industriel spécialisée dans la création de produits innovants et durables.">
     <link rel="stylesheet" href="css/historique.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -13,28 +13,30 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="historique-page">
 <?php include 'navbar.php'; ?>
   <main>
     <div class="content">
+      <div class="container">
+        <h1 class="page-title">Mon Histoire</h1>
+      </div>
       <div class="historique-container">
           <div class="anniversary-banner scale-in ">
-              <div class="anniversary-content highlight">
-              <span class="years count-up">26 Ans</span> 
+              <div class="anniversary-content">
+              <span class="years count-up">26 ans</span> 
                   <span class="text"> D'expertise en design industriel</span>
               </div> 
               <div class="anniversary-content">
-              <span class="years count-up">15 Ans</span>
-                  <span class="text"> De l'agence Leano Design</span>
-              </div>
-              <div class="anniversary-content highlight">
-             <span class="years">60</span>
-              <span class="label">Clients</span>
-              <span class="text">Qui nous ont fait confiance</span>
+              <span class="years count-up">15 ans</span>
+                 <span class="text"> De l'agence Leano Design</span>
               </div>
               <div class="anniversary-content">
-              <span class="years">250</span>
-              <span class="label">Projets</span>
+             <span class="years">60 clients </span>
+              <span class="label"></span>
+              <span class="text"> Ils m'ont fait confiance</span>
+              </div>
+              <div class="anniversary-content">
+              <span class="years">250 projets</span>
              <span class="text">Réalisés pour nos clients</span>
             </div>
           </div>
@@ -56,70 +58,59 @@
         <div class="timeline">
           <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-icon">
-              <i class="fas fa-briefcase"></i>
+              <i class="fas fa-graduation-cap"></i>
             </div>
-            <div class="timeline-content">
-              <span class="timeline-date">2010 – aujourd'hui</span>
-              <p><strong>Leano Design (Guingamp) – Gérant, Designer Industriel</strong></p>
-              <p>Création et gestion de Leano Design, une entreprise spécialisée dans le design industriel, alliant créativité et innovation.</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
-            <div class="timeline-icon">
-              <i class="fas fa-cogs"></i>
-            </div>
-            <div class="timeline-content">
-              <span class="timeline-date">2001 – 2010</span>
-              <p><strong>OKTES (Lannion) – Responsable Design / Bureau d'études</strong></p>
-              <p>Supervision des projets de design au sein de l'équipe de recherche et développement.</p>
+              <p><strong>Diplômé de l'Institut Supérieur de Design de Valenciennes</strong></p>
+              <p><strong>Filières Engineering Design Produits et Systèmes – Promotion 2000</strong><p>
+              <p>En 200O, Intégrer le Groupe SEB à Lourdes m'a permis de confronter ma pratique du design à la réalité des processus industriels et aux exigences d'un grand groupe international.</p>
             </div>
           </div>
           <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-icon">
               <i class="fas fa-industry"></i>
             </div>
-            <div class="timeline-content">
-              <span class="timeline-date">1999 – 2001</span>
-              <p><strong>Groupe SEB (Lourdes) – Designer Produit</strong></p>
-              <p>Conception et développement de nouveaux produits pour le leader mondial des appareils de cuisine.</p>
+              <ul>
+                <li>Connaissance du cycle complet : de l'idéation au lancement industriel</li>
+                <li>Travail interdisciplinaire : avec les ingénieurs, le marketing, l'usine, etc.</li>
+                <li>Contraintes maîtrisées : coûts, normes sécurité, ergonomie, DFM, outillages.</li>
+              </ul>
+              <p>De 2001 à 2010, J'ai assuré le poste de designer produit au sein du bureau d'études OKTES à Lannion, en pilotant la cohérence formelle, fonctionnelle et technique des projets. J'étais l'interlocuteur clé entre design, mécanique et électronique,  j'ai assuré la faisabilité des concepts tout en défendant leur qualité esthétique et fonctionnelle </p>
+              <ul>
             </div>
+          </div>
           </div>
         </div>
       </div>
     </section>
     <section class="section skills-full-bg" id="skills" data-aos="fade-up" data-aos-duration="1500">
-      <h2>Expertises</h2>
-      <div class="skills-grid">
-        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-          <i class="fas fa-lightbulb"></i>
-          <h3>Créativité & innovation</h3>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-          <i class="fas fa-hand-paper"></i>
-          <h3>Ergonomie & UX</h3>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-          <i class="fas fa-cogs"></i>
-          <h3>Prototype à production</h3>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-          <i class="fas fa-tools"></i>
-          <h3>Techniques de fabrication</h3>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-          <i class="fas fa-leaf"></i>
-          <h3>Matériaux durables</h3>
-        </div>
-        <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
-          <i class="fas fa-shield-alt"></i>
-          <h3>Confidentialité & NDA</h3>
+      <div class="container">
+        <h2>Expertises</h2>
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+            <h3>Créativité & innovation</h3>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+            <h3>Ergonomie & UX</h3>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+            <h3>Prototype à production</h3>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+            <h3>Techniques de fabrication</h3>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+            <h3>Matériaux durables</h3>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-duration="1500">
+            <h3>Confidentialité & NDA</h3>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="highlight" data-aos="fade-up" data-aos-duration="1500">
-      <div class="container center">
-        <h2>Notre mission</h2>
+      <div class="container">
+        <h2>Ma mission</h2>
         <p>Transformer une idée en un produit tangible, équilibrant innovation, fonctionnalité, esthétique et production durable.</p>
       </div>
     </section>    
