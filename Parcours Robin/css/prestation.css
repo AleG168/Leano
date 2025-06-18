@@ -1,0 +1,149 @@
+.prestation-block {
+    background-color: #d0d0d0; 
+    padding: 2rem;
+    height: 100%;
+    /* Remove transition and box-shadow from main block */
+    /* transition: all 0.3s ease; */
+    position: relative;
+    overflow: hidden;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
+}
+
+
+.prestation-block h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #222; /* Set h2 to black */
+}
+
+.prestation-block h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+    color: #222; /* Set h3 to black */
+}
+
+/* Styles for individual prestation items */
+.prestation-item-block {
+    background-color: #f2f2f2; /* Light grey background for each item */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 0px;
+    padding: 15px 20px;
+    margin-bottom: 10px; /* Space between items */
+    display: flex;
+    justify-content: space-between; /* Align content and icon */
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #222; /* Set item block text to black */
+    transition: all 0.3s ease;
+}
+
+.prestation-item-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prestation-item-block .fas.fa-plus {
+    color: #222; /* Noir pour l'icône plus */
+    font-size: 1.2rem;
+}
+
+/* Remove old .prestation-list styles as they are no longer used for the left block */
+.prestation-list {
+    /* list-style: none; */
+    padding: 0;
+    margin: 0;
+}
+
+.prestation-list li {
+    padding: 0.8rem 0;
+    /* border-bottom: 1px solid #eee; */
+    font-size: 1.1rem;
+    color: #222; /* Set list item text to black */
+    /* transition: all 0.3s ease; */
+}
+
+.prestation-list li:hover {
+    color: #222; /* Keep text black on hover */
+    /* padding-left: 10px; */
+}
+
+.prestation-section {
+    margin-bottom: 2rem;
+}
+
+.prestation-section ul {
+    /* list-style: none; */
+    padding-left: 1rem;
+}
+
+.prestation-section ul li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #222; /* Set list items in prestation-section to black */
+    position: relative;
+}
+
+
+.btn-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    /* padding: 0.8rem 1.5rem; */
+    background-color: transparent;
+    color: #007bff; /* Standard blue link color */
+    text-decoration: underline;
+    /* border-radius: 4px; */
+    /* transition: all 0.3s ease; */
+}
+
+.btn-link:hover {
+    /* background-color: #000; */
+    /* transform: translateY(-2px); */
+    color: #0056b3; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+    .prestation-block {
+        margin-bottom: 2rem;
+    }
+}
+
+.prestation-item-content {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 10px 0;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #222;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+    opacity: 0;
+}
+
+.prestation-item-block.active + .prestation-item-content {
+    max-height: 300px;
+    padding: 15px 20px;
+    opacity: 1;
+}
+
+.prestation-item-block .fas.fa-plus {
+    transition: transform 0.2s;
+}
+
+.prestation-item-block.active .fa-plus {
+    transform: rotate(45deg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
