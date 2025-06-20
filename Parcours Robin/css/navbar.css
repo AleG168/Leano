@@ -226,9 +226,51 @@
   padding-left: 50px;
 }
 
-.navbar-nav .nav-item .nav-link {
-    font-family: 'Sean Slab', serif;
-    font-weight: 800;
+.navbar-nav, .navbar-nav .nav-link, .offcanvas-title, .offcanvas-body .nav-link {
+  font-family: 'Sean Slab', serif !important;
+  font-size: 16px !important;
+}
+
+/* --- Responsive Social Icons --- */
+@media (max-width: 991.98px) {
+  .navbar .container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px;
+    order: 1;
+  }
+  .navbar-toggler {
+    margin: 0 auto 8px auto;
+    display: block;
+    position: static;
+    order: 2;
+  }
+  .nav-links-wrapper {
+    order: 3;
+  }
+  .social-icons-wrapper {
+    order: 4;
+  }
+}
+
+/* Variante : icônes sous le menu burger */
+@media (max-width: 767.98px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .social-icons-wrapper {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    position: static;
+    order: 3;
+  }
 }
 
 
