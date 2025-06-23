@@ -28,7 +28,7 @@ html, body {
 
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Sean Slab', serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -90,7 +90,7 @@ header p {
     flex-direction: column;
     width: var(--card-width); /* Ensure it takes the card width */
     position: relative; /* For proper positioning of children like z-index */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     border-radius: 0px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.1s ease;
 }
@@ -119,6 +119,20 @@ header p {
 }
 
 /* Default arrow (right-pointing) */
+.card-arrow-right::before {
+    content: '';
+    position: absolute;
+    right: calc(-1 * var(--arrow-base-thickness) - 2px); /* Décale un peu plus à droite */
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(var(--arrow-base-thickness) + 4px); /* Plus large que la flèche principale */
+    height: calc(var(--arrow-total-length) + 4px); /* Plus haute que la flèche principale */
+    background-color: #d0d0d0; /* Gris clair pour le contour */
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
 .card-arrow-right::after {
     content: '';
     position: absolute;
@@ -127,11 +141,11 @@ header p {
     transform: translateY(-50%); /* Adjust for vertical centering */
     width: var(--arrow-base-thickness);
     height: var(--arrow-total-length);
-    background-color: inherit;
+    background-color: inherit !important;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
     z-index: 1;
     pointer-events: none;
-    filter: drop-shadow(2px 0 0 rgba(0, 0, 0, 1)); /* Right shadow for outline */
+    filter: none; /* On retire l'ombre */
 }
 
 /* Down-pointing arrow */
@@ -195,11 +209,11 @@ header p {
 
 
 .card-content {
-    padding: 20px; /* Overall padding for the content area */
+    padding: 20px;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start; /* alignement en haut */
     align-items: flex-start;
     width: 100%;
 }
@@ -209,9 +223,11 @@ header p {
     font-weight: 800;
     font-size: 24px;
     margin-top: 0;
-    margin-bottom: 0; /* Remove bottom margin to reduce gap */
+    margin-bottom: 0.5em;
     text-align: left;
     line-height: 1.2;
+    min-height: 90px; /* Augmente la valeur pour forcer l'alignement */
+    display: block;
 }
 
 .card-content p {
@@ -220,6 +236,7 @@ header p {
     text-align: left;
     font-size: 16px;
     line-height: 1.4; /* Ensure consistent line spacing for objectives */
+    font-weight: 400;
 }
 
 /* Removed .card-image-container styles as icons are no longer used */
@@ -316,7 +333,12 @@ header p {
 
 /* Removed .card-container:hover .card-image-container img styles as icons are no longer used */
 
-.card-container:hover .card-arrow-right::after,
+.card-container:hover .card-arrow-right::before,
+.card-container:hover .card-arrow-right::after {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
 .card-container:hover .card-arrow-down::after,
 .card-container:hover .card-arrow-left::after {
     opacity: 0;
@@ -394,11 +416,11 @@ header p {
         align-items: center;
         width: 100%;
         gap: 0;
-        padding: 0 5px;
+        padding: 0 2px;
     }
     .card-container {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         box-sizing: border-box;
     }
     .card {
@@ -410,22 +432,55 @@ header p {
     }
     .card-photo-block {
         height: auto;
-        min-height: 180px;
-        max-height: 260px;
+        min-height: 100px;
+        max-height: 180px;
     }
     .demarche-small-img {
-        height: 120px;
+        height: 80px;
         max-width: 100%;
     }
     .photo-overlay .overlay-text {
-        font-size: 14px;
-        max-width: 95%;
+        font-size: 12px;
+        max-width: 98%;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5px;
+        text-align: center;
     }
     header h2 {
-        font-size: 24px;
+        font-size: 20px;
+        margin-bottom: 5px;
     }
     header p {
-        font-size: 13px;
+        font-size: 12px;
+    }
+    .social-icons-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 10px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        position: static !important;
+    }
+    .social-icons-wrapper a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 1.5rem !important;
+        color: #222 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .social-icons-wrapper i, .social-icons-wrapper img {
+        font-size: 1.5rem !important;
+        width: 28px !important;
+        height: 28px !important;
+        color: #222 !important;
+        display: inline-block !important;
     }
 }
 
@@ -473,26 +528,26 @@ header p {
 @media (max-width: 480px) {
     .card-container {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     .card {
-        padding: 8px;
+        padding: 4px;
     }
     .card-photo-block {
-        min-height: 100px;
-        max-height: 160px;
+        min-height: 60px;
+        max-height: 100px;
     }
     .demarche-small-img {
-        height: 70px;
+        height: 40px;
     }
     .photo-overlay .overlay-text {
-        font-size: 12px;
+        font-size: 10px;
     }
     header h2 {
-        font-size: 18px;
+        font-size: 14px;
     }
     header p {
-        font-size: 11px;
+        font-size: 10px;
     }
     .logo {
         height: 60px; /* Further reduced logo size */
@@ -540,3 +595,30 @@ header p {
     max-width: 100%;
     object-fit: contain;
 }
+
+.historique-page .logo, .historique-page .logo img {
+    height: 120px !important;
+    max-height: 120px !important;
+    width: auto;
+}
+
+.navbar a, .navbar a:visited {
+    color: #000 !important;
+}
+
+.fw-bold {
+    font-weight: bold !important;
+}
+
+.nav-icon img {
+    height: 28px;
+    vertical-align: middle;
+  }
+  
+  .nav-icon.contact-icon img {
+    height: 26px;
+  }
+  
+  .navbar-nav.desktop-nav {
+    gap: 2.5rem;
+  }

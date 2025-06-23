@@ -7,15 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="Vincent Beaucourt" content="Projet">
-    <meta name="description" content="Léano Design : Agence de design Industriel Bretonne ..."> 
-    <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton">
+    <meta name="description" content="Agence de design & ingénierie industrielle en Bretagne : conception et optimisation pour vos produits et équipements."> 
+    <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
 
-    <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+    <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar_Index.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,14 +22,11 @@
 
 <body>
     <header class = "Navbar_centrer">        
-    <?php include 'navbar_Index.php'; ?>
+      <?php include 'navbar_Index.php'; ?>
     </header>
 
 <div class="container-fluid px-3 px-md-5">
-
   <div class="row align-items-start">
-
-
     <!-- Colonne gauche (vidéo + titre + texte) -->
     <div class="col-12 col-xl-6 ps-lg-5 ps-4 pe-4 video-section">
   
@@ -50,7 +46,7 @@
   <div class="engagement-wrapper">
 
     <h3 class="text-primarySupport Titre">
-      Notre engagement
+      Mon engagement
     </h3>
     <h3 class="Sous_Titre">
       Concevoir ensemble des produits ingénieux et innovants
@@ -72,8 +68,8 @@
 
   </div>
 </div>
-        </div>
-        </div>
+  </div>
+</div>
 
     <?php include 'footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>

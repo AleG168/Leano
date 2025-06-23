@@ -8,7 +8,7 @@
   font-style: normal;
 }
 body {
-    font-family: 'Sean Slab Narrow', sans-serif;
+    font-family: 'Sean Slab', serif;
     font-size: 16px;
     font-weight: 400;
 }
@@ -84,10 +84,15 @@ h1 {
     margin-top: 20px;
 }
 
-.map-container iframe {
-    width: 100%;
-    height: 300px; /* Adjust height as needed */
+.contact-map {
     border: 0;
+    width: 100%;
+    height: 300px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form .form-group {
@@ -101,10 +106,12 @@ h1 {
     width: 100%;
     padding: 15px 10px;
     border: none; /* Remove border */
-    border-radius: 4px;
+    border-radius: 0px;
     font-size: 16px;
     font-family: 'Sean Slab Narrow', sans-serif;
     background-color: #EEEEEE; /* Set a slightly darker, minimal grey background */
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 .contact-form label {
@@ -124,9 +131,9 @@ h1 {
 .contact-form input[type="text"]:not(:placeholder-shown) + label,
 .contact-form input[type="email"]:not(:placeholder-shown) + label,
 .contact-form textarea:not(:placeholder-shown) + label {
-    top: 5px;
-    font-size: 16px;
-    color: #555; /* Adjust color as needed */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .contact-form textarea {
@@ -134,25 +141,18 @@ h1 {
     resize: vertical; /* Allow vertical resizing */
 }
 
-.submit-btn {
-    display: block;
-    width: auto; /* Adjust width as needed */
-    padding: 5px 15px; /* Reduced padding further */
-    background-color: #000; /* Adjust color as needed */
-    color: #fff;
-    border: none; /* Remove border */
-    border-radius: 0; /* Remove rounded corners */
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Sean Slab Narrow', sans-serif;
-    font-weight: 400;
-    margin-left: auto; /* Push the button to the right */
-    margin-right: 0;
-}
-
-.submit-btn:hover {
-    background-color: #555; /* Adjust hover color as needed */
+.contact-form .submit-btn,
+.contact-form .submit-btn:focus,
+.contact-form .submit-btn:hover {
+    width: auto;
+    min-width: 180px;
+    padding: 10px 24px;
+    background-color: #000 !important;
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    align-self: flex-end;
 }
 
 /* Responsive adjustments */
@@ -264,4 +264,32 @@ h1 {
     }
 }
 
+.contact-page .logo, .contact-page .logo img {
+    height: 120px !important;
+    max-height: 120px !important;
+    width: auto;
+}
 
+
+.navbar a, .navbar a:visited {
+    color: #000 !important;
+    font-family: 'Sean Slab', serif !important;
+    font-size: 16px !important;
+}
+
+.fw-bold {
+    font-weight: bold !important;
+}
+
+.nav-icon img {
+    height: 28px;
+    vertical-align: middle;
+  }
+  
+  .nav-icon.contact-icon img {
+    height: 26px;
+  }
+  
+  .navbar-nav.desktop-nav {
+    gap: 2.5rem;
+  }

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+
+@font-face {
+  font-family: 'Sean Slab';
+  src: url('../fonts/SeanSlab-NormalExtrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/SeanSlab-NarrowRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Styles du slider */
+.slider-container {
+    position: relative;
+    width: 94vw;
+    max-width: 1200px;
+    height: auto;
+    aspect-ratio: 16/9;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.after, .before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.after img, .before img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before {
+    clip-path: inset(0 50% 0 0);
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 100%;
+    background: white;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles de la galerie */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #000000;
+    padding: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Style pour les légendes */
+.card .description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card .description h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card .description p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 0;
+    color: #555;
+}
+
+/* Effets au survol */
+.card:hover .description {
+    opacity: 1;
+}
+
+.card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+/* Style du titre et du texte principal */
+.product h1 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 32pt;
+    margin-bottom: 15px;
+    color: #000000;
+    padding: 0 20px;
+}
+
+.product p {
+    font-size: clamp(1em, 3vw, 1.2em);
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #000000;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+
+
+.alignementPresentationProduit{
+    margin-left: 219px;
+}
+
+
+/* Media Queries pour les petits écrans */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 90vw;
+        margin: 20px auto;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 20px 10px;
+        gap: 15px;
+    }
+    
+    .card img {
+        height: 200px;
+    }
+    
+    .card .description {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        padding: 10px;
+    }
+    
+    .card .description h3 {
+        font-size: 1em;
+    }
+    
+    .card .description p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .card img {
+        height: 250px;
+    }
+}
+
+
+
+
+
+
+/* Ajoutez ceci à votre fichier CSS (de préférence dans responsive.css) */
+
+@media (min-width: 1400px) and (max-width: 1482px) {
+    .alignementPresentationProduit {
+        margin-left: calc(219px + (100vw - 1480px));
+        /* 
+        Explication du calcul :
+        - À 1480px : 100vw = 1480 → 1480-1480 = 0 → margin-left = 219px + 0 = 219px
+        - À 1400px : 100vw = 1400 → 1400-1480 = -80 → margin-left = 219px + (-80) = 139px
+        Ainsi, la marge diminue de 1px pour chaque 1px de réduction de la largeur d'écran
+        */
+    }
+}
+
+/* Conservez votre style original pour les écrans plus larges */
+@media (min-width: 1481px) {
+    .alignementPresentationProduit {
+        margin-left: 219px;
+    }
+}
+
+/* Et pour les écrans plus petits que 1400px, vous pouvez ajuster si nécessaire */
+@media (max-width: 1399px) {
+    .alignementPresentationProduit {
+        margin-left: 139px; /* ou toute autre valeur appropriée */
+    }
+}
+
+@media (min-width: 1481px) and (max-width: 1871px) {
+    .alignementPresentationProduit {
+        margin-left: max(0.5px, calc(219px + (100vw - 1871px) * 0.5));
+        /* Garantit un minimum de 0.5px (au lieu de 0px) */
+    }
+}
+
+
+@media (min-width: 1870px) {
+    .alignementPresentationProduit {
+        margin-left: calc(219px + (100vw - 1870px) * 0.5);
+    }
+}
+
+
+@media (min-width: 1400px) and (max-width: 1482px) {
+    .alignementPresentationProduit {
+        margin-left: calc(119px + (100vw - 1400px) * 0.5);
+        /* 
+        119px = 219px (original) - 100px (décalage initial)
+        Le calcul ajoute ensuite 0.5px par pixel au-delà de 1400px
+        */
+    }
+}
+
+body {
+    font-family: 'Sean Slab', serif;
+    background: white;
+    color: black;
+}

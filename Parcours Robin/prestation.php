@@ -18,6 +18,10 @@
     <?php include 'navbar.php'; ?>
 
     <main class="container mt-5">
+        <div class="page-header mb-5">
+            <h1 class="main-title">Mes prestations</h1>
+            <p class="subtitle">Chaque projet est une collaboration sur-mesure, de l'idée à la solution concrète.</p>
+        </div>
         <div class="row">
             <!-- Bloc Prestations proposées -->
             <div class="col-md-8">
@@ -68,36 +72,47 @@
                 <div class="prestation-block" data-aos="fade-left">
                     <h2>Prestations réalisées</h2>
                     
-                    <div class="prestation-section">
-                        <h3>Objet connecté</h3>
-                        <ul>
-                            <li>Cahier d'intentions</li>
-                            <li>Développement 2D/3D du concept retenu</li>
-                            <li>Réalisation d'une maquette d'aspect</li>
-                            <li>Fourniture d'un export .step pour le Bureau d'études</li>
-                        </ul>
-                    </div>
+                    <div class="prestation-list-container">
+                        <div class="prestation-item-block">
+                            <span class="prestation-item-link clickable">Objet connecté</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="prestation-item-content">
+                            <ul>
+                                <li>Cahier d'intentions</li>
+                                <li>Développement 2D/3D du concept retenu</li>
+                                <li>Réalisation d'une maquette d'aspect</li>
+                                <li>Fourniture d'un export .step pour le Bureau d'études</li>
+                            </ul>
+                        </div>
 
-                    <div class="prestation-section">
-                        <h3>Équipement industriel</h3>
-                        <ul>
-                            <li>Croquis</li>
-                            <li>Modélisation 3D</li>
-                            <li>Prototype</li>
-                            <li>Fourniture des fichiers print des marquages</li>
-                            <li>Visuels catalogue</li>
-                        </ul>
-                    </div>
+                        <div class="prestation-item-block">
+                            <span class="prestation-item-link clickable">Équipement industriel</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="prestation-item-content">
+                            <ul>
+                                <li>Croquis</li>
+                                <li>Modélisation 3D</li>
+                                <li>Prototype</li>
+                                <li>Fourniture des fichiers print des marquages</li>
+                                <li>Visuels catalogue</li>
+                            </ul>
+                        </div>
 
-                    <div class="prestation-section">
-                        <h3>Produit cosmétique</h3>
-                        <ul>
-                            <li>Moodboard</li>
-                            <li>Sketchs</li>
-                            <li>Rendu 3D</li>
-                            <li>Maquette</li>
-                            <li>Fiche matériau</li>
-                        </ul>
+                        <div class="prestation-item-block">
+                            <span class="prestation-item-link clickable">Produit cosmétique</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="prestation-item-content">
+                            <ul>
+                                <li>Moodboard</li>
+                                <li>Sketchs</li>
+                                <li>Rendu 3D</li>
+                                <li>Maquette</li>
+                                <li>Fiche matériau</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

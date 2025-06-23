@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: 'Sean Slab Narrow', serif;
+    font-family: 'Sean Slab', serif;
     font-size: 12pt;
     background: var(--bg);
     color: var(--text);
@@ -57,25 +57,6 @@ h2 {
 
 /* --------------------- NAVIGATION HEADER --------------------- */
 
-header {
-    width: 100%;
-    background-color: var(--white);
-    padding: 20px 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 100%;
-    
-}
 
 .logo {
     height: 120px;
@@ -84,21 +65,6 @@ header {
 }
 
   
-nav {
-    background-color: var(--main-dark);
-    padding: 12px 30px;
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-}
 
 .social-icons {
     display: flex;
@@ -323,7 +289,17 @@ h2 {
 .highlight .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 3rem;
+    text-align: left;
+}
+
+.highlight .container h2 {
+    margin-left: -47px;
+    text-align: left;
+}
+
+.highlight .container p {
+    margin-left: -47px;
+    text-align: left;
 }
 
 .footer {
@@ -488,8 +464,15 @@ h2 {
         padding: 15px 5px;
     }
 
+    .highlight .container h2,
+    .highlight .container p {
+        margin-left: 0;
+        text-align: center;
+    }
+
     .highlight .container {
-        padding-left: 0;
+        text-align: center;
+        padding: 0 20px;
     }
 
     .page-title {
@@ -651,9 +634,8 @@ h2 {
     perspective: 1000px;
     position: relative;
     padding: 20px;
-    border-radius: 0px;
-    background-color: var(--white);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    /* background-color: var(--white); */
+    /* box-shadow: 0 4px 16px rgba(0,0,0,0.06); */
     transform: scale(1.05);
 }
 
@@ -787,4 +769,91 @@ h2 {
     text-decoration: none;
     letter-spacing: -1px;
     margin-left: -47px;
+}
+
+.historique-page .logo, .historique-page .logo img {
+    height: 120px !important;
+    max-height: 120px !important;
+    width: auto;
+    color: rgb(0, 0, 0) !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+.navbar a, .navbar a:visited {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.fw-bold {
+  font-weight: bold !important;
+}
+
+.navbar a, .navbar a:visited {
+    color: #000 !important;
+    font-family: 'Sean Slab', serif !important;
+    font-size: 16px !important;
+}
+
+.fw-bold {
+    font-weight: bold !important;
+}
+
+.card-content h3 {
+    font-family: 'Sean Slab', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    text-align: left;
+    line-height: 1.2;
+    height: 76px; /* Hauteur fixe pour tous les titres */
+    display: flex;
+    align-items: flex-end;
+}
+  
+.nav-icon img {
+    height: 28px;
+    vertical-align: middle;
+  }
+  
+  .nav-icon.contact-icon img {
+    height: 26px;
+  }
+  
+  .navbar-nav.desktop-nav {
+    gap: 2.5rem;
+  }
+
+/* Animations de base */
+.animate-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-card {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-card.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.animate-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-item.visible {
+  opacity: 1;
+  transform: translateX(0);
 }

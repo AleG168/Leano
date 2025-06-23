@@ -20,32 +20,9 @@ body {
     margin: 0;
     background: white;
     color: black;
-    font-family: 'Sean Slab Narrow', serif;
+    font-family: 'Sean Slab', serif;
     overflow-x: hidden;
 }
-
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-}
-
-.logo {
-    height: 100px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-right: 10em;
-}
-
-.social-icons img {
-    height: 30px;
-}
-
 
 
 .container-fluid {
@@ -446,7 +423,7 @@ header {
 
   .engagement-block {
     width: 100%; /* ✅ Cela devient effectif ici */
-    max-width: none; /* <- pour s’assurer qu’il s’étire bien */
+    max-width: none; /* <- pour s'assurer qu'il s'étire bien */
     margin: 0;
     box-sizing: border-box;
   }
@@ -502,5 +479,3 @@ header {
   
 
 }
-
-
