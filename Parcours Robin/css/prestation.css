@@ -1,14 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
-
-@font-face {
-  font-family: 'Sean Slab Narrow';
-  src: url('../fonts/seanslab-normalblack-regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
 .prestation-block {
-    background-color: transparent;
+    background-color: #d0d0d0; 
     padding: 2rem;
     height: 100%;
     /* Remove transition and box-shadow from main block */
@@ -20,11 +11,11 @@
 
 
 .prestation-block h2 {
-    font-family: 'Sean Slab', serif;
-    font-weight: 800;
-    font-size: 24px;
-    color: #222;
-    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #222; /* Set h2 to black */
 }
 
 .prestation-block h3 {
@@ -37,22 +28,23 @@
 
 /* Styles for individual prestation items */
 .prestation-item-block {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
+    background-color: #f2f2f2; /* Light grey background for each item */
+    border: 1px solid #ddd; /* Subtle border */
     border-radius: 0px;
     padding: 15px 20px;
-    margin-bottom: 1px;
+    margin-bottom: 10px; /* Space between items */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Align content and icon */
     align-items: center;
-    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #222; /* Set item block text to black */
     transition: all 0.3s ease;
-    min-width: 100%;
-    width: 100%;
 }
 
 .prestation-item-block:hover {
-    background-color: #e8e8e8;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .prestation-item-block .fas.fa-plus {
@@ -120,71 +112,31 @@
     }
 }
 
-/* Styles pour l'animation des blocs de contenu */
 .prestation-item-content {
-    background: white;
-    padding: 0 20px;
+    display: block;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-    margin-bottom: 15px;
-    border: 1px solid transparent;
-}
-
-.prestation-item-content p {
-    font-family: 'Sean Slab Narrow', serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #222;
-    line-height: 1.4;
-}
-
-.prestation-item-content ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.prestation-item-content ul li {
-    font-family: 'Sean Slab Narrow', serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #222;
-    padding: 0.3rem 0;
-}
-
-/* Style quand le contenu est actif */
-.prestation-item-content.active {
-    max-height: 300px; /* Augmenté pour accommoder les listes plus longues */
-    padding: 20px;
-    opacity: 1;
-    border-color: #ddd;
-    border-top: none;
-}
-
-/* Style pour le bloc cliquable */
-.prestation-item-block {
-    background-color: #f2f2f2;
+    background: #fff;
     border: 1px solid #ddd;
-    border-radius: 0px;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 10px 0;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #222;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+    opacity: 0;
+}
+
+.prestation-item-block.active + .prestation-item-content {
+    max-height: 300px;
     padding: 15px 20px;
-    margin-bottom: 1px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    min-width: 100%;
-    width: 100%;
+    opacity: 1;
 }
 
-.prestation-item-block.active {
-    border-bottom-color: transparent;
-}
-
-.prestation-item-block .fa-plus {
-    transition: transform 0.3s ease;
+.prestation-item-block .fas.fa-plus {
+    transition: transform 0.2s;
 }
 
 .prestation-item-block.active .fa-plus {
@@ -195,238 +147,3 @@
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-/* Logo sizing for prestation page */
-.prestation-page .logo {
-    height: 120px !important;
-    max-height: 120px !important;
-    margin-left: 0;
-}
-
-.prestation-page .logo-wrapper img {
-    height: 120px !important;
-    max-height: 120px !important;
-    width: auto;
-}
-
-/* Styles spécifiques pour le bloc de prestations réalisées */
-.col-md-4 .prestation-block {
-    /* background-color: #d0d0d0; */
-    padding: 2rem;
-}
-
-/* Alignement du bloc de prestations proposées avec le logo */
-.col-md-8 .prestation-block {
-    margin-left: -5px;
-    padding-left: 0;
-}
-
-/* Styles responsifs */
-@media (max-width: 1200px) {
-    .prestation-block {
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 991px) {
-    .col-md-8 .prestation-block {
-        margin-left: 0;
-    }
-    
-    .prestation-block h2 {
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .prestation-block {
-        margin-bottom: 2rem;
-    }
-
-    .prestation-item-block {
-        padding: 12px 15px;
-        font-size: 1rem;
-    }
-
-    .prestation-section h3 {
-        font-size: 16px;
-    }
-
-    .prestation-section ul li {
-        font-size: 14px;
-    }
-
-    .prestation-page .logo,
-    .prestation-page .logo-wrapper img {
-        height: 80px !important;
-        max-width: 95vw;
-        margin: 0 auto 10px auto;
-        display: block;
-    }
-}
-
-@media (max-width: 576px) {
-    .prestation-block {
-        padding: 1rem;
-    }
-
-    .prestation-block h2 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-    }
-
-    .prestation-item-block {
-        padding: 10px;
-        font-size: 0.95rem;
-    }
-}
-
-/* Styles pour le titre et sous-titre */
-.page-header {
-    margin-left: -5px;
-}
-
-.main-title {
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 600;
-    font-size: 32pt;
-    color: #222;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-family: 'Sean Slab Narrow', serif;
-    font-size: 12pt;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-@media (max-width: 991px) {
-    .page-header {
-        margin-left: 0;
-    }
-    
-    .main-title {
-        font-size: 28pt;
-    }
-}
-
-@media (max-width: 576px) {
-    .main-title {
-        font-size: 24pt;
-    }
-    
-    .subtitle {
-        font-size: 11pt;
-    }
-}
-
-.prestation-item-block span {
-    font-family: 'Sean Slab', serif;
-    font-weight: 800;
-    font-size: 18px;
-    color: #222;
-}
-
-/* Styles pour les prestations réalisées */
-.prestation-section h3 {
-    font-family: 'Sean Slab', serif;
-    font-weight: 800;
-    font-size: 18px;
-    color: #222;
-    margin: 1.5rem 0 1rem;
-}
-
-.prestation-section ul {
-    padding-left: 1.2rem;
-    margin: 0;
-}
-
-.prestation-section ul li {
-    font-family: 'Sean Slab Narrow', serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #222;
-    padding: 0.3rem 0;
-    position: relative;
-}
-
-/* Style spécifique pour le bloc gris */
-.col-md-4 .prestation-block {
-    /* background-color: #d0d0d0; */
-    padding: 2rem;
-}
-
-/* Styles responsifs */
-@media (max-width: 768px) {
-    .prestation-section h3 {
-        font-size: 16px;
-    }
-
-    .prestation-section ul li {
-        font-size: 14px;
-    }
-}
-
-body {
-    font-family: 'Sean Slab', serif;
-    background: white;
-    color: black;
-}
-
-.prestation-list-container {
-    width: 100%;
-}
-
-/* Styles pour les prestations proposées (gauche) */
-.col-md-8 .prestation-item-block {
-    width: 100%;
-    min-width: 100%;
-}
-
-/* Styles pour les prestations réalisées (droite) */
-.col-md-4 .prestation-item-block {
-    width: 100%;  /* Prend 100% de la colonne de droite qui est déjà plus petite */
-    min-width: 100%;
-}
-
-/* Ajustement des colonnes */
-.col-md-8 {
-    width: 58%;
-    padding-right: 30px;
-}
-
-.col-md-4 {
-    width: 42%;
-}
-
-/* Pour s'assurer que le contenu prend toute la largeur disponible */
-.col-md-8 .prestation-block,
-.col-md-4 .prestation-block {
-    width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.navbar a, .navbar a:visited {
-    color: #000 !important;
-    font-family: 'Sean Slab', serif !important;
-    font-size: 16px !important;
-}
-
-.fw-bold {
-    font-weight: bold !important;
-}
-
-.nav-icon img {
-    height: 28px;
-    vertical-align: middle;
-  }
-  
-  .nav-icon.contact-icon img {
-    height: 26px;
-  }
-  
-  .navbar-nav.desktop-nav {
-    gap: 2.5rem;
-  }

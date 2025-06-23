@@ -1,13 +1,11 @@
 <!-- BOOTSTRAP NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white position-relative">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container-fluid">
     <div class="container d-flex align-items-center">
       <div class="d-flex align-items-center me-2">
         <!-- Logo à gauche (non cliquable) -->
-        <img src="assets/images/logo.png" alt="Leano Design Logo" id="LogoLeano">
-        <a class="nav-link fs-4" href="index.php" title="Accueil">
-          <img src="assets/images/Home.png" alt="Accueil" style="width: 24px; height: 24px;">
-        </a>
+        <img src="assets/images/logo.png" alt="Leano Design Logo" style="height:80px; margin-left: -53px;" class="">
+        <a class="nav-link fs-4" href="index.php" title="Accueil">🏠</a>
       </div>
       <!-- Hamburger -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,23 +24,18 @@
             <a class="nav-link fw-bold" href="lieux-intervention.php" style="color: #000;">Démarches</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="realisations.php" style="color: #000;">Réalisations</a>
+            <a class="nav-link fw-bold" href="réalisations.php" style="color: #000;">Réalisations</a>
           </li>
         </ul>
       </div>
       <!-- Icônes à droite -->
-      <div class="d-flex align-items-center" style="margin-right: -53px; gap: 0">
-        <a href="contact.php" class="fs-3 pe-1" aria-label="Contact" title="Contact">
-          <img src="assets/images/contact.png" alt="Contact" style="width: 24px; height: 24px;">
-        </a>
-        <a href="https://www.instagram.com/leanodesign?igsh=M2Fkd3Q3Mm9vbzU3" target="_blank" class="fs-4 text-dark pe-1">
-          <img src="assets/images/Instagram.svg" alt="Instagram" style="width: 24px; height: 24px;">
-        </a>
-        <a href="https://fr.linkedin.com/company/leano-design" target="_blank" class="fs-4 text-dark">
-          <img src="assets/images/linkedin.svg" alt="LinkedIn" style="width: 24px; height: 24px;">
-        </a>
+      <div class="d-flex align-items-center gap-3" style="margin-right: -53px;">
+        <a href="contact.php" class="fs-3" aria-label="Contact" title="Contact">✉️</a>
+        <a href="https://www.instagram.com/leanodesign?igsh=M2Fkd3Q3Mm9vbzU3" target="_blank" class="fs-4 text-dark"><i class="fab fa-instagram"></i></a>
+        <a href="https://fr.linkedin.com/company/leano-design" target="_blank" class="fs-4 text-dark"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </div>
 </nav>
-<!-- /BOOTSTRAP NAVBAR --> 
+<!-- /BOOTSTRAP NAVBAR -->
+

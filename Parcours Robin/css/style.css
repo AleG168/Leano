@@ -25,6 +25,29 @@ body {
 }
 
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.logo {
+    height: 100px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 10em;
+}
+
+.social-icons img {
+    height: 30px;
+}
+
+
+
 .container-fluid {
   max-width: 100%;
 }
@@ -479,3 +502,5 @@ body {
   
 
 }
+
+
