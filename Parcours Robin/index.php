@@ -14,15 +14,15 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/navbarSansAOS.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navbar_Index.css">
     <link rel="stylesheet" href="css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class = "Navbar_centrer">        
-      <?php include 'navbar_Index.php'; ?>
+    <header class = "Navbar_centrer NavPresentationProduit">        
+      <?php include 'NavbarSansAOS.php'; ?>
     </header>
 
 <div class="container-fluid px-3 px-md-5">
@@ -72,7 +72,6 @@
 </div>
 
     <?php include 'footer.php'; ?>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="js/texte_Block.js"></script>
     
     

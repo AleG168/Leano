@@ -32,6 +32,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    cursor: none;
 }
 
 .after img, .before img {
@@ -48,12 +49,13 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 6px;
+    width: 3px;
     height: 100%;
     background: white;
     cursor: ew-resize;
     transform: translateX(-50%);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: none;
 }
 
 /* Styles de la galerie */
@@ -89,9 +91,10 @@
 /* Style pour les légendes */
 .card .description {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top : 0px;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.6);
     color: #000000;
@@ -101,13 +104,17 @@
 }
 
 .card .description h3 {
-    font-size: 1.2em;
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 18pt;
     margin-bottom: 8px;
     color: #333;
 }
 
 .card .description p {
-    font-size: 0.9em;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    font-weight: 400;
     line-height: 1.4;
     margin: 0;
     color: #555;
@@ -133,7 +140,7 @@
     font-size: 32pt;
     margin-bottom: 15px;
     color: #000000;
-    padding: 0 20px;
+
 }
 
 .product p {
@@ -143,13 +150,77 @@
     margin-bottom: 40px;
     color: #000000;
     max-width: 800px;
-    padding: 0 20px;
+
 }
 
 
 
 .alignementPresentationProduit{
     margin-left: 219px;
+}
+
+.NavPresentationProduit{
+    margin-top : 46px;
+    margin-bottom: 58px;
+}
+
+
+.d-flex{
+    margin-left: 88px;
+}
+
+#mainNavbar{
+    margin-left: 88px;
+}
+
+.navbar a{
+    padding : 0;
+}
+
+.LogoRedirect{
+    height: 28px;
+    width: 28px;
+    max-width :  35px;
+    max-height :  35px;
+}
+
+.sup{
+    height: 32px;
+    width: 32px;
+    max-width :  35px;
+    max-height :  35px;
+}
+
+.logo {
+    height: 120px;
+    margin-left: 0;
+}
+
+.LienColor{
+    text-decoration: none;
+    color : #00555a;
+}
+
+@media (max-width: 1869px) and (min-width: 1483px) {
+  .NavPresentationProduit {
+    margin-left: calc(0px - (1869px - 100vw) * 0.5);
+  }
+}
+
+
+@media (max-width: 1482px) and (min-width: 1400px) {
+  .NavPresentationProduit {
+    margin-left: calc(135px - (1869px - 100vw) * 0.5);
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 992px) {
+  .NavPresentationProduit {
+    margin-left: calc(116px - (1400px - 100vw) * 0.5);
+  }
+  #mainNavbar{
+    margin-left: 12px;
+  }
 }
 
 
@@ -184,6 +255,22 @@
     .card .description p {
         font-size: 0.8em;
     }
+    .navbar a, .navbar a:visited {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 !important;
+    padding: 0 !important;
+    justify-content: left !important;
+  }
+    .d-flex {
+     margin-left: 0;
+    }
+    .sup{
+    margin-left: -7px;
+    }
+    .LogoRedirect{
+    margin-right: 10px;
+}
 }
 
 @media (max-width: 480px) {
@@ -207,12 +294,6 @@
 @media (min-width: 1400px) and (max-width: 1482px) {
     .alignementPresentationProduit {
         margin-left: calc(219px + (100vw - 1480px));
-        /* 
-        Explication du calcul :
-        - À 1480px : 100vw = 1480 → 1480-1480 = 0 → margin-left = 219px + 0 = 219px
-        - À 1400px : 100vw = 1400 → 1400-1480 = -80 → margin-left = 219px + (-80) = 139px
-        Ainsi, la marge diminue de 1px pour chaque 1px de réduction de la largeur d'écran
-        */
     }
 }
 
@@ -226,14 +307,13 @@
 /* Et pour les écrans plus petits que 1400px, vous pouvez ajuster si nécessaire */
 @media (max-width: 1399px) {
     .alignementPresentationProduit {
-        margin-left: 139px; /* ou toute autre valeur appropriée */
+        margin-left: 31px;
     }
 }
 
 @media (min-width: 1481px) and (max-width: 1871px) {
     .alignementPresentationProduit {
         margin-left: max(0.5px, calc(219px + (100vw - 1871px) * 0.5));
-        /* Garantit un minimum de 0.5px (au lieu de 0px) */
     }
 }
 
@@ -248,15 +328,24 @@
 @media (min-width: 1400px) and (max-width: 1482px) {
     .alignementPresentationProduit {
         margin-left: calc(119px + (100vw - 1400px) * 0.5);
-        /* 
-        119px = 219px (original) - 100px (décalage initial)
-        Le calcul ajoute ensuite 0.5px par pixel au-delà de 1400px
-        */
     }
 }
 
-body {
-    font-family: 'Sean Slab', serif;
-    background: white;
-    color: black;
+
+
+@media (min-width: 1400px) and (max-width: 1400px) {
+    .logo {
+        margin-left: -215px;
+    }
 }
+
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+
+

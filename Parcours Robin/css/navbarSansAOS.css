@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/seanslab-normalblack-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #1c1c1c;
+    /* border-radius: 30px; */
+    padding: 0;
+    margin: 0 20px; /* optionnel : espace autour de la barre */
+    height: 60px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+}
+
+/* Liste des liens dans la navbar */
+.navbar ul {
+    list-style-type: none; /* suppression des puces */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* centrage horizontal */
+    align-items: stretch; /* chaque li prend toute la hauteur */
+    height: 100%;
+}
+
+/* Chaque élément de la liste */
+.navbar li {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    flex: 1; /* chaque li prend la même largeur */
+}
+
+/* Style des liens */
+.navbar a, .navbar a:visited {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Style spécial pour le lien "accueil" */
+.home-link {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 1.2rem;
+}
+
+.home-link:hover {
+    background-color: transparent;
+    color: #4d94ff;
+}
+
+/* Design adaptatif (responsive) */
+@media (max-width: 768px) {
+    
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+    .navbar li {
+        margin: 0.5rem 0;
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+    
+}
+
+/* Conteneur de la navbar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; 
+}
+
+/* Icone accueil */
+.home-icon, .home-icon:visited, .home-icon:focus, .home-icon:active {
+    font-size: 28px;
+    margin-right: 18px;
+    text-decoration: none;   
+}
+
+/* Icone mail */
+.mail-icon, .mail-icon:visited {
+    font-size: 30px; 
+    margin-left: 18px; 
+    text-decoration: none !important;    
+}
+
+.navbar-logo-container {
+  padding-left: 50px;
+}
+
+/* Hamburger menu CSS-only */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+.nav-toggle-label span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 5px 0;
+  background: #fff !important;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Afficher le menu horizontalement sur desktop */
+.nav-links {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: flex;
+    position: fixed;
+    top: 18px;
+    right: 24px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    padding: 6px 8px;
+    z-index: 2001;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #1c1c1c;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+  #nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  #nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  #nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  #nav-toggle:checked ~ .nav-links {
+    display: block !important;
+  }
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
+.contact-nav .logo {
+  margin-left: 20px;
+}
+
+.contact-nav .logo img {
+  margin-left: 20px; /* ou tout autre espacement souhaité */
+  height: 50px;
+  width: auto;
+}
+
+.social-icons-wrapper {
+    margin-left: auto;
+    margin-right: 0; /* Removed negative margin to ensure icons are fully visible */
+}
+
+/* New styles for responsive navigation */
+.navbar-logo {
+  padding-left: 50px;
+}
+
+.navbar-nav, .navbar-nav .nav-link, .offcanvas-title, .offcanvas-body .nav-link {
+  font-family: 'Sean Slab', serif !important;
+  font-size: 16px !important;
+}
+.navbar-nav {
+  gap: 2.5rem;
+}
+
+/* --- Responsive Social Icons --- */
+@media (max-width: 991.98px) {
+  .navbar .container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px;
+    order: 1;
+  }
+  .navbar-toggler {
+    margin: 0 auto 8px auto;
+    display: block;
+    position: static;
+    order: 2;
+  }
+  .nav-links-wrapper {
+    order: 3;
+  }
+  .social-icons-wrapper {
+    order: 4;
+  }
+}
+
+/* Variante : icônes sous le menu burger */
+@media (max-width: 767.98px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .social-icons-wrapper {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    position: static;
+    order: 3;
+  }
+}
+
+

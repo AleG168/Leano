@@ -1,0 +1,25 @@
+
+
+@media (max-width: 1199px) and (min-width: 1056px) {
+.social-icons-wrapper {
+    margin-right: -77px;
+  }
+}
+
+
+@media (max-width: 1055px) and (min-width: 992px) {
+.social-icons-wrapper {
+    margin-right: -92px;
+  }
+}
+
+@media (max-width: 1188px) and (min-width: 992px) {
+.navbar a, .navbar a:visited {
+  padding: 0;
+  }
+  .header{
+    padding: 0;
+  }
+}
+
+

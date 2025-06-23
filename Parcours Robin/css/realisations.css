@@ -2,7 +2,7 @@ body {
     margin: 0;
     background: white;
     color: black;
-    font-family: 'Sean Slab', serif;
+    font-family: 'Sean Slab Narrow', serif;
     overflow-x: hidden;
 }
 
@@ -10,7 +10,7 @@ body {
 .TitreReali {
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
-    font-size: 32pt; /* Taille fixe */
+    font-size: clamp(30px, 5vw, 32pt);
     margin-bottom: -3px;
     margin-top: 76px;
 }
@@ -18,7 +18,7 @@ body {
 #SousTitre {
     font-family: 'Sean Slab', serif;
     font-weight: 800;
-    font-size: 18pt; /* Taille fixe */
+    font-size: clamp(15px, 3vw, 18pt);
 }
 
 /* Styles pour les blocs carrés */
@@ -36,21 +36,19 @@ body {
 }
 
 .square-block:hover {
-    /* transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    border-color: #adb5bd; */
-
-    opacity: 1;
+    
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .square-block:hover .block-image {
-    filter: blur(2px);
-    opacity: 0.7; /* Appliquez l'opacité uniquement à l'image */
+    filter: grayscale(100%) brightness(40%) contrast(120%);
+    opacity: 0.9; /* Ajustez entre 0.8 et 1 selon besoin */
 }
 
 .square-block:hover .hover-text {
-    opacity: 1;
-    filter: blur(0);
+    opacity: 1; /* Texte visible */
+    filter: grayscale(0%); /* Garantit que le texte reste en couleur */
+    
 }
 
 .block-image {
@@ -66,7 +64,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #000000 !important;
+    color: #ffffff !important;
     filter: none !important;
     font-family: 'Sean Slab', serif;
     font-weight: 800;
@@ -101,18 +99,6 @@ header {
     margin-bottom: 42px;
 }
 
-.navbar a, .navbar a:visited {
-    color: white;
-    text-decoration: none;
-    padding: 0 1.5rem;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    font-size: 18pt; /* Taille fixe */
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 800;
-}
 
 .header-container {
     display: flex;
@@ -126,9 +112,13 @@ header {
 .logo {
     height: 120px;
     flex-shrink: 0;
-    margin-left: -47px;
+    margin-left: 0px;
 }
 
+.LienColor{
+    text-decoration: none;
+    color : #008996;
+}
 
 /* Début merchandising */
 
@@ -156,8 +146,8 @@ header {
 }
 
 .merch-square {
-    width: 120px; /* Carrés légèrement réduits */
-    height: 120px;
+    width: 150px;
+    height: 150px;
     position: relative;
     flex: 0 0 auto;
 }
@@ -201,6 +191,132 @@ header {
     transform: scale(1.05);
 }
 
+/* Début Navbarre */
+
+.LogoRedirect{
+    height: 28px;
+    width: 28px;
+    max-width :  35px;
+    max-height :  35px;
+}
+
+.sup{
+    height: 32px;
+    width: 32px;
+    max-width :  35px;
+    max-height :  35px;
+}
+
+
+@media (min-width: 991px) {
+.sup{
+    margin-left: 22px;
+}
+}
+
+@media (max-width: 1480px) and (min-width: 1400px) {
+  body header {
+    padding: 0 !important;
+  }
+  .logo {
+    margin-top: 38px;
+    margin-bottom: 38px;
+  }
+}
+
+@media (max-width: 1299px) and (min-width: 1200px) {
+  .logo {
+    margin-left: calc((100vw - 1299px) * 0.5);
+  }
+}
+
+@media (max-width: 1119px) and (min-width: 992px) {
+  .logo {
+    margin-left: calc((100vw - 1119px) * 0.5);
+  }
+}
+
+@media (max-width: 1188px) and (min-width: 992px) {
+.navbar a, .navbar a:visited {
+  padding: 0;
+  }
+}
+
+
+@media (max-width: 1199px) and (min-width: 1056px) {
+.social-icons-wrapper {
+    margin-right: -77px;
+  }
+}
+
+
+@media (max-width: 1055px) and (min-width: 992px) {
+.social-icons-wrapper {
+    margin-right: -92px;
+  }
+}
+
+
+@media (max-width: 575px) and (min-width: 193px) {
+  .logo {
+    transform: translateX(calc((575px - 100vw) * 0.5));
+    will-change: transform;
+    margin-left: -387px;
+    margin-top: -50px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .logo {
+     margin-left: calc((1vw - 768px) * 0.7);
+     margin-top: -47px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+.logo {
+    margin-right: 346PX;
+    margin-top: -81px;
+    margin-bottom: -80px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .navbar li{
+    flex: 0 !important;
+  }
+}
+
+@media (max-width: 336px) {
+  .navbar-toggler {
+    position: absolute;
+    right: 15px;
+    top: 80px;
+  }
+}
+
+@media (max-width: 192px) {
+  .logo {
+    margin-top: -50px;
+  }
+}
+
+
+
+/* Fin NavBarre */
+
+
 @media (max-width: 768px) {
     .banner-images {
         padding: 0 5px;
@@ -234,4 +350,25 @@ header {
     .realisation-block {
         padding: 0 0.25rem;
     }
+}
+
+@media (max-width: 527px){
+.hover-text
+  {
+    font-size: 13pt;
+  }
+}
+
+@media (max-width: 327px){
+.hover-text
+  {
+    font-size: 10pt;
+  }
+}
+
+@media (max-width: 227px){
+.hover-text
+  {
+    font-size: 8pt;
+  }
 }
