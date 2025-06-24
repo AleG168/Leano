@@ -1,4 +1,8 @@
-
+.texte_chemin{
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 16pt;
+    font-weight: 400;
+}
 
 @media (max-width: 1199px) and (min-width: 1056px) {
 .social-icons-wrapper {

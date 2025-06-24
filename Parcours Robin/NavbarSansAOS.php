@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
   <div class="container-fluid">
     <div class="container d-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center me-auto logo-wrapper">
+      <div class="d-flex align-items-center me-auto logo-wrapper divClique">
 
         <img src="assets/images/logo.png" alt="Logo de Leano Design" class="logo">
 

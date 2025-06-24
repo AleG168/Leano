@@ -1,5 +1,4 @@
 <?php
-// CSS should be included in the head of the document
 
 if (!isset($footerCssIncluded)) {
     echo '<link rel="stylesheet" href="css/footer.css">';
