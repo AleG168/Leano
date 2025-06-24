@@ -39,7 +39,7 @@
 }
 
 .footer-content {
-    max-width: 1264px;
+    max-width: 1480px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -59,9 +59,8 @@
 .footer-section a {
     text-decoration: none;
     transition: color 0.3s;
-
     font-family: 'Sean Slab Narrow', serif;
-    font-size: 12pt;
+    font-size: clamp(15px, 3vw, 12pt);
     color :#ffffff;
     font-weight: 400;
 }
@@ -202,6 +201,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    right: -73px;
+    position: relative;
 }
 
 .LOGO_COULEUR {
@@ -333,8 +334,9 @@
     }
 
     .LOGO_COULEUR {
-        height: 35px;
+        height: 70px;
         margin: 10px 0;
+        margin-left: -140px;
     }
 
     .modal-content {
@@ -364,4 +366,18 @@
   .references-carousel {
     padding: 0 10px; /* réduit aussi ici */
   }
+}
+
+
+@media (max-width: 1236px) {
+  .footer-section a {
+    font-size: clamp(15px, 3vw, 12pt);
+    }
+}
+
+ @media (min-width: 1199px) and (max-width: 769px) {
+    .LOGO_COULEUR {
+    right: 26px;
+    position: relative;
+    }
 }
