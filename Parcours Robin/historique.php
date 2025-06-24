@@ -23,7 +23,7 @@
       <div class="historique-container">
           <div class="anniversary-banner scale-in ">
               <div class="anniversary-content">
-              <span class="years count-up">26 ans</span> 
+              <span class="years count-up">24 ans</span> 
                   <span class="text"> D'expertise en design industriel</span>
               </div> 
               <div class="anniversary-content">
