@@ -55,7 +55,7 @@
         <!-- Conteneur centré pour les liens -->
         <div class="mx-auto w-100 d-flex justify-content-center align-items-center" style="max-width: 1100px;">
           <!-- Icône Accueil -->
-          <a class="nav-link nav-icon me-2" href="index.php" title="Accueil"><img src="assets/images/Home.png" alt="Accueil" style="height: 28px; vertical-align: middle;"></a>
+          <a class="nav-link nav-icon me-2" href="index.php" title="Accueil"><img src="assets/images/Home.png" alt="HOME Leano Design" style="height: 28px; vertical-align: middle;"></a>
           <!-- Liens principaux (style bold avec bordure) -->
           <ul class="navbar-nav mb-2 mb-lg-0 border border-light rounded-0 px-4 py-2 text-dark mx-2 d-flex justify-content-center">
             <li class="nav-item">
@@ -72,7 +72,7 @@
             </li>
           </ul>
           <!-- Icône Contact -->
-          <a href="contact.php" class="nav-icon ms-2" aria-label="Contact" title="Contact"><img src="assets/images/Contact.png" alt="Contact" style="height: 26px; vertical-align: middle;"></a>
+          <a href="contact.php" class="nav-icon ms-2" aria-label="Contact" title="Contact"><img src="assets/images/Contact.png" alt="Contact Leano Design" style="height: 26px; vertical-align: middle;"></a>
         </div>
         <!-- Icônes réseaux sociaux (alignées à droite) -->
         <div class="d-flex align-items-center ms-auto social-icons-wrapper">        

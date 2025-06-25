@@ -11,7 +11,10 @@
     <meta name="Vincent Beaucourt" content="Projet">
     <meta name="description" content="Agence de design & ingénierie industrielle en Bretagne : conception et optimisation pour vos produits et équipements."> 
     <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
-
+    <meta name="author" content="LEANO DESIGN+ ENGINEERING">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.leanodesign.com/" />
+    
     <!-- Icon de l'onglet -->
     <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
 

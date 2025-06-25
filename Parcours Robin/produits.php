@@ -81,6 +81,20 @@ if (is_dir($dossierProduits)) {
 }
 ?>
 
+
+<?php
+    // Construction de la liste des mots-clés avec les noms des produits
+    $keywords = "designer industriel, Breton, " . htmlspecialchars($nomCategorie);
+    if (!empty($produits)) {
+        $productNames = array_map(function($produit) {
+            return htmlspecialchars($produit['nom']);
+        }, $produits);
+        $keywords .= ", " . implode(", ", $productNames);
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -97,6 +111,17 @@ if (is_dir($dossierProduits)) {
     <!-- Icon de l'onglet -->
     <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
 
+    <!-- Métadonnées pour le référencement et la description -->
+    <meta name="Vincent Beaucourt" content="Projet">
+    <meta name="description" content="<?php echo 'Découvrez mes Projets dans le secteur' . htmlspecialchars($nomCategorie) . ' - Design industriel et ingénierie innovante en Bretagne' ?>">
+    <meta name="keywords" content="designer industriel, Breton, Leano, Design, <?php echo $keywords ?>">
+    <meta name="author" content="LEANO DESIGN+ ENGINEERING">
+    <meta name="category" content="<?php echo htmlspecialchars($nomCategorie) ?>">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.leanodesign.com/" />
+
+
+    
     <!-- Feuilles de style personnalisées -->
     <link rel="stylesheet" href="css/navbarSansAOS.css">
     <link rel="stylesheet" href="css/realisations.css">
@@ -140,7 +165,7 @@ if (is_dir($dossierProduits)) {
                             <!-- Lien vers la page de présentation du produit -->
                             <a href="presentationProduit.php?category=<?php echo htmlspecialchars(urlencode($categorie)) ?>&NomProduit=<?php echo htmlspecialchars(urlencode($produit['dossier'])) ?>">
                                 <!-- Vignette du produit quand cliqué redirige vers Presentation Produit -->
-                                <img src="<?php echo htmlspecialchars($produit['vignette']) ?>" alt="<?php echo htmlspecialchars($produit['nom']) ?>" class="block-image">
+                                <img src="<?php echo htmlspecialchars($produit['vignette']) ?>" alt="Leano Design Produit - <?php echo $nomCategorie . " - " . htmlspecialchars($produit['nom']) ?>" class="block-image">
                                 <!-- Nom du produit au survol -->
                                 <div class="hover-text"><?php echo htmlspecialchars($produit['nom']) ?></div>
                             </a>

@@ -6,7 +6,8 @@ $domainesDir = 'assets/Realisations';
 // Scan du dossier des réalisations pour lister les sous-dossiers
 $dossiers = scandir($domainesDir);
 
-$compteurDomaine = 1; // Compteur pour le nombre de domaines trouvés (initialisé a 1 car bandeau Merchandising)
+$compteurDomaine = 1; // Compteur pour le nombre de domaines trouvés
+$keywords = []; // Initialisation du tableau pour les mots-clés
 
 // Parcours des dossiers trouvés
 foreach ($dossiers as $dossier) {
@@ -15,14 +16,14 @@ foreach ($dossiers as $dossier) {
         continue;
     }
     
-     // Construction du chemin vers la vignette principale
+    // Construction du chemin vers la vignette principale
     $chemin_vignette = $domainesDir . '/' . $dossier . '/VignettePrincipale.png';
     
-      // Vérification de l'existence de la vignette
+    // Vérification de l'existence de la vignette
     if (file_exists($chemin_vignette)) {
         // Formatage du nom du domaine pour l'affichage
-        $nom = str_replace('_', ' ', $dossier); // les "_" deviennent des " " (pourl'affichages des nom des catégories)
-        $nom = mb_convert_case(strtolower($nom), MB_CASE_TITLE, "UTF-8"); // met tous les caractères en minuscule et ajpute une Majuscule a chaque mot = gestion des caractères spéciaux
+        $nom = str_replace('_', ' ', $dossier);
+        $nom = mb_convert_case(strtolower($nom), MB_CASE_TITLE, "UTF-8");
         
         // Ajout du domaine à la liste
         $domaines[] = [
@@ -30,9 +31,19 @@ foreach ($dossiers as $dossier) {
             'vignette' => $chemin_vignette,
             'nom' => $nom
         ];
-        $compteurDomaine ++; // + 1 au compteur de domaine pour chaque dossier parcouru
+        
+        // Ajout du nom aux mots-clés
+        $keywords[] = $nom;
+        $compteurDomaine++;
     }
 }
+// Ajout du nom aux mots-clés
+$keywords[] = "Graphisme";
+$keywords[] = "Merchandising";
+$keywords[] = "Packaging";
+
+// sépare par des "," et enleve les doublons
+$keywordsString = implode(', ', array_unique($keywords));
 
 ?>
 <!DOCTYPE html>
@@ -44,10 +55,17 @@ foreach ($dossiers as $dossier) {
     
     <!-- Icon de l'onglet -->
     <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Titre de la page dans l'onglet -->
     <title>LeanoDesign - Réalisations</title>
+
+    <!-- Métadonnées pour le référencement et la description -->
+    <meta name="Vincent Beaucourt" content="Projet">
+    <meta name="description" content="Découvrez mes domaines d'expertise : design industriel et ingénierie au service de solutions innovantes pour l'industrie"> 
+    <meta name="keywords" content="<?php echo htmlspecialchars($keywordsString); ?>">
+    <meta name="author" content="LEANO DESIGN+ ENGINEERING">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.leanodesign.com/" />
     
     <!-- Feuilles de style personnalisées -->
     <link rel="stylesheet" href="css/navbarSansAOS.css">
@@ -82,7 +100,7 @@ foreach ($dossiers as $dossier) {
                 <a href="produits.php?category=<?php echo urlencode($domaine['dossier']) ?>" class="square-block">
                         
                     <!-- Image de vignette -->
-                    <img src="<?php echo $domaine['vignette'] ?>" alt="<?php echo $domaine['nom'] ?>" class="block-image">
+                    <img src="<?php echo $domaine['vignette'] ?>" alt="Leano Design - <?php echo $domaine['nom'] ?>" class="block-image">
 
                     <!-- Texte au survol des blocs acec le noms des domaines affiché -->
                     <div class="hover-text"><?php echo $domaine['nom'] ?></div>
@@ -102,31 +120,44 @@ foreach ($dossiers as $dossier) {
                         <!-- Conteneur des images -->
                         <div class="banner-images d-flex justify-content-center flex-wrap">
                             <?php
-
-                            // Dossier spécifique pour le merchandising
-                            $merchDir = "$domainesDir/Packaging_Merchandising_Graphisme";
+                            // Dossier spécifique pour les produits de merchandising
+                            $produitsMerchDir = "$domainesDir/Packaging_Merchandising_Graphisme/Produits";
                             $merchImages = [];
-                            $maxImages = 5;// Nombre maximum d'images à afficher
+                            $maxImages = 5; // Nombre maximum d'images à afficher
+                            $allowedExtensions = ['png', 'jpg', 'jpeg', 'gif'];
                             
                             // Récupération des images de merchandising
-                            if (is_dir($merchDir)) {
-                                $files = scandir($merchDir);
+                            if (is_dir($produitsMerchDir)) {
+                                $produitsDirs = scandir($produitsMerchDir);
                                 
-                                // Parcours des fichiers avec limite du nombre maximum
-                                for ($i = 0; $i < count($files) && count($merchImages) < $maxImages; $i++) {
+                                // Parcours des dossiers de produits avec limite du nombre maximum
+                                foreach ($produitsDirs as $produitDir) {
+                                    if ($produitDir[0] === '.' || count($merchImages) >= $maxImages) {
+                                        continue;
+                                    }
                                     
-                                    // Filtre sur les extensions d'image
-                                    if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $files[$i])) {
-                                        $merchImages[] = "$merchDir/{$files[$i]}";
+                                    // Recherche de la vignette principale avec différentes extensions
+                                    foreach ($allowedExtensions as $ext) {
+                                        $vignettePath = "$produitsMerchDir/$produitDir/VignettePrincipale.$ext";
+                                        
+                                        // Vérification de l'existence de la vignette
+                                        if (file_exists($vignettePath)) {
+                                            // Stockage à la fois le chemin et le nom du dossier
+                                            $merchImages[] = [
+                                                'path' => $vignettePath,
+                                                'name' => str_replace('_', ' ', $produitDir) // Remplace les underscores par des espaces
+                                            ];
+                                            break; // On sort de la boucle des extensions si on a trouvé la vignette
+                                        }
                                     }
                                 }
                             }
                             
                             // Affichage des images de merchandising
-                            foreach ($merchImages as $image) { ?>
+                            foreach ($merchImages as $item) { ?>
                                 <div class="merch-square">
                                     <div class="merch-content">
-                                        <img src="<?php echo $image ?>" alt="Merch" class="merch-img">
+                                        <img src="<?php echo $item['path'] ?>" alt="Leano Design - <?php echo $item['name'] ?>" class="merch-img">
                                         <div class="merch-hover"></div>
                                     </div>
                                 </div>

@@ -33,7 +33,7 @@ $current_year = date('Y');
                             // Vérification de l'extension
                             if (isset($file_parts['extension']) && in_array(strtolower($file_parts['extension']), $allowed_extensions)) {
                                 echo '<div class="custom-carousel-item">';
-                                echo '<img src="' . $refs_dir . $file . '" alt="Référence client">';
+                                echo '<img src="' . $refs_dir . $file . '" alt="Leano Design Référence - ' . $file_parts['filename'] . '">';
                                 echo '</div>';
                             }
                         }

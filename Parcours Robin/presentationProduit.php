@@ -16,6 +16,10 @@ $productNameFS = str_replace(' ', '_', $productName);
 // Conversion inverse pour l'affichage : remplacement des underscores par des espaces
 $categoryKeyFS2 = str_replace('_', ' ', $categoryKey);
 
+// Conversion inverse pour l'affichage : remplacement des underscores par des espaces
+$Keys = str_replace(' ', '_', $productName);
+
+
 // Construction du chemin absolu vers le dossier du produit
 $basePath = __DIR__.'/assets/Realisations/';
 $productPath = $basePath . $categoryKeyFS . '/Produits/' . $productNameFS;
@@ -94,6 +98,16 @@ $images = array_values($images); // Réindexation du tableau après le tri
 
     <!-- Titre de la page avec le nom du Produit choisie depuis le JSON-->
     <title>LeanoDesign - <?php echo htmlspecialchars($jsonData['header']['title'] ?? $productName) ?></title>
+
+    <!-- Métadonnées pour le référencement et la description -->
+    <meta name="Vincent Beaucourt" content="Projet">
+    <meta name="description" content="<?php echo htmlspecialchars($jsonData['meta']['description'] ?? 'Découvrez '.($Keys ?? '').', solution de design industriel innovante conçue en Bretagne') ?>"> 
+    <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor, <?php echo htmlspecialchars($jsonData['header']['title'] ?? $productName) ?>">
+    <meta name="author" content="LEANO DESIGN+ ENGINEERING">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.leanodesign.com/" />
+
+    
     <!-- Inclusion des feuilles de style -->
     <link rel="stylesheet" href="css/navbarSansAOS.css">
     <link rel="stylesheet" href="css/style.css">
@@ -134,7 +148,7 @@ $images = array_values($images); // Réindexation du tableau après le tri
                     <!-- Si une image après existe, on l'affiche, sinon on utilise une image par défaut -->
                     <img src="<?php echo !empty($apresImage) ? 
                         'assets/Realisations/' . rawurlencode($categoryKeyFS) . '/Produits/' . rawurlencode($productNameFS) . '/' . $apresImage : 
-                        'assets/images/after.png' ?>" alt="Après">
+                        'assets/images/after.png' ?>" alt="<?php echo "Leano Design - " .$categoryKeyFS2 . " - " . str_replace('_', ' ', $productName) . " - Après" ?>">
                 </div>
                 
                 <div class="before">
@@ -142,7 +156,7 @@ $images = array_values($images); // Réindexation du tableau après le tri
                     <!-- Même principe que pour l'image "après" -->
                     <img src="<?php echo !empty($avantImage) ? 
                         'assets/Realisations/' . rawurlencode($categoryKeyFS) . '/Produits/' . rawurlencode($productNameFS) . '/' . $avantImage : 
-                        'assets/images/before.png' ?>" alt="Avant">
+                        'assets/images/before.png' ?>" alt="<?php echo "Leano Design - " . $categoryKeyFS2 . " - " . str_replace('_', ' ', $productName) . " - Avant" ?>">
                 </div>
                 <div class="slider"></div>
             </div>
@@ -160,7 +174,7 @@ $images = array_values($images); // Réindexation du tableau après le tri
                 ?>
                     <figure class="card" id="<?php echo $imageId ?>">
                         <!-- Affichage de l'image avec son alternative textuelle -->
-                        <img src="<?php echo htmlspecialchars($imageSrc) ?>" alt="Produit <?php echo $i ?>">
+                        <img src="<?php echo htmlspecialchars($imageSrc) ?>" alt="Leano Design - image <?php echo $i ?> présentation produit <?php echo htmlspecialchars($jsonData['header']['title'] ?? $productName) ?>">
                         <figcaption class="description">
                             <?php if (isset($jsonData[$imageId])) { ?>
                                 <!-- Affichage du titre et description de l'image si disponibles dans le JSON -->
