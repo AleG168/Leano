@@ -22,7 +22,7 @@ $current_year = date('Y');
                     <?php
                     // Scan du dossier des références (assets/refs)
                     $refs_dir = 'assets/refs/';
-                    $allowed_extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp']; // Extensions autorisées
+                    $allowed_extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg']; // Extensions autorisées
                     
                     if (is_dir($refs_dir)) {
                         $files = scandir($refs_dir);
@@ -53,7 +53,7 @@ $current_year = date('Y');
             <?php
             // Scan du dossier des partenaires (assets/Partenaires)
             $partenaires_dir = 'assets/Partenaires/';
-            $allowed_extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+            $allowed_extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'];
             
             if (is_dir($partenaires_dir)) {
                 $files = scandir($partenaires_dir);

@@ -101,7 +101,7 @@ $images = array_values($images); // Réindexation du tableau après le tri
 
     <!-- Métadonnées pour le référencement et la description -->
     <meta name="Vincent Beaucourt" content="Projet">
-    <meta name="description" content="<?php echo htmlspecialchars($jsonData['meta']['description'] ?? 'Découvrez '.($Keys ?? '').', solution de design industriel innovante conçue en Bretagne') ?>"> 
+    <meta name="description" content="<?php echo htmlspecialchars($jsonData['meta']['description'] .($Keys ?? '')) ?>"> 
     <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor, <?php echo htmlspecialchars($jsonData['header']['title'] ?? $productName) ?>">
     <meta name="author" content="LEANO DESIGN+ ENGINEERING">
     <meta name="robots" content="index, follow">

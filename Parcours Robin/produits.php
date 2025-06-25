@@ -113,7 +113,7 @@ if (is_dir($dossierProduits)) {
 
     <!-- Métadonnées pour le référencement et la description -->
     <meta name="Vincent Beaucourt" content="Projet">
-    <meta name="description" content="<?php echo 'Découvrez mes Projets dans le secteur' . htmlspecialchars($nomCategorie) . ' - Design industriel et ingénierie innovante en Bretagne' ?>">
+    <meta name="description" content="<?php echo 'Projets du secteur' . htmlspecialchars($nomCategorie)?>">
     <meta name="keywords" content="designer industriel, Breton, Leano, Design, <?php echo $keywords ?>">
     <meta name="author" content="LEANO DESIGN+ ENGINEERING">
     <meta name="category" content="<?php echo htmlspecialchars($nomCategorie) ?>">

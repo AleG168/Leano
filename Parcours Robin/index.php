@@ -9,7 +9,7 @@
     
     <!-- Métadonnées pour le référencement et la description -->
     <meta name="Vincent Beaucourt" content="Projet">
-    <meta name="description" content="Agence de design & ingénierie industrielle en Bretagne : conception et optimisation pour vos produits et équipements."> 
+    <meta name="description" content="Agence de design & ingénierie industrielle en Bretagne"> 
     <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
     <meta name="author" content="LEANO DESIGN+ ENGINEERING">
     <meta name="robots" content="index, follow">
@@ -75,17 +75,18 @@
     <div class="align-video-boxes">
 
       <!-- Tous les blocs engagements -->
-    <div class="engagement-block">Innovation</div>
-    <div class="engagement-block">Durabilité</div>
-    <div class="engagement-block">Simplicité</div>
-    <div class="engagement-block">Esthétique</div>
-    <div class="engagement-block">Collaboration</div>
-    <div class="engagement-block">Technologie</div>
-    <div class="engagement-block">Responsabilité</div>
-    <div class="engagement-block">Adaptabilité</div>
-    <div class="engagement-block">Performance</div>
-    <div class="engagement-block">Éthique</div>
-</div>
+      <div class="engagement-block">Innovation</div>
+      <div class="engagement-block">Durabilité</div>
+      <div class="engagement-block">Simplicité</div>
+      <div class="engagement-block">Esthétique</div>
+      <div class="engagement-block">Collaboration</div>
+      <div class="engagement-block">Technologie</div>
+      <div class="engagement-block">Responsabilité</div>
+      <div class="engagement-block">Adaptabilité</div>
+      <div class="engagement-block">Performance</div>
+      <div class="engagement-block">Éthique</div>
+      
+  </div>
 
 
   </div>

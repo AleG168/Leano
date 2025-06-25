@@ -61,7 +61,7 @@ $keywordsString = implode(', ', array_unique($keywords));
 
     <!-- Métadonnées pour le référencement et la description -->
     <meta name="Vincent Beaucourt" content="Projet">
-    <meta name="description" content="Découvrez mes domaines d'expertise : design industriel et ingénierie au service de solutions innovantes pour l'industrie"> 
+    <meta name="description" content="Domaines d'expertise"> 
     <meta name="keywords" content="<?php echo htmlspecialchars($keywordsString); ?>">
     <meta name="author" content="LEANO DESIGN+ ENGINEERING">
     <meta name="robots" content="index, follow">
