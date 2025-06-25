@@ -1,19 +1,19 @@
 body {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+    padding-top: 80px; /* Pour compenser la hauteur de la navbar fixe */
 }
 
 .legal-container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #222222;
-    border-radius: 15px;
+    background-color: #ffffff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .legal-container h1 {
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -24,9 +24,8 @@ body {
 section {
     margin-bottom: 2.5rem;
     padding: 1.5rem;
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    border-left: 4px solid #0066cc;
+    background-color: #d8d8d8;
+    
 }
 
 section h2 {
@@ -36,7 +35,7 @@ section h2 {
 }
 
 section p, section ul {
-    color: #cccccc;
+    color: #000000;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -62,6 +61,10 @@ section a:hover {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Ajustement pour mobile */
+    }
+    
     .legal-container {
         margin: 1rem;
         padding: 1rem;
@@ -74,4 +77,4 @@ section a:hover {
     section {
         padding: 1rem;
     }
-} 
+}

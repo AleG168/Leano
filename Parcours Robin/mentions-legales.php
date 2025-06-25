@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeanoDesign - Mentions Légales</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mentions-legales.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
+    <!-- Import de la navbar via PHP -->
+    <header class="Navbar_centrer NavPresentationProduit">
+        <?php include 'NavbarSansAOS.php'; ?>
+    </header>
     
     <div class="content">
         <div class="legal-container">
@@ -51,5 +59,8 @@
     </div>
 
     <?php include 'footer.php'; ?>
+
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
