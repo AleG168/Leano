@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600&family=Sean+Slab:wght@400;800&display=swap" />
 </head>
-<body>
+<body class="contact-page">
   <div class="container-fluid">
     <div class="container">
       <?php include 'navbar.php'; ?>
