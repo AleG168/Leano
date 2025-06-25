@@ -1,0 +1,38 @@
+pour mettre une vidéo sur le site (la lien doit être en "https://www.youtube.com/embed/" donc copier un lien dans l'url ne marchera pas):
+1 - allez sur YouTube
+2 - cliquer sur la vidéo
+3 - cliquer sur le bouton partager (a coter des likes)
+4 - cliquer sur "Intégrer"
+5 - copier le lien YouTube de : https    jusqu'à  "?" (je pas le prendre)
+
+
+
+
+exemple après le 4 j'obtient cela : 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NVVrL9h5RHc?si=lTxF-VkHTh4VQ-2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+il faut donc copier : "https://www.youtube.com/embed/NVVrL9h5RHc"
+
+
+
+6 - aller dans le fichier "index.php" a la ligne 50
+7 - remplacer le lien par celui choisie (! laisser la partie après le "?" le "?" y comprit)
+
+exemple du code a la ligne 50:
+
+
+<iframe src="https://www.youtube.com/embed/AcCyxakOg5k?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0" 
+	allow="autoplay; encrypted-media" allowfullscreen frameborder="0">
+</iframe>
+
+
+il faut donc remplacer "https://www.youtube.com/embed/NVVrL9h5RHc" par le lien de la vidéo choisie
+
+résultat :
+
+<iframe src="https://www.youtube.com/embed/NVVrL9h5RHc?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0" 
+	allow="autoplay; encrypted-media" allowfullscreen frameborder="0">
+</iframe>
+
