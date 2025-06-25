@@ -73,7 +73,7 @@ h2 {
 }
     
 .social-icons img {
-    height: 50px;
+    height: 80px;
 }
 
 .social-icons-wrapper {
@@ -85,8 +85,18 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none !important;
+    box-shadow: none !important;
 }
 
+.social-icons-wrapper img,
+.LogoRedirect {
+    height: 80px !important;
+}
+
+.social-icons-wrapper i {
+    font-size: 1.5rem !important;
+}
 
 /* --------------------- HERO --------------------- */
 
@@ -857,3 +867,4 @@ h2 {
   opacity: 1;
   transform: translateX(0);
 }
+
