@@ -16,4 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
             content.classList.toggle('active');
         });
     });
+
+    // Colonne de gauche : fade-in depuis la gauche
+    var leftBlock = document.querySelector('.row .col-md-8 .prestation-block');
+    if (leftBlock) {
+        leftBlock.classList.add('fade-in-left');
+    }
+    // Colonne de droite : fade-in depuis la droite
+    var rightBlock = document.querySelector('.row .col-md-4 .prestation-block');
+    if (rightBlock) {
+        rightBlock.classList.add('fade-in-right');
+    }
 });
