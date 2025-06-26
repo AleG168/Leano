@@ -161,6 +161,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .merch-img {
@@ -189,6 +191,27 @@ header {
 
 .merch-square:hover .merch-img {
     transform: scale(1.05);
+}
+
+/* Styles pour la description */
+.merch-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    font-size: 12px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    font-family: 'Sean Slab', serif;
+}
+
+.merch-square:hover .merch-description {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* Début Navbarre */
