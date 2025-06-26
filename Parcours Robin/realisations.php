@@ -120,45 +120,94 @@ $keywordsString = implode(', ', array_unique($keywords));
                         <!-- Conteneur des images -->
                         <div class="banner-images d-flex justify-content-center flex-wrap">
                             <?php
-                            // Dossier spécifique pour les produits de merchandising
-                            $produitsMerchDir = "$domainesDir/Packaging_Merchandising_Graphisme/Produits";
-                            $merchImages = [];
-                            $maxImages = 5; // Nombre maximum d'images à afficher
-                            $allowedExtensions = ['png', 'jpg', 'jpeg', 'gif'];
                             
-                            // Récupération des images de merchandising
+                            // Configuration initiale pour les produits de merchandising
+                            // Chemin vers le dossier contenant les produits merchandising
+                            $produitsMerchDir = "$domainesDir/Packaging_Merchandising_Graphisme/Produits";
+                            // Tableau qui stockera les images à afficher
+                            $merchImages = [];
+                            // Nombre maximum d'images à afficher dans le bandeau
+                            $maxImages = 5;
+                            // Extensions d'images autorisées pour les vignettes
+                            $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'];
+
+                            // Vérification que le dossier merchandising existe
                             if (is_dir($produitsMerchDir)) {
+                                // Récupération de la liste des dossiers produits (scan du répertoire)
                                 $produitsDirs = scandir($produitsMerchDir);
                                 
-                                // Parcours des dossiers de produits avec limite du nombre maximum
+                                // Parcours de chaque dossier produit trouvé
                                 foreach ($produitsDirs as $produitDir) {
+                                    // On ignore les dossiers cachés (commençant par '.') et on vérifie qu'on n'a pas déjà le max d'images
                                     if ($produitDir[0] === '.' || count($merchImages) >= $maxImages) {
-                                        continue;
+                                        continue; // Passe à l'itération suivante
                                     }
                                     
-                                    // Recherche de la vignette principale avec différentes extensions
+                                    // Recherche de la vignette principale dans le dossier produit
+                                    // On teste chaque extension autorisée
                                     foreach ($allowedExtensions as $ext) {
+                                        // Construction du chemin vers la vignette
                                         $vignettePath = "$produitsMerchDir/$produitDir/VignettePrincipale.$ext";
                                         
-                                        // Vérification de l'existence de la vignette
+                                        // Si la vignette existe pour cette extension
                                         if (file_exists($vignettePath)) {
-                                            // Stockage à la fois le chemin et le nom du dossier
+                                            // Initialisation pour la recherche de fichier JSON
+                                            $jsonFile = null; // Nom du fichier JSON trouvé
+                                            $jsonData = [];   // Données décodées du JSON
+                                            // Liste des fichiers dans le dossier produit
+                                            $files = scandir("$produitsMerchDir/$produitDir");
+                                            $keepSearching = true; // Flag pour arrêter après le premier JSON trouvé
+                                            
+                                            // Parcours des fichiers pour trouver un JSON
+                                            foreach ($files as $file) {
+                                                // Vérifie que c'est un fichier JSON (extension .json)
+                                                if ($keepSearching && strtolower(pathinfo($file, PATHINFO_EXTENSION)) === 'json') {
+                                                    $jsonFile = $file; // Stocke le nom du fichier
+                                                    $keepSearching = false; // Arrête la recherche
+                                                }
+                                            }
+                                            
+                                            // Initialisation de la description
+                                            $description = "";
+                                            // Si un fichier JSON a été trouvé
+                                            if ($jsonFile) {
+                                                // Construction du chemin complet vers le JSON
+                                                $jsonPath = "$produitsMerchDir/$produitDir/$jsonFile";
+                                                // Lecture du contenu du fichier
+                                                $jsonContent = file_get_contents($jsonPath);
+                                                
+                                                // Si la lecture a réussi
+                                                if ($jsonContent !== false) {
+                                                    // Décodage du JSON en tableau associatif
+                                                    $jsonData = json_decode($jsonContent, true);
+                                                    // Récupération de la description si elle existe
+                                                    if (isset($jsonData['image1']['description'])) {
+                                                        $description = $jsonData['image1']['description'];
+                                                    }
+                                                }
+                                            }
+                                            
+                                            // Ajout des informations de l'image au tableau final
                                             $merchImages[] = [
-                                                'path' => $vignettePath,
-                                                'name' => str_replace('_', ' ', $produitDir) // Remplace les underscores par des espaces
+                                                'path' => $vignettePath,        // Chemin de l'image
+                                                'name' => str_replace('_', ' ', $produitDir), // Nom formaté
+                                                'description' => $description    // Description (peut être vide)
                                             ];
-                                            break; // On sort de la boucle des extensions si on a trouvé la vignette
+                                            break; // On sort de la boucle des extensions car on a trouvé la vignette
                                         }
                                     }
                                 }
                             }
-                            
+
                             // Affichage des images de merchandising
                             foreach ($merchImages as $item) { ?>
                                 <div class="merch-square">
                                     <div class="merch-content">
                                         <img src="<?php echo $item['path'] ?>" alt="Leano Design - <?php echo $item['name'] ?>" class="merch-img">
                                         <div class="merch-hover"></div>
+                                        <?php if (!empty($item['description'])) { ?>
+                                            <div class="merch-description"><?php echo $item['description'] ?></div>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             <?php } ?>
