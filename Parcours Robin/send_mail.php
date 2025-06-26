@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } catch (Exception $e) {
             // En cas d'erreur, redirige avec un statut d'erreur
             // Pour déboguer, décommentez la ligne ci-dessous et commentez la redirection
-            // echo "Le message n'a pas pu être envoyé. Erreur Mailer: {$mail->ErrorInfo}";
+             echo "Le message n'a pas pu être envoyé. Erreur Mailer: {$mail->ErrorInfo}";
             header("Location: contact.php?status=error");
             exit;
         }
