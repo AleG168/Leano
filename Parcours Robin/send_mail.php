@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // ---- MODIFIEZ CETTE LIGNE ----
     // Définissez ici l'adresse e-mail qui recevra les messages du formulaire.
-    $to = "leanodesign@gmail.com"; 
+    $to = "rnft78@gmail.com"; 
     // -----------------------------
 
     // === NETTOYAGE ET SÉCURISATION DES DONNÉES DU FORMULAIRE ===
@@ -43,18 +43,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'VOTRE MAIL'; 
-            $mail->Password = 'VOTRE MOTS DE PASSE D Application'; // <-- MODIFIEZ CECI
+            $mail->Username = 'rnft78@gmail.com'; 
+            $mail->Password = 'uypy zpgt frdy tezz'; // <-- MODIFIEZ CECI
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
             $mail->CharSet = 'UTF-8';
 
             // Expéditeur et destinataire
-            // On définit l'expéditeur comme étant ton adresse d'envoi pour éviter les problèmes de spoofing.
-            // Le nom de l'expéditeur reste celui du visiteur.
-            $mail->setFrom('rnft78@gmail.com', $nom); 
+            // L'expéditeur est l'utilisateur (attention, peut ne pas fonctionner avec Gmail)
+            $mail->setFrom($email, $nom); 
             $mail->addAddress($to);
-            // L'adresse de réponse est bien celle du visiteur.
+            // L'adresse de réponse est aussi celle de l'utilisateur.
             $mail->addReplyTo($email, $nom);
 
             // Contenu
