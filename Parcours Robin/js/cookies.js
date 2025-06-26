@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!settingsButton) console.error('Settings button not found');
 
     // Force l'affichage de la bannière pour les tests (à supprimer en production)
-    cookieBanner.style.display = 'block';
+    // cookieBanner.style.display = 'block';
     console.log('Cookie banner should be visible');
 
     // Vérifie si des préférences de cookies existent déjà

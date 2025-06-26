@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // ---- MODIFIEZ CETTE LIGNE ----
     // Définissez ici l'adresse e-mail qui recevra les messages du formulaire.
-    $to = "rnft78@gmail.com"; 
+    $to = "leanodesign@gmail.com"; 
     // -----------------------------
 
     // === NETTOYAGE ET SÉCURISATION DES DONNÉES DU FORMULAIRE ===
@@ -43,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'rnft78@gmail.com'; 
-            $mail->Password = 'uypy zpgt frdy tezz'; // <-- MODIFIEZ CECI
+            $mail->Username = 'VOTRE MAIL'; 
+            $mail->Password = 'VOTRE MOTS DE PASSE D Application'; // <-- MODIFIEZ CECI
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
             $mail->CharSet = 'UTF-8';

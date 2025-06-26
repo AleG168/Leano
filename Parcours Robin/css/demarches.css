@@ -17,13 +17,13 @@ html, body {
 }
 
 :root {
-    --card-width: 280px;
-    --card-height: 200px;
+    --card-width: 250px;
+    --card-height: 180px;
     --arrow-overlap: 0px;
     --arrow-base-thickness: 20px; /* Reduced thickness of the arrow's base */
     --arrow-total-length: 50px; /* Reduced total length of the arrow */
     --card-to-card-spacing: 110px;
-    --photo-block-height: 450px;
+    --photo-block-height: 320px;
 }
 
 /* General Styling */
@@ -65,21 +65,11 @@ header p {
 /* Timeline Container */
 .timeline-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    padding: 0;
-    gap: 30px; /* Réduit de 50px à 30px pour un espacement plus compact */
-    width: fit-content; /* S'adapte à la largeur du contenu pour afficher toutes les cartes */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
     margin: 0 auto;
-    overflow-x: auto;
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-.timeline-container::-webkit-scrollbar {
-    display: none;
 }
 
 /* Removed .timeline-section and related styles as they are no longer needed for a single row layout */
@@ -92,7 +82,7 @@ header p {
     position: relative; /* For proper positioning of children like z-index */
     box-shadow: none;
     border-radius: 0px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.1s ease;
+    transition: box-shadow 0.3s ease, z-index 0.1s ease;
 }
 
 /* Card Styling (Adjusted for being inside card-container) */
@@ -221,12 +211,12 @@ header p {
 .card-content h3 {
     font-family: 'Sean Slab', sans-serif;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 0;
     margin-bottom: 0.5em;
     text-align: left;
     line-height: 1.2;
-    min-height: 90px; /* Augmente la valeur pour forcer l'alignement */
+    height: 80px; /* Augmente la valeur pour forcer l'alignement */
     display: block;
 }
 
@@ -234,7 +224,7 @@ header p {
     margin-top: 0; 
     margin-bottom: 0;
     text-align: left;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.4; /* Ensure consistent line spacing for objectives */
     font-weight: 400;
 }
@@ -321,14 +311,12 @@ header p {
 
 /* Hover effects */
 .card-container:hover {
-    transform: translateY(-5px) scale(1.03);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
 .card-container:hover .card-description {
     opacity: 0; /* Ensure this remains hidden as photo overlay takes precedence */
-    transform: translateY(100%); /* Ensure this remains off-screen */
 }
 
 /* Removed .card-container:hover .card-image-container img styles as icons are no longer used */
