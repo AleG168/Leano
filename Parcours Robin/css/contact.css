@@ -517,3 +517,9 @@ h1 {
     margin-left: 19px !important;
   }
 }
+
+@media (max-width: 991px) {
+.fab{
+    font-size : 18.5pt
+  }
+}

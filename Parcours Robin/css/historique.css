@@ -870,6 +870,9 @@ h2 {
     .navbar a, .navbar a:visited {
   margin-bottom: 40px !important;
   }
+  .fab{
+    font-size : 18.5pt
+  }
 }
 
  @media (max-width: 901px) and (min-width:  833px) {
