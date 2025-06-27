@@ -1,86 +1,89 @@
 <?php
+// Import des classes nécessaires de PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Inclure les fichiers PHPMailer
+// Inclusion des fichiers PHPMailer
 require_once __DIR__ . '/PHPMailer-master/PHPMailer-master/src/PHPMailer.php';
 require_once __DIR__ . '/PHPMailer-master/PHPMailer-master/src/SMTP.php';
 require_once __DIR__ . '/PHPMailer-master/PHPMailer-master/src/Exception.php';
 
-// Vérifie si le formulaire a été soumis en utilisant la méthode POST.
-// C'est une mesure de sécurité pour s'assurer que le script n'est pas exécuté directement.
+// Vérification si le formulaire a été soumis en POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    // ---- MODIFIEZ CETTE LIGNE ----
-    // Définissez ici l'adresse e-mail qui recevra les messages du formulaire.
-    $to = "rnft78@gmail.com"; 
-    // -----------------------------
-
-    // === NETTOYAGE ET SÉCURISATION DES DONNÉES DU FORMULAIRE ===
-
-    // strip_tags() supprime les balises HTML et PHP pour éviter les injections de code.
-    // filter_var() avec FILTER_SANITIZE_FULL_SPECIAL_CHARS supprime les caractères spéciaux (remplace FILTER_SANITIZE_STRING qui est déprécié).
-    $nom = filter_var(strip_tags($_POST['nom']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-
-    // filter_var() avec FILTER_VALIDATE_EMAIL vérifie si l'adresse e-mail fournie a un format valide.
-    // C'est essentiel pour s'assurer que vous pouvez répondre à l'utilisateur.
-    $email = filter_var(strip_tags($_POST['email']), FILTER_VALIDATE_EMAIL);
+    // Adresse email du destinataire qui recevra le message
+    $to = "rnft78@gmail.com";
     
-    // Le message est également nettoyé pour supprimer les balises.
-    $message = filter_var(strip_tags($_POST['message']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    // Validation de l'adresse email du destinataire
+    if(!filter_var($to, FILTER_VALIDATE_EMAIL)) {
+        die("Adresse de destination invalide");
+    }
 
-    // === VÉRIFICATION DES DONNÉES ===
-    
-    // On s'assure que le nom et le message ne sont pas vides et que l'email est valide.
-    // Si l'une de ces conditions n'est pas remplie, le script ne tentera pas d'envoyer l'e-mail.
+    // Nettoyage et validation des données du formulaire
+    $nom = filter_var(strip_tags($_POST['nom'] ?? ''), FILTER_SANITIZE_FULL_SPECIAL_CHARS); // Filtre le nom
+    $email = filter_var(strip_tags($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL); // Valide l'email
+    $message = filter_var(strip_tags($_POST['message'] ?? ''), FILTER_SANITIZE_FULL_SPECIAL_CHARS); // Filtre le message
+
+    // Vérification que tous les champs requis sont valides et non vides
     if (!empty($nom) && $email && !empty($message)) {
-        // === ENVOI DE L'E-MAIL AVEC PHPMailer ===
-        
+        // Création d'une nouvelle instance PHPMailer avec les exceptions activées
         $mail = new PHPMailer(true);
+        
         try {
-            // Paramètres du serveur SMTP
-            // $mail->SMTPDebug = 2; // Ligne de débogage, à réactiver si besoin
-            $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'rnft78@gmail.com'; 
-            $mail->Password = 'uypy zpgt frdy tezz'; // <-- MODIFIEZ CECI
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
-            $mail->CharSet = 'UTF-8';
+            // Configuration SMTP
+            $mail->SMTPDebug = 2; // Mode debug (2 = verbose)
+            $mail->isSMTP(); // Utilisation de SMTP
+            $mail->Host = 'smtp.gmail.com'; // Serveur SMTP de Gmail
+            $mail->SMTPAuth = true; // Activation de l'authentification SMTP
+            $mail->Username = 'rnft78@gmail.com'; // Adresse Gmail pour l'authentification
+            $mail->Password = 'uypy zpgt frdy tezz'; // Mot de passe de l'application
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Chiffrement TLS
+            $mail->Port = 587; // Port SMTP pour TLS
+            $mail->CharSet = 'UTF-8'; // Encodage des caractères
+            
+            // Configuration des options SSL pour contourner les problèmes de certificat
+            $mail->SMTPOptions = [
+                'ssl' => [
+                    'verify_peer' => false, // Désactive la vérification du certificat
+                    'verify_peer_name' => false, // Désactive la vérification du nom
+                    'allow_self_signed' => true // Autorise les certificats auto-signés
+                ]
+            ];
 
-            // Expéditeur et destinataire
-            // L'expéditeur est l'utilisateur (attention, peut ne pas fonctionner avec Gmail)
-            $mail->setFrom($email, $nom); 
-            $mail->addAddress($to);
-            // L'adresse de réponse est aussi celle de l'utilisateur.
+            // Configuration de l'expéditeur
+            $mail->setFrom($email, $nom);  // Utilise l'email et le nom saisis dans le formulaire
+
+
+            // Ajout de l'adresse de réponse (email de l'utilisateur)
             $mail->addReplyTo($email, $nom);
+            // Ajout du destinataire principal
+            $mail->addAddress($to);
 
-            // Contenu
-            $mail->isHTML(false);
-            $mail->Subject = "Nouveau message de $nom via le formulaire de contact";
-            $mail->Body    = "Nom: $nom\nEmail: $email\n\nMessage:\n$message";
+            // Configuration du contenu de l'email
+            $mail->isHTML(false); // Email en texte brut (non HTML)
+            $mail->Subject = "Nouveau message de $nom via le formulaire de contact"; // Sujet
+            $mail->Body = "Nom: $nom\nEmail: $email\n\nMessage:\n$message"; // Corps du message
 
-            $mail->send();
-            header("Location: contact.php?status=success");
-            exit;
+            // Envoi de l'email et redirection si succès
+            if($mail->send()) {
+                header("Location: contact.php?status=success");
+                exit;
+            }
+            
         } catch (Exception $e) {
-            // En cas d'erreur, redirige avec un statut d'erreur
-            // Pour déboguer, décommentez la ligne ci-dessous et commentez la redirection
-             echo "Le message n'a pas pu être envoyé. Erreur Mailer: {$mail->ErrorInfo}";
+            // Gestion des erreurs : log et redirection
+            error_log("Erreur envoi email: " . $e->getMessage() . " - " . $mail->ErrorInfo);
             header("Location: contact.php?status=error");
             exit;
         }
     } else {
-        // Si les données du formulaire étaient invalides (champs vides ou email incorrect),
-        // on redirige avec un statut d'erreur spécifique.
+        // Redirection si les données du formulaire sont invalides
         header("Location: contact.php?status=invalid");
         exit;
     }
 } else {
-    // Si quelqu'un essaie d'accéder directement à ce fichier send_mail.php via son URL,
-    // on le redirige simplement vers la page de contact.
+    // Redirection si l'accès n'est pas via POST
     header("Location: contact.php");
     exit;
 }
-?> 
+?>
