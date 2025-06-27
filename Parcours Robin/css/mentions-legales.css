@@ -175,3 +175,9 @@ section a:hover {
     padding-right: 20px;
   }
 }
+
+  @media (max-width: 991px){
+    .navbar a, .navbar a:visited {
+  margin-bottom: 40px !important;
+  }
+}
