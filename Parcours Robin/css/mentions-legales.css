@@ -7,6 +7,22 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-family: 'Sean Slab', serif;
+}
+
+.LogoRedirect{
+    height: 28px;
+    width: 28px;
+    max-width :  35px;
+    max-height :  35px;
+}
+
+.logo {
+    height: 120px;
+}
+
 body {
     background-color: #ffffff;
     color: #000000;
@@ -18,7 +34,7 @@ body {
     margin: 2rem auto;
     padding: 2rem;
     background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .legal-container h1 {
@@ -30,12 +46,13 @@ body {
     margin-bottom: 3rem;
     border-bottom: none;
     padding-bottom: 1rem;
+    text-align: left;
 }
 
 section {
     margin-bottom: 2.5rem;
     padding: 1.5rem;
-    background-color: #ededed;
+    background-color: #eaeaea75;
 }
 
 section h2 {
@@ -98,7 +115,57 @@ section a:hover {
 .Navbar_centrer {
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
     box-sizing: border-box;
+    margin-top: -74px;
+}
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .navbar a, .navbar a:visited{
+    padding: 0 !important;
+    margin-right: 14px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .navbar > .container-fluid{
+    margin-left: -141px;
+  }
+  .align-items-center{
+    margin-right: -149px;
+  }
+}
+
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .logo{
+    padding: 0 !important;
+    margin-left: -9px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .logo{
+    margin-left: calc(-102px + (1199px - 100vw) * 0.5);
+  }
+}
+
+
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .logo{
+    margin-left: calc(-115px + (991px - 100vw) * 0.5);
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px){
+  .logo{
+    margin-left: calc(-95px + (767px - 100vw) * 0.5);
+  }
+}
+
+@media (max-width: 575px){
+  .logo{
+    margin-left: 9px;
+  }
 }
