@@ -763,6 +763,7 @@ h2 {
     font-weight: 400;
     font-size: 16px;
     color: var(--text);
+    text-align: left;
 }
 
 .page-title {
@@ -915,3 +916,71 @@ h2 {
 }
 
 
+ @media (max-width: 1234px) and (min-width: 1200px) {
+    .social-icons-wrapper {
+    margin-right: 15px !important;
+    }
+    .logo {
+    margin-left: -14px !important;
+    }
+    h1{
+        margin-left: -14px !important;
+    }
+}
+
+
+ @media (max-width: 819px) and (min-width: 769px) {
+    .logo {
+    margin-left: -14px !important;
+    }
+    h1{
+        margin-left: -14px !important;
+    }
+}
+
+ @media (max-width: 768px) and (min-width: 768px) {
+    .logo {
+    margin-left: -14px !important;
+    }
+    h1{
+        margin-left: -48px !important;
+    }
+}
+
+
+ @media (max-width: 575px) and (min-width: 481px) {
+    .logo {
+        padding-left: 37px !important;
+    }
+    h1{
+        padding-left: 48px !important;
+    }
+}
+
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+    .highlight .container h2{
+        text-align: center;
+    }
+    .highlight .container p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+    .highlight .container h2{
+        text-align: center;
+    }
+    .highlight .container p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .highlight .container h2{
+        text-align: center;
+    }
+    .highlight .container p{
+        text-align: center;
+    }
+}
