@@ -34,7 +34,9 @@ body {
     margin: 2rem auto;
     padding: 2rem;
     background-color: #ffffff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    border: solid;
+    border-color: #e5e5e5;
+    border-width: 1px;
 }
 
 .legal-container h1 {
