@@ -532,10 +532,10 @@ header p {
         font-size: 10px;
     }
     header h2 {
-        font-size: 14px;
+        font-size: 26px;
     }
     header p {
-        font-size: 10px;
+        font-size: 12px;
     }
     .logo {
         height: 60px; /* Further reduced logo size */
@@ -610,3 +610,28 @@ header p {
   .navbar-nav.desktop-nav {
     gap: 2.5rem;
   }
+
+  @media (max-width: 991px){
+    .navbar a, .navbar a:visited {
+  margin-bottom: 40px !important;
+  }
+}
+
+
+@media (max-width: 990px) {
+  header h2 {
+        text-align :left;
+  }
+  header p {
+    text-align :left;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 769px) {
+  header h2 {
+    font-size: 34px;
+  }
+  header p {
+    font-size: 15px;
+  }
+}

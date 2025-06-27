@@ -248,9 +248,9 @@
     }
     
     .card .description {
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
         padding: 10px;
     }
     
@@ -355,6 +355,37 @@
     right: 15px;
     top: 15px;
   }
+}
+
+
+@media (max-width: 1399px) and (min-width: 1024px) {
+  .logo{
+    margin-left: calc(-303px + (1399px - 100vw) * 0.5);
+}
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+  .logo{
+    margin-left: -230px;
+}
+}
+
+@media (max-width: 768px) and (min-width: 768px) {
+  .logo{
+    margin-left: -259px;
+}
+}
+
+@media (max-width: 767px) and (min-width: 767px) {
+  .logo{
+    margin-left: -32px;
+}
+}
+
+@media (max-width: 1023px) and (min-width: 992px) {
+  .logo{
+    margin-left: calc(-115px + (1023px - 100vw) * 0.5);
+}
 }
 
 

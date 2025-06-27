@@ -24,8 +24,6 @@
 
 
 
-
-
 .footer {
     background-color: #222222;
     padding: 0 0 1.5rem 0;
@@ -375,9 +373,35 @@
     }
 }
 
- @media (min-width: 1199px) and (max-width: 769px) {
+ @media (min-width: 769px) and (max-width: 1199px) {
     .LOGO_COULEUR {
-    right: 26px;
     position: relative;
     }
 }
+
+@media (max-width: 1157px) {
+    .footer-section a {
+        font-size: 14px; /* Taille plus raisonnable que 2px */
+    }
+    
+    .footer-section p {
+        font-size: 14px; /* Pour le texte de copyright aussi */
+    }
+}
+
+ @media (min-width: 769px) and (max-width: 778px) {
+    .footer-content {
+        padding: 0 1rem;
+    }
+}
+
+
+ @media (min-width: 769px) and (max-width: 1027px) {
+    .separator {
+    margin: 0;
+    }
+    .LOGO_COULEUR {
+    margin-right: 87px;
+    }
+}
+

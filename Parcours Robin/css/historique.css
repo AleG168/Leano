@@ -383,7 +383,6 @@ h2 {
 
     .logo {
         height: 100px;
-        margin-left: 0;
     }
 
     .social-icons img {
@@ -454,7 +453,6 @@ h2 {
 
     .logo {
         height: 80px;
-        margin-left: 0;
     }
 
     .social-icons img {
@@ -486,7 +484,7 @@ h2 {
     }
 
     .page-title {
-        margin-left: 0 !important;
+        margin-left: 0 ;
         font-size: 1.8rem;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -867,4 +865,53 @@ h2 {
   opacity: 1;
   transform: translateX(0);
 }
+
+@media (max-width: 991px){
+    .navbar a, .navbar a:visited {
+  margin-bottom: 40px !important;
+  }
+}
+
+ @media (max-width: 901px) and (min-width:  833px) {
+    .logo {
+    margin-right: calc(-47px + (901px - 100vw) * 0.5) !important;
+    }
+}
+
+@media (max-width: 480px){
+    h1{
+        margin-left: -21px !important;
+    }
+}
+
+
+
+ @media (max-width: 767px) and (min-width:  576px) {
+    .logo {
+    margin-left: -14px !important;
+    }
+}
+
+ @media (max-width: 1054px) and (min-width:  992px) {
+    .container, .container-md, .container-sm {
+    max-width: 1012px;
+    }
+}
+
+@media (max-width: 1076px) and (min-width:  992px) {
+    .logo {
+    margin-left: -14px !important;
+    }
+    h1{
+        margin-left: -14px !important;
+    }
+}
+
+
+ @media (max-width: 1060px) and (min-width:  992px) {
+    .social-icons-wrapper {
+    margin-right: 15px;
+    }
+}
+
 

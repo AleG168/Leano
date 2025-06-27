@@ -200,11 +200,11 @@
 .prestation-page .logo {
     height: 120px !important;
     max-height: 120px !important;
-    margin-left: 0 !important;
+    margin-left: 0 ;
     position: relative !important;
     left: auto !important;
     top: auto !important;
-    margin-right: 0 !important;
+    margin-right: 0 ;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     display: block !important;
@@ -219,7 +219,7 @@
     position: relative !important;
     left: auto !important;
     top: auto !important;
-    margin: 0 !important;
+    margin: 0 ;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -261,7 +261,7 @@
         position: relative !important;
         left: auto !important;
         top: auto !important;
-        margin: 0 !important;
+        margin: 0 ;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -295,7 +295,7 @@
         position: relative !important;
         left: auto !important;
         top: auto !important;
-        margin: 0 !important;
+        margin: 0 ;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -338,7 +338,7 @@
         position: relative !important;
         left: auto !important;
         top: auto !important;
-        margin: 0 auto 10px 24px !important;
+        margin: 0 auto 10px 24px;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -379,7 +379,7 @@
         position: relative !important;
         left: auto !important;
         top: auto !important;
-        margin: 0 auto 10px auto !important;
+        margin: 0 auto 10px auto ;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -406,7 +406,7 @@
         position: relative !important;
         left: auto !important;
         top: auto !important;
-        margin: 0 auto 10px auto !important;
+        margin: 0 auto 10px auto ;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -416,7 +416,7 @@
     .prestation-page .logo-wrapper {
         position: relative !important;
         left: auto !important;
-        margin-left: 0 !important;
+        margin-left: 0 ;
         padding-left: 0 !important;
         width: auto !important;
         display: block !important;
@@ -613,7 +613,7 @@ body {
     .prestation-page .logo,
     .prestation-page .logo-wrapper img {
         display: block !important;
-        margin: 0 auto 10px auto !important;
+        margin: 0 auto 10px auto ;
         left: 0 !important;
         right: 0 !important;
         position: relative !important;
@@ -632,5 +632,65 @@ body {
     }
     .prestation-page .page-header {
         text-align: center;
+    }
+}
+
+@media (max-width: 991px){
+    .navbar a, .navbar a:visited {
+  margin-bottom: 40px !important;
+  }
+}
+
+ @media (max-width: 1199px) and (min-width: 1024px) {
+.navbar a, .navbar a:visited {
+  margin-right: 13px;
+ }
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    margin-top: 20px; /* Ajoute une marge en haut pour pousser le bouton vers le bas */
+    position: relative; /* Change de absolute à relative */
+    right: auto;
+    top: auto;
+  }
+}
+
+
+ @media (max-width: 766px) and (min-width: 766px) {
+.logo {
+  margin-left: 126px ;
+ }
+}
+
+ @media (max-width: 765px) and (min-width: 576px) {
+    .logo {
+    margin-right: calc(401px + (765px - 100vw) * 0.5) !important ; 
+ }
+    h1{
+        text-align :left
+    }
+    .subtitle{
+        text-align :left
+    }
+}
+
+ @media (max-width: 355px){
+    .logo {
+        margin-left : -11px !important;
+    }
+ }
+
+
+
+ @media (max-width: 575px) and (min-width:  356px) {
+    .logo {
+    margin-left: calc(-247px + (575px - 100vw) * 0.5) !important ; 
+ }
+    h1{
+        text-align :left
+    }
+    .subtitle{
+        text-align :left
     }
 }

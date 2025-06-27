@@ -489,3 +489,31 @@ h1 {
       width: auto !important;
     }
   }
+
+
+  @media (max-width: 991px){
+    .navbar a, .navbar a:visited {
+  margin-bottom: 40px !important;
+  }
+}
+
+
+ @media (max-width: 1199px) and (min-width: 1024px) {
+.navbar a, .navbar a:visited {
+  margin-right: 13px;
+ }
+}
+
+
+@media (max-width: 991px) and (min-width: 769px) {
+  .logo-wrapper .logo {
+    margin-left: -248px !important;
+  }
+}
+
+
+@media (max-width: 576px) and (min-width: 481px) {
+  .logo-wrapper .logo {
+    margin-left: 19px !important;
+  }
+}
