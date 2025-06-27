@@ -9,12 +9,14 @@
   <meta name="description" content="Vous avez un projet en design industriel ? Contactez LeanoDesign pour discuter de vos besoins, obtenir un devis ou démarrer une collaboration sur mesure à Lannion ou à distance.">
   <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
 
+ 
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/contact.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/img/favicon.png" />
+  <!-- Icon de l'onglet -->
+    <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
