@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <!-- Encodage des caractères en UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Métadonnées pour le référencement et la description -->
+    <meta name="Vincent Beaucourt" content="Projet">
+    <meta name="description" content="Agence de design & ingénierie industrielle en Bretagne"> 
+    <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
+    <meta name="author" content="LEANO DESIGN+ ENGINEERING">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.leanodesign.com/" />
+
+    <!-- Icon de l'onglet -->
+    <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
+
     <!-- Permet l'adaptation du site sur mobile/tablette -->
     <title>LeanoDesign - Mentions Légales</title>
     <!-- Titre de l'onglet du navigateur -->
