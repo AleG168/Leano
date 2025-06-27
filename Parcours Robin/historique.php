@@ -1,6 +1,8 @@
+<!-- Début du document HTML pour la page historique de LeanoDesign -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Métadonnées de la page et liens vers les feuilles de style et bibliothèques -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeanoDesign -  Histoire</title>    
@@ -18,12 +20,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="historique-page">
-<?php include 'navbar.php'; ?>
+<?php 
+// Inclusion de la barre de navigation principale
+include 'navbar.php'; 
+?>
   <main>
     <div class="content">
       <div class="container">
+        <!-- Titre principal de la page -->
         <h1 class="page-title">Mon Histoire</h1>
       </div>
+      <!-- Bannière d'anniversaire/expérience avec chiffres clés -->
       <div class="historique-container">
           <div class="anniversary-banner scale-in ">
               <div class="anniversary-content">
@@ -44,8 +51,10 @@
              <span class="text">Réalisés pour nos clients</span>
             </div>
           </div>
+        <!-- Bouton pour accéder à la section parcours -->
         <a href="#about" class="cta">Découvrir le parcours</a>
       </div>
+      <!-- Section À propos avec présentation du fondateur -->
       <section id="about" class="section about" data-aos="fade-up" data-aos-duration="1500">
       <div class="container grid">
         <div class="text">
@@ -53,13 +62,16 @@
           <p>Vincent Beaucourt, fondateur de Leano Design, conçoit depuis 15 ans des produits alliant <strong>innovation</strong>, <strong>esthétique</strong> et <strong>fonctionnalité</strong>. Diplômé de RUBIKA, il collabore avec des équipes techniques pour transformer les idées en produits concrets.</p>
           <p class="quote">"Un bon design, c'est quand la forme suit la fonction avec élégance."</p>
         </div>
+        <!-- Photo du fondateur -->
         <img src="assets/images/vincent-beaucourt.jpg" loading="lazy" alt="Vincent Beaucourt" class="profile" />
       </div>
     </section>
+    <!-- Section chronologique du parcours professionnel -->
     <section class="section" id="timeline" data-aos="fade-up" data-aos-duration="1500">
       <div class="container">
         <h2>Parcours</h2>
         <div class="timeline">
+          <!-- Premier événement du parcours -->
           <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-icon">
               <i class="fas fa-graduation-cap"></i>
@@ -69,6 +81,7 @@
               <p>En 200O, Intégrer le Groupe SEB à Lourdes m'a permis de confronter ma pratique du design à la réalité des processus industriels et aux exigences d'un grand groupe international.</p>
             </div>
           </div>
+          <!-- Deuxième événement du parcours -->
           <div class="timeline-item" data-aos="fade-up" data-aos-duration="1500">
             <div class="timeline-icon">
               <i class="fas fa-industry"></i>
@@ -86,6 +99,7 @@
         </div>
       </div>
     </section>
+    <!-- Section des expertises/compétences clés -->
     <section class="section skills-full-bg" id="skills" data-aos="fade-up" data-aos-duration="1500">
       <div class="container">
         <h2>Expertises</h2>
@@ -112,6 +126,7 @@
       </div>
     </section>
 
+    <!-- Section mission/valeurs -->
     <section class="highlight" data-aos="fade-up" data-aos-duration="1500">
       <div class="container">
         <h2>Ma mission</h2>
@@ -119,9 +134,12 @@
       </div>
     </section>    
   </main>
-  <?php include 'footer.php'; ?>
+  <?php 
+  // Inclusion du pied de page commun à toutes les pages
+  include 'footer.php'; 
+  ?>
 
-  <!-- AOS Library Script -->
+  <!-- Script d'initialisation de la librairie AOS pour les animations au scroll -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   
   <script>
