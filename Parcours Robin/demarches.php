@@ -9,7 +9,9 @@
   <meta name="description" content="Découvrez la démarche de design produit de LeanoDesign : une approche structurée en 6 étapes, de l'idéation à la pré-industrialisation, pour transformer vos idées en produits concrets et innovants.">
   <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
  
-
+<!-- Icon de l'onglet -->
+    <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
+    
   <link rel="stylesheet" href="css/footer.css" />
  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />

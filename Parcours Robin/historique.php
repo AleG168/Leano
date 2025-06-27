@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeanoDesign -  Histoire</title>    
     <meta name="description" content="Découvrez l'histoire de LeanoDesign, une entreprise de design industriel spécialisée dans la création de produits innovants et durables.">
+
+    <!-- Icon de l'onglet -->
+    <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
+    
     <link rel="stylesheet" href="css/historique.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">

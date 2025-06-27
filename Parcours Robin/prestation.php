@@ -13,6 +13,9 @@
     <meta name="Vincent Beaucourt" content="Projet">
     <meta name="description" content="Découvrez les prestations de LeanoDesign en design industriel : cahier des charges, concepts, maquettes 3D, prototypes, dossier de fabrication, supports de présentation.">
     <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
+
+    <!-- Icon de l'onglet -->
+    <link rel="icon" type="image/png" href="assets/images/D+_EMBLEMEOnglet.png"/>
     
     <link rel="stylesheet" href="css/prestation.css">
     <link rel="stylesheet" href="css/footer.css">
