@@ -12,7 +12,7 @@ require_once __DIR__ . '/PHPMailer-master/PHPMailer-master/src/Exception.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Adresse email du destinataire qui recevra le message
-    $to = "rnft78@gmail.com";
+    $to = "leanodesign@gmail.com";
     
     // Validation de l'adresse email du destinataire
     if(!filter_var($to, FILTER_VALIDATE_EMAIL)) {
@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP(); // Utilisation de SMTP
             $mail->Host = 'smtp.gmail.com'; // Serveur SMTP de Gmail
             $mail->SMTPAuth = true; // Activation de l'authentification SMTP
-            $mail->Username = 'rnft78@gmail.com'; // Adresse Gmail pour l'authentification
-            $mail->Password = 'uypy zpgt frdy tezz'; // Mot de passe de l'application
+            $mail->Username = 'votre addresse mail'; // Adresse Gmail pour l'authentification
+            $mail->Password = 'votre mds d application'; // Mot de passe de l'application
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Chiffrement TLS
             $mail->Port = 587; // Port SMTP pour TLS
             $mail->CharSet = 'UTF-8'; // Encodage des caractères
