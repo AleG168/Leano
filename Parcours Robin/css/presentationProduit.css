@@ -183,6 +183,11 @@
     padding : 0;
 }
 
+.navbar li{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
 .LogoRedirect{
     height: 28px;
     width: 28px;
@@ -262,7 +267,6 @@
         font-size: 0.8em;
     }
     .navbar a, .navbar a:visited {
-    width: 100%;
     border-radius: 10px;
     margin: 0 !important;
     padding: 0 !important;
@@ -280,6 +284,9 @@
     .divClique {
     pointer-events: none !important;
     }
+
+
+
 }
 
 @media (max-width: 480px) {
@@ -355,6 +362,9 @@
     right: 15px;
     top: 15px;
   }
+  .d-flex {
+    margin-left: 0;
+    }
 }
 
 
@@ -388,4 +398,9 @@
 }
 }
 
+@media (max-width: 282px) {
+  .navbar-toggler {
+    right : -10px
+  }
+}
 

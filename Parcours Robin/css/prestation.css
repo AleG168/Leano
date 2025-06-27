@@ -553,7 +553,7 @@ body {
 }
 
 .navbar a, .navbar a:visited {
-    color: #000 !important;
+    color: rgba(var(--bs-dark-rgb),var(--bs-text-opacity)) !important;
     font-family: 'Sean Slab', serif !important;
     font-size: 16px !important;
 }
@@ -693,4 +693,23 @@ body {
     .subtitle{
         text-align :left
     }
+}
+
+
+
+
+@media (max-width: 688px) {
+  .navbar-toggler {
+    margin-top: 20px; /* Ajoute une marge en haut pour pousser le bouton vers le bas */
+    position: relative; /* Change de absolute à relative */
+    right: 100px;
+    top: auto;
+  }
+}
+
+@media (max-width: 308px) {
+  .navbar-toggler {
+    right:45px !important;
+
+  }
 }
