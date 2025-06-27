@@ -27,6 +27,9 @@
           <!-- Liste des liens de navigation -->
           <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
             <li class="nav-item">
+              <a class="nav-link text-dark" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link text-dark" href="historique.php">A Propos</a>
             </li>
             <li class="nav-item">

@@ -86,7 +86,7 @@
             LISTE DES LIENS DU MENU DESKTOP
             Modifiez ici les liens et leurs intitulés.
           -->
-          <ul class="navbar-nav mb-2 mb-lg-0 border border-light rounded-0 px-4 py-2 text-dark mx-2 d-flex justify-content-center" style="gap: 2.5rem;">
+          <ul class="navbar-nav mb-2 mb-lg-0 border border-light rounded-0 px-4 py-2 text-dark mx-2 d-flex justify-content-center">
             <li class="nav-item">
               <a class="nav-link fw-bold" href="historique.php" style="color: #000;">A Propos</a>
             </li>

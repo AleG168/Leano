@@ -14,7 +14,6 @@
     <meta name="description" content="Découvrez les prestations de LeanoDesign en design industriel : cahier des charges, concepts, maquettes 3D, prototypes, dossier de fabrication, supports de présentation.">
     <meta name="keywords" content="designer industriel, design, Lannion, conception produit, Bretagne, modélisation 3D, écodesign, Breton, Trégor">
     
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/prestation.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
