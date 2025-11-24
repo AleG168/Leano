@@ -13,6 +13,15 @@ body {
     font-weight: 400;
 }
 
+body.contact-page
+{
+    background-color: #ffffffff;
+}
+
+.container {
+  flex: 1 0 auto;          /* prend tout l’espace restant avant le footer */
+}
+
 h1 {
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
@@ -38,12 +47,20 @@ h1 {
 .contact-form {
     padding: 20px;
     text-align: left; /* Align text to the left */
+    margin-left: 10px;
 }   
 
 
 .contact-details-block {
     background-color: #EEEEEE; /* Add background to the new block */
-    padding: 20px; /* Add padding to the new block */
+    padding-bottom: 110px;
+    margin-top: 6px;
+    margin-bottom: 0;
+
+}
+
+.sizeBlock {
+    font-size: 110%;
 }
 
 .info-block {
@@ -81,7 +98,8 @@ h1 {
 
 
 .map-container {
-    margin-top: 20px;
+    margin-top: 13px;
+    transform : scale(1.05);
 }
 
 .contact-map {
@@ -334,7 +352,12 @@ h1 {
     margin-left: 40px;
     /* Ajuste la valeur pour aligner avec le logo */
 }
-  
+
+.alig{
+  margin-top: 19px;
+}
+
+
 @media (max-width: 992px) {
   .contact-page .logo {
     margin-left: 0;

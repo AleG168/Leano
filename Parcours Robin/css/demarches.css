@@ -35,7 +35,6 @@ body {
 
 /* Logo Styling */
 .logo {
-    max-width: 150px; /* Reduced max-width for the logo */
     height: auto;
 }
 
