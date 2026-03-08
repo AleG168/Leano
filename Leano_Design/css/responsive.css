@@ -1,0 +1,45 @@
+/* =============================================================
+   LEANO DESIGN — responsive.css
+   Uniquement les ajustements que Bootstrap ne couvre pas nativement.
+   Aucune media query de positionnement logo.
+   ============================================================= */
+
+html, body { overflow-x: hidden; }
+
+/* Engagement grid : 1 colonne sur mobile */
+@media (max-width: 575px) {
+  .align-video-boxes {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    flex: none;
+    min-height: 400px;
+  }
+  .engagements-col {
+    min-height: auto;
+  }
+}
+
+/* Engagement grid : hauteur minimale tablette/desktop intermédiaire (stacked, < xl) */
+@media (min-width: 576px) and (max-width: 1199px) {
+  .align-video-boxes {
+    flex: none;
+    min-height: 450px;
+  }
+}
+
+/* Démarches : timeline verticale sur mobile */
+@media (max-width: 900px) {
+  .timeline-container {
+    flex-direction: column !important;
+    overflow-x: visible !important;
+  }
+  .card-container { width: 100% !important; margin-bottom: 15px; }
+  .card { width: 100% !important; min-width: unset !important; height: auto !important; }
+  .card-arrow-right::after, .card-arrow-right::before,
+  .card-arrow-down::after, .card-arrow-left::after { display: none !important; }
+}
+
+/* Footer cookie buttons colonne sur mobile */
+@media (max-width: 576px) {
+  .cookie-buttons { flex-direction: column; }
+}

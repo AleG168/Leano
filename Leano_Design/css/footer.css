@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+
+@font-face {
+  font-family: 'Sean Slab';
+  src: url('../fonts/SeanSlab-NormalExtrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/SeanSlab-NarrowRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.test-sean-slab {
+  font-family: 'Sean Slab', serif;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+
+
+.footer {
+    background-color: #222222;
+    padding: 0 0 1.5rem 0;
+    width: 100%;
+    
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+.footer-content {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-section {
+    color: #ffffff;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+
+
+.footer-section a {
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: clamp(15px, 3vw, 12pt);
+    color :#ffffff;
+    font-weight: 400;
+}
+
+.footer-section a:hover {
+    color: #00acc1;
+}
+
+.separator {
+    color: #444444;
+    margin: 0 1rem;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #222222;
+    padding: 1.5rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.cookie-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cookie-button.accept {
+    background-color: #0066cc;
+    color: white;
+}
+
+.cookie-button.accept:hover {
+    background-color: #0052a3;
+}
+
+.cookie-button.reject {
+    background-color: #444444;
+    color: white;
+}
+
+.cookie-button.reject:hover {
+    background-color: #333333;
+}
+
+.cookie-button.customize {
+    background-color: transparent;
+    border: 2px solid #0066cc;
+    color: #0066cc;
+}
+
+.cookie-button.customize:hover {
+    background-color: #0066cc;
+    color: white;
+}
+
+/* Cookie Modal */
+.cookie-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #222222;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    color: #ffffff;
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 16pt;
+}
+
+.modal-content h2 {
+    color: #0066cc;
+    margin-bottom: 1.5rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 32pt;
+}
+
+
+.cookie-option {
+    margin-bottom: 1.5rem;
+}
+
+.cookie-option label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cookie-option p {
+    color: #888888;
+    font-family: 'Sean Slab Narrow', serif;
+    font-weight: 400;
+    font-size: 12pt;
+    margin-left: 1.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+
+/* Style pour le logo Breizh Fab */
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: auto;
+    
+    pointer-events: none;
+}
+
+.LOGO_COULEUR {
+    height: 80px;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* ── Barre de bas de footer (fond sombre) ── */
+.footer-background {
+    background-color: #222222;
+    color: #ffffff;
+    width: 100%;
+}
+
+/* Sur mobile : cacher les séparateurs | entre les liens empilés */
+@media (max-width: 767px) {
+    .footer-section { text-align: center !important; }
+    .separator { display: none; }
+    .footer-section a { display: block; margin: 4px 0; }
+    .LOGO_COULEUR { height: 60px; }
+}
+
+
+
+/* Styles pour le carrousel des références */
+.references-carousel-section {
+    width: 100%;
+    padding: 15px 20px;  /* réduit de 80px à 20px par défaut */
+    background-color: #eaeaea !important;
+    text-align: center;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+@media (min-width: 768px) {
+    .references-carousel-section { padding: 15px 80px; }
+}
+
+.references-carousel-section h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    color: #2E2925;
+    font-weight: 400;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.custom-carousel-track {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.references-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+@media (min-width: 768px) {
+    .references-carousel { padding: 0 60px; }
+}
+
+.custom-carousel-item {
+    min-width: 100px;
+    height: 50px;
+    margin: 0 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .custom-carousel-item { min-width: 150px; margin: 0 15px; }
+}
+
+.custom-carousel-item img {
+    max-width: 100%;
+    max-height: 40px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+
+.custom-carousel-item img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+
+
+#Titre_Partenaire {
+    margin: 0;
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    color :#000000;
+    font-weight: 400;
+}
+
+.partenaires-bandeau {
+  background-color: #f5f5f5 !important;
+  margin-top: 0;
+  padding: 0.8rem 1rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.LogoPart {
+    max-width: 100px;
+    max-height: 35px;
+    display: block;
+}
+
+.partenaires-conteneur {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* centre les logos horizontalement */
+  flex-wrap: wrap;          /* permet aux logos de passer à la ligne si besoin */
+  gap: 30px;
+  margin-top: 0.5rem;
+}
+
+
+
+
+/* Responsive adjustments */
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+

@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+
+@font-face {
+  font-family: 'Sean Slab';
+  src: url('../fonts/SeanSlab-NormalExtrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/SeanSlab-NarrowRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.texte_chemin{
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+/* Styles du slider */
+.slider-container {
+    position: relative;
+    width: 94vw;
+    max-width: 1200px;
+    height: auto;
+    aspect-ratio: 16/9;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.after, .before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: none;
+}
+
+.after img, .before img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before {
+    clip-path: inset(0 50% 0 0);
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: white;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: none;
+}
+
+/* Styles de la galerie */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #000000;
+    padding: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Style pour les légendes */
+.card .description {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top : 0px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card .description h3 {
+    font-family: 'Sean Slab', serif;
+    font-weight: 800;
+    font-size: 18pt;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card .description p {
+    font-family: 'Sean Slab Narrow', serif;
+    font-size: 12pt;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+    color: #555;
+}
+
+/* Effets au survol */
+.card:hover .description {
+    opacity: 1;
+}
+
+.card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+/* Style du titre et du texte principal */
+.product h1 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 32pt;
+    margin-bottom: 15px;
+    color: #000000;
+
+}
+
+.product p {
+    font-size: clamp(14PX, 16px, 18px);
+    font-family: 'Sean Slab Narrow', sans-serif;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #666;
+    max-width: 800px;
+}
+
+
+
+.alignementPresentationProduit{
+    margin-left: 219px;
+}
+
+.NavPresentationProduit{
+    margin-top : 46px;
+    margin-bottom: 58px;
+}
+
+
+/* IMPORTANT : ces règles doivent s'appliquer UNIQUEMENT au contenu du produit,
+   PAS à la navbar ni au footer qui utilisent aussi des classes Bootstrap flex */
+.product .d-flex{
+    margin-left: 88px;
+}
+
+.product #mainNavbar{
+    margin-left: 88px;
+}
+
+/* Ces règles de padding navbar sont locales à cette page uniquement */
+.NavPresentationProduit .navbar a{
+    padding : 0;
+}
+
+.NavPresentationProduit .navbar li{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.LogoRedirect{
+    height: 28px;
+    width: 28px;
+    max-width :  35px;
+    max-height :  35px;
+}
+
+.sup{
+    height: 32px;
+    width: 32px;
+    max-width :  35px;
+    max-height :  35px;
+}
+
+.logo {
+    height: 120px;
+    margin-left: 0;
+}
+
+.LienColor{
+    text-decoration: none;
+    color : #00555a;
+}
+
+
+
+
+
+
+
+
+
+/* ─── Responsive ─── */
+@media (max-width: 991px) {
+    .alignementPresentationProduit {
+        margin-left: 0 !important;
+        padding: 0 16px !important;
+    }
+    .NavPresentationProduit {
+        margin-top: 0 !important;
+        margin-bottom: 8px !important;
+    }
+    .product .d-flex {
+        margin-left: 0 !important;
+    }
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        padding: 20px 10px;
+    }
+    .card img {
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Ajoutez ceci à votre fichier CSS (de préférence dans responsive.css) */
+
+
+
+/* Conservez votre style original pour les écrans plus larges */
+
+
+/* Et pour les écrans plus petits que 1400px, vous pouvez ajuster si nécessaire */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

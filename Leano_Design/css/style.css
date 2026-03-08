@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+@font-face {
+  font-family: 'Sean Slab';
+  src: url('../fonts/SeanSlab-NormalExtrabold.otf') format('opentype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/SeanSlab-NarrowRegular.otf') format('opentype');
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: black;
+  font-family: 'Sean Slab Narrow', serif;
+  overflow-x: hidden;
+}
+
+/* ── Navbar ── */
+.navbar-font {
+  font-family: 'Sean Slab', serif !important;
+  font-size: 16px !important;
+}
+/* NE PAS redéfinir .social-icon ici — navbar.css fait autorité (32×32) */
+
+/* Navbar spacing desktop */
+.NavPresentationProduit {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ── Typographie ── */
+.Titre {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 600;
+  font-size: clamp(22px, 4vw, 32pt);
+}
+
+#SousTitre {
+  font-family: 'Sean Slab', serif;
+  font-weight: 800;
+  font-size: clamp(14px, 2.5vw, 18pt);
+}
+
+.Sous_Titre {
+  font-family: 'Sean Slab', serif;
+  font-size: clamp(14px, 2.5vw, 18pt);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000;
+  margin: 0 0 10px 0;
+}
+
+.text-primarySupport {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 4vw, 32pt);
+  margin-bottom: 10px;
+}
+
+/* ── Vidéo ── */
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ── Engagement grid ── */
+.align-video-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 3px;
+  width: 100%;
+  min-height: 0;   /* critical: prevents grid from expanding beyond flex parent */
+}
+
+/*
+ * Bloc engagement : hauteur fixée par la ligne de la grille (1fr).
+ * overflow:hidden empêche le texte survolé d'agrandir la cellule.
+ */
+.engagement-block {
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sean Slab Narrow', serif;
+  font-size: clamp(14px, 1.8vw, 18pt);
+  font-weight: 400;
+  text-align: center;
+  padding: 8px;
+  overflow: hidden;        /* empêche l'expansion sur hover */
+  position: relative;
+  min-height: 0;
+  cursor: default;
+  transition: background-color 0.2s;
+}
+
+/* Texte affiché au survol — toujours confiné dans la cellule */
+.engagement-block.hovered {
+  font-size: clamp(12px, 1.4vw, 16px);
+  line-height: 1.35;
+  background-color: #d8d8d8;
+}
+
+.engagement-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* LogoRedirect (footer/nav icons) */
+.LogoRedirect {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+.sup { width: 32px; height: 32px; }

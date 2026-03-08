@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sean+Slab:wght@400;800&display=swap');
+
+@font-face {
+  font-family: 'Sean Slab Narrow';
+  src: url('../fonts/seanslab-normalblack-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+    font-family: 'Sean Slab', serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body.contact-page
+{
+    background-color: #ffffffff;
+}
+
+.container {
+  flex: 1 0 auto;          /* prend tout l’espace restant avant le footer */
+}
+
+h1 {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 32pt;
+}
+
+.contact-info h2 {
+    font-family: 'Sean Slab', sans-serif;
+    font-size: 18pt;
+    font-weight: 800;
+}
+
+.contact-container {
+    margin-top: 30px;
+}
+
+.contact-blocks {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.contact-info,
+.contact-form {
+    padding: 20px;
+    text-align: left;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}   
+
+
+.contact-details-block {
+    background-color: #EEEEEE;
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 350px;
+}
+
+.sizeBlock {
+    font-size: 110%;
+}
+
+.info-block {
+    margin-bottom: 20px;
+}
+
+.info-block i {
+    /* Hide the icon */
+    display: none;
+}
+
+.info-block .info-content {
+    /* Ensure content inside info-block stacks if needed */
+    display: block;
+}
+
+/* Style for info blocks with icons */
+.info-block:has(i) {
+    display: flex;
+    align-items: center;
+    /* Remove the icon */
+}
+
+.info-content h2 {
+    margin-bottom: 5px;
+}
+
+.info-content p {
+    margin-bottom: 5px;
+    font-family: 'Sean Slab Narrow', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+.map-container {
+    margin-top: 0;
+}
+
+.contact-map {
+    border: 0;
+    width: 100%;
+    height: 350px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    position: relative; /* Needed for label positioning */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 10px;
+    border: none; /* Remove border */
+    border-radius: 0px;
+    font-size: 16px;
+    font-family: 'Sean Slab Narrow', sans-serif;
+    background-color: #EEEEEE; /* Set a slightly darker, minimal grey background */
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.contact-form label {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    color: #999;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none; /* Allow clicking on the input through the label */
+    font-size: 16px;
+    font-family: 'Sean Slab Narrow', sans-serif;
+}
+
+.contact-form input[type="text"]:focus + label,
+.contact-form input[type="email"]:focus + label,
+.contact-form textarea:focus + label,
+.contact-form input[type="text"]:not(:placeholder-shown) + label,
+.contact-form input[type="email"]:not(:placeholder-shown) + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.contact-form textarea {
+    min-height: 150px; /* Adjust as needed */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form .submit-btn,
+.contact-form .submit-btn:focus,
+.contact-form .submit-btn:hover {
+    width: auto;
+    min-width: 180px;
+    padding: 10px 24px;
+    background-color: #000 !important;
+    color: #fff !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    align-self: flex-end;
+}
+
+/* Responsive adjustments */
+
+
+/* Styles pour le header de contact */
+.contact-header {
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-nav {
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 10px;
+    height: 60px;
+}
+
+.logo {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 15px;
+    transition: all 0.3s ease;
+    font-family: 'Sean Slab Narrow', sans-serif;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+.nav-links a.active {
+    color: #ccc;
+}
+
+/* Specific overrides for navbar on contact.php */
+.navbar > .container-fluid > .container {
+    justify-content: space-between !important;
+    gap: 0 !important;
+}
+
+.navbar .logo-wrapper {
+    margin-right: auto !important;
+}
+
+.navbar .social-icons-wrapper {
+    margin-left: auto !important;
+}
+
+/* Responsive adjustments for logo on contact page */
+
+
+
+
+
+
+.contact-page .logo, .contact-page .logo img {
+    height: 120px !important;
+    max-height: 120px !important;
+    width: auto;
+}
+
+.contact-page .logo {
+    margin-left: 0px;
+    /* Ajuste la valeur pour rapprocher le logo du bord gauche */
+}
+
+.navbar a, .navbar a:visited {
+    color: rgba(var(--bs-dark-rgb),var(--bs-text-opacity)) !important;
+    font-family: 'Sean Slab', serif !important;
+    font-size: 16px !important;
+}
+
+.fw-bold {
+    font-weight: bold !important;
+}
+
+.nav-icon img {
+    height: 28px;
+    vertical-align: middle;
+  }
+
+  .nav-icon.contact-icon img {
+    height: 26px;
+  }
+  
+  .navbar-nav.desktop-nav {
+    gap: 2.5rem;
+  }
+
+  .nav-icon img {
+    height: 28px;
+    vertical-align: middle;
+  }
+  
+  .nav-icon.contact-icon img {
+    height: 26px;
+  }
+  
+
+  
+.contact-page .navbar .social-icons-wrapper a {
+    text-decoration: none !important;
+}
+  
+.contact-page .navbar .social-icons-wrapper a .fa-instagram,
+.contact-page .navbar .social-icons-wrapper a .fa-linkedin-in {
+    font-size: 1.5rem !important;
+    /* Taille ajustée pour correspondre à ~23-24px */
+}
+  
+.contact-page .navbar .social-icons-wrapper {
+    justify-content: flex-start !important;
+    margin-left: 40px;
+    /* Ajuste la valeur pour aligner avec le logo */
+}
+
+.alig{
+  margin-top: 19px;
+}
+
+
+
+  
+
+
+  
+
+
+/* Pour les très petits écrans */
+
+  
+/* Empêcher le décalage du logo */
+
+  /* Nouveau conteneur pour le header mobile */
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Empêcher le logo de disparaître */
+  
+  
+  /* Garantir que le logo reste visible */
+  .logo-wrapper {
+    z-index: 1000;
+    position: relative;
+  }
+
+  
+  
+
+  
+
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
